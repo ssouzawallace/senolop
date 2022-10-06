@@ -1,13 +1,13 @@
 //
-//  Keyboard.swift
-//  Calculator
+//  BasicKeyboard.swift
+//  Senolop
 //
-//  Created by Wallace Silva on 02/09/22.
+//  Created by Wallace Silva on 06/10/22.
 //
 
 import SwiftUI
 
-struct Keyboard: View {
+struct BasicKeyboard: View {
     @Binding var calculator: RPNCalculator
     
     var body: some View {
@@ -170,8 +170,8 @@ struct Keyboard: View {
     }
 }
 
-struct Keyboard_Previews: PreviewProvider {
+struct BasicKeyboard_Previews: PreviewProvider {
     static var previews: some View {
-        Keyboard(calculator: Binding.constant(RPNCalculator()))
+        BasicKeyboard(calculator: Binding.constant(RPNCalculator()))
     }
 }

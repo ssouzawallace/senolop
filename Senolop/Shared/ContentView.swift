@@ -57,19 +57,9 @@ struct ContentView: View {
             }
             VStack(alignment: .center, spacing: 0) {
                 Display(mode: $mode, calculator: $calculator)
-                HStack {
-                    if mode == .programmer { //&& UIDevice.current.orientation.isLandscape {
-                        ProgrammerKeyboard(calculator: $calculator)
-                    }
-                    if mode == .scientific { //&& UIDevice.current.orientation.isLandscape {
-                        ScientificKeyboard(calculator: $calculator)
-                    }
-                    if mode != .programmer {
-                        Keyboard(calculator: $calculator)
-                    }
-                }
-                .foregroundColor(buttonColor)
+                Keyboard(calculator: $calculator, mode: mode)
             }
+            .foregroundColor(buttonColor)
             .background(Color("BackgroundColor"))
         }
         .navigationViewStyle(.columns)
@@ -94,6 +84,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-//            .previewInterfaceOrientation(.landscapeRight)
+            .previewInterfaceOrientation(.landscapeRight)
     }
 }
