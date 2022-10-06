@@ -46,9 +46,9 @@ struct ContentView: View {
             VStack {
                 Text("Senolop")
                 Display(mode: $mode, calculator: $calculator)
-                
                 ColorPicker("Button color", selection: $buttonColor)
-                
+            }
+            VStack(alignment: .center, spacing: 0) {
                 Picker("Mode", selection: $mode) {
                     Text(RPNCalculator.VisualizationMode.basic.rawValue).tag(RPNCalculator.VisualizationMode.basic)
                     Text(RPNCalculator.VisualizationMode.scientific.rawValue).tag(RPNCalculator.VisualizationMode.scientific)
