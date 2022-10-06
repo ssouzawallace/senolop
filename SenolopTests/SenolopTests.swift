@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import Senolop
 
 final class SenolopTests: XCTestCase {
 
@@ -32,4 +33,18 @@ final class SenolopTests: XCTestCase {
         }
     }
 
+    func testeCalculator() {
+        var sut = RPNCalculator()
+        
+        sut.digitPressed(9)
+        sut.digitPressed(0)
+        sut.digitPressed(1)
+        sut.plusPressed()
+        sut.plusPressed()
+        
+        var expectiation = XCTestExpectation(description: "Sum")
+        if let element = sut.stack.first, element.value == 10 {
+            expectiation.fulfill()
+        }
+    }
 }
