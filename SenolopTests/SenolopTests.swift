@@ -42,7 +42,7 @@ final class SenolopTests: XCTestCase {
         sut.plusPressed()
         sut.plusPressed()
         
-        var expectiation = XCTestExpectation(description: "Sum")
+        let expectiation = XCTestExpectation(description: "Sum")
         if let element = sut.stack.first, element.value == 10 {
             expectiation.fulfill()
         }
