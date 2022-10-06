@@ -31,6 +31,25 @@ jobs:
           if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device"
+      - name: Download Apple Provisioning Profiles
+          # You may pin to the exact commit or the version.
+          # uses: Apple-Actions/download-provisioning-profiles@3167792207a5b26099bc0ca22b5010a323dd2a0b
+          uses: Apple-Actions/download-provisioning-profiles@v1
+          with:
+            # The bundle identifier of the application
+            bundle-id: 
+            # The type of profile to download. One of IOS_APP_DEVELOPMENT, IOS_APP_STORE, IOS_APP_ADHOC, IOS_APP_INHOUSE, MAC_APP_DEVELOPMENT, MAC_APP_STORE, MAC_APP_DIRECT, TVOS_APP_DEVELOPMENT, TVOS_APP_STORE, TVOS_APP_ADHOC, TVOS_APP_INHOUSE
+            profile-type: # optional
+            # The AppStore Connect API Key Issuer Identifier
+            issuer-id: 
+            # The Key ID for AppStore Connect API
+            api-key-id: 
+            # The PKCS8 format Private Key for AppStore Connect API
+            api-private-key: MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgcLCm1CN+SPKSH2aP
+IeUQFUlRPShllsPLHlCNL9i5XhagCgYIKoZIzj0DAQehRANCAARS8Dbr3qnzvPM2
+M5Jy3Nk5I3e5Fbz2rlsPqQ7eYNutXL4DX+7Qpm9DsgAsh1VPlz5ROBfylrttexec
+POE2dnqz
+
       - name: Test
         env:
           scheme: ${{ 'default' }}
