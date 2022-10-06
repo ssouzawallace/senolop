@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var buttonColor: Color = .gray
     @State private var mode: RPNCalculator.VisualizationMode = .basic
     @State private var calculator = RPNCalculator()
     
@@ -45,13 +46,17 @@ struct ContentView: View {
             VStack {
                 Text("Senolop")
                 Display(mode: $mode, calculator: $calculator)
-            }
-            VStack(alignment: .center, spacing: 0) {
+                
+                ColorPicker("Button color", selection: $buttonColor)
+                
                 Picker("Mode", selection: $mode) {
                     Text(RPNCalculator.VisualizationMode.basic.rawValue).tag(RPNCalculator.VisualizationMode.basic)
                     Text(RPNCalculator.VisualizationMode.scientific.rawValue).tag(RPNCalculator.VisualizationMode.scientific)
                     Text(RPNCalculator.VisualizationMode.programmer.rawValue).tag(RPNCalculator.VisualizationMode.programmer)
                 }
+                .pickerStyle(.segmented)
+            }
+            VStack(alignment: .center, spacing: 0) {
                 Display(mode: $mode, calculator: $calculator)
                 HStack {
                     if mode == .programmer { //&& UIDevice.current.orientation.isLandscape {
@@ -64,6 +69,7 @@ struct ContentView: View {
                         Keyboard(calculator: $calculator)
                     }
                 }
+                .foregroundColor(buttonColor)
             }
             .background(Color("BackgroundColor"))
         }
