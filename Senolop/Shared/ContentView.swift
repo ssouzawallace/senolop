@@ -47,6 +47,7 @@ struct ContentView: View {
                 Display(mode: $mode, calculator: $calculator)
                 ColorPicker("Button color", selection: $buttonColor)
             }
+            .padding()
             VStack(alignment: .center, spacing: 0) {
                 Picker("Mode", selection: $mode) {
                     Text(RPNCalculator.VisualizationMode.basic.rawValue).tag(RPNCalculator.VisualizationMode.basic)
