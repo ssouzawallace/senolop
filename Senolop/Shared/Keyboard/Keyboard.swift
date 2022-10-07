@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Keyboard: View {
     @Binding var calculator: RPNCalculator
-    @State var mode = RPNCalculator.VisualizationMode.basic
+    var mode: RPNCalculator.VisualizationMode
     
     var body: some View {
         switch mode {
@@ -25,6 +25,6 @@ struct Keyboard: View {
 
 struct Keyboard_Previews: PreviewProvider {
     static var previews: some View {
-        Keyboard(calculator: Binding.constant(RPNCalculator()))
+        Keyboard(calculator: Binding.constant(RPNCalculator()), mode: .basic)
     }
 }
