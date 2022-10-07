@@ -53,17 +53,14 @@ struct ContentView: View {
                     Text(RPNCalculator.VisualizationMode.scientific.rawValue).tag(RPNCalculator.VisualizationMode.scientific)
                     Text(RPNCalculator.VisualizationMode.programmer.rawValue).tag(RPNCalculator.VisualizationMode.programmer)
                 }
-                .pickerStyle(.segmented)
-            }
-            VStack(alignment: .center, spacing: 0) {
                 Display(mode: $mode, calculator: $calculator)
                 Keyboard(calculator: $calculator, mode: mode)
             }
             .foregroundColor(buttonColor)
             .background(Color("BackgroundColor"))
         }
-        .navigationViewStyle(.columns)
         .navigationTitle("Senolop")
+        .navigationViewStyle(.columns)
         .toolbar {
             Menu {
                 Button("Copy", action: copy)
