@@ -55,8 +55,12 @@ struct ContentView: View {
                     Text(RPNCalculator.VisualizationMode.scientific.rawValue).tag(RPNCalculator.VisualizationMode.scientific)
                     Text(RPNCalculator.VisualizationMode.programmer.rawValue).tag(RPNCalculator.VisualizationMode.programmer)
                 }
+                .pickerStyle(.segmented)
+                .padding()
                 Keyboard(calculator: $calculator, mode: mode)
+                    .padding()
             }
+            .padding()
             .foregroundColor(buttonColor)
             .background(Color("BackgroundColor"))
         }
