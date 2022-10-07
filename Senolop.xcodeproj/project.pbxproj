@@ -348,25 +348,21 @@
 				TargetAttributes = {
 					17080FE228EF6D75002D7118 = {
 						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = 174AC93A28EE84F800E32729;
 					};
 					174AC93A28EE84F800E32729 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
 					174AC95028EE84FA00E32729 = {
 						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = 174AC93A28EE84F800E32729;
 					};
 					17522EA928EF53DD006A178B = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
 					17522EB828EF53DF006A178B = {
 						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = 17522EA928EF53DD006A178B;
 					};
 					17522EC228EF53E0006A178B = {
 						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = 17522EA928EF53DD006A178B;
 					};
 				};
 			};
@@ -538,11 +534,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.SenolopUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Senolop;
 			};
 			name = Debug;
 		};
@@ -557,11 +553,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.SenolopUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Senolop;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -761,7 +757,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 55XL2R5538;
@@ -776,7 +771,6 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Senolop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Senolop";
 			};
 			name = Debug;
 		};
@@ -784,7 +778,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 55XL2R5538;
@@ -799,7 +792,6 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Senolop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Senolop";
 			};
 			name = Release;
 		};
@@ -867,7 +859,6 @@
 		17522ECF28EF53E0006A178B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 55XL2R5538;
@@ -879,7 +870,6 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Senolop Apple Watch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Senolop Apple Watch Watch App";
 				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
@@ -887,7 +877,6 @@
 		17522ED028EF53E0006A178B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 55XL2R5538;
@@ -899,7 +888,6 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Senolop Apple Watch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Senolop Apple Watch Watch App";
 				VALIDATE_PRODUCT = YES;
 				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -915,11 +903,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "tech.wcorp.Senolop-Apple-Watch-Watch-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "Senolop Apple Watch Watch App";
 				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
@@ -934,11 +922,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "tech.wcorp.Senolop-Apple-Watch-Watch-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "Senolop Apple Watch Watch App";
 				VALIDATE_PRODUCT = YES;
 				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
