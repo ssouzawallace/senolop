@@ -49,12 +49,12 @@ struct ContentView: View {
             }
             .padding()
             VStack(alignment: .center, spacing: 0) {
+                Display(mode: $mode, calculator: $calculator)
                 Picker("Mode", selection: $mode) {
                     Text(RPNCalculator.VisualizationMode.basic.rawValue).tag(RPNCalculator.VisualizationMode.basic)
                     Text(RPNCalculator.VisualizationMode.scientific.rawValue).tag(RPNCalculator.VisualizationMode.scientific)
                     Text(RPNCalculator.VisualizationMode.programmer.rawValue).tag(RPNCalculator.VisualizationMode.programmer)
                 }
-                Display(mode: $mode, calculator: $calculator)
                 Keyboard(calculator: $calculator, mode: mode)
             }
             .foregroundColor(buttonColor)

@@ -15,14 +15,18 @@ struct Display: View {
     
     var body: some View {
         VStack {
-            ScrollView {
+            List {
                 ForEach(calculator.stack) { element in
                     VStack(alignment: .trailing) {
                         Text("\(Double(element.value))")
                         Divider()
                     }
                 }
+                .scaleEffect(x: 1, y: -1, anchor: .center)
+                .flipsForRightToLeftLayoutDirection(true)
             }
+            .scaleEffect(x: 1, y: -1, anchor: .center)
+            .listStyle(.plain)
             if mode == .programmer {
                 Picker("Mode", selection: $baseMode) {
                     Text("8")
