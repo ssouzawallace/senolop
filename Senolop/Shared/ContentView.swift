@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var buttonColor: Color = .gray
+    @State private var buttonColor: Color = .accentColor
     @State private var mode: RPNCalculator.VisualizationMode = .basic
     @State private var calculator = RPNCalculator()
     
@@ -45,7 +45,11 @@ struct ContentView: View {
             VStack {
                 Text("Senolop")
                 Display(mode: $mode, calculator: $calculator)
-                ColorPicker("Button color", selection: $buttonColor)
+                    #if os(iOS)
+                    ColorPicker(selection: $buttonColor) {
+                        Text("Button color")
+                    }
+                    #endif
             }
             .padding()
             VStack(alignment: .center, spacing: 0) {
@@ -65,7 +69,9 @@ struct ContentView: View {
             .background(Color("BackgroundColor"))
         }
         .navigationTitle("Senolop")
+        #if os(iOS)
         .navigationViewStyle(.columns)
+        #endif
         .toolbar {
             ToolbarItemGroup {
                 Button(action: copy) {
