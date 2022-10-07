@@ -63,17 +63,25 @@ struct ContentView: View {
         .navigationTitle("Senolop")
         .navigationViewStyle(.columns)
         .toolbar {
-            Menu {
-                Button("Copy", action: copy)
-                Button("Export", action: export)
-                Button("Clear", action: clear)
-                Menu("Switch Style") {
-                        Button("Style 1", action: switchStyle1)
-                        Button("Style 2", action: switchStyle2)
-                        Button("Style 3", action: switchStyle3)
-                    }
-            } label: {
-                Label("Share", systemImage: "square.and.arrow.up")
+            ToolbarItemGroup {
+                Button(action: copy) {
+                    Image(systemName: "doc.on.doc")
+                }
+                Button(action: copy) {
+                    Image(systemName: "square.and.arrow.up")
+                }
+                Button(action: copy) {
+                    Image(systemName: "xmark.circle")
+                }
+                Button(action: switchStyle1) {
+                    Image(systemName: "1.circle")
+                }
+                Button(action: switchStyle2) {
+                    Image(systemName: "2.circle")
+                }
+                Button(action: switchStyle3) {
+                    Image(systemName: "3.circle")
+                }
             }
         }
     }

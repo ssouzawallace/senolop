@@ -33,7 +33,20 @@ final class SenolopTests: XCTestCase {
         }
     }
 
-    func testeCalculator() {
+    func testCalculator() {
+        var sut = RPNCalculator()
+        
+        sut.digitPressed(9)
+        sut.digitPressed(0)
+        sut.digitPressed(1)
+        
+        let expectiation = XCTestExpectation(description: "Sum")
+        if let element = sut.stack.first, element.value == 901 {
+            expectiation.fulfill()
+        }
+    }
+    
+    func testSum() {
         var sut = RPNCalculator()
         
         sut.digitPressed(9)
@@ -44,6 +57,20 @@ final class SenolopTests: XCTestCase {
         
         let expectiation = XCTestExpectation(description: "Sum")
         if let element = sut.stack.first, element.value == 10 {
+            expectiation.fulfill()
+        }
+    }
+    
+    func testSubtraction() {
+        var sut = RPNCalculator()
+        
+        sut.digitPressed(9)
+        sut.digitPressed(0)
+        sut.digitPressed(1)
+        sut.minusPressed()
+        
+        let expectiation = XCTestExpectation(description: "Subtraction")
+        if let element = sut.stack.first, element.value == -1 {
             expectiation.fulfill()
         }
     }
