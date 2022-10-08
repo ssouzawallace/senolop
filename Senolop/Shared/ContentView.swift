@@ -18,15 +18,12 @@ struct ContentView: View {
     @State private var calculator = RPNCalculator()
     
     func copy() {
-        
+        UIPasteboard.general.string = calculator.stack.enumerated().reduce("", { partialResult, currentItem in
+            partialResult + "\n" + "\(currentItem.offset): \(currentItem.element.value)"
+        })
     }
     
-    func export() {
-        
-    }
-    
-    func clear() {
-        
+    func back() {
     }
     
     func switchStyle(_ style: Style) {
@@ -77,10 +74,10 @@ struct ContentView: View {
                 Button(action: copy) {
                     Image(systemName: "doc.on.doc")
                 }
-                Button(action: copy) {
+                Button(action: {}) {
                     Image(systemName: "square.and.arrow.up")
                 }
-                Button(action: copy) {
+                Button(action: back) {
                     Image(systemName: "xmark.circle")
                 }
                 Button(action: switchStyle1) {
