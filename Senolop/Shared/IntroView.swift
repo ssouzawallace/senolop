@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Charts
 
 struct ToyShape: Identifiable {
     var type: String
@@ -30,26 +29,9 @@ struct IntroView: View {
                 .font(.body)
                 .padding()
             
-            if #available(iOS 16.0, *) {
-                Chart {
-                    BarMark(
-                        x: .value("Shape Type", data[0].type),
-                        y: .value("Total Count", data[0].count)
-                    )
-                    BarMark(
-                        x: .value("Shape Type", data[1].type),
-                        y: .value("Total Count", data[1].count)
-                    )
-                    BarMark(
-                        x: .value("Shape Type", data[2].type),
-                        y: .value("Total Count", data[2].count)
-                    )
-                }
-            } else {
-                Image(systemName: "globe")
-                                .padding()
-                // Fallback on earlier versions
-            }
+            Image(systemName: "globe")
+                .animation(.linear.repeatForever())
+                .padding()
             
             Button {
                 
