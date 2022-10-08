@@ -48,27 +48,15 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             
-            if #available(iOS 15, *) {
-                CalculatorView(mode: $mode,
-                               calculator: $calculator,
-                               buttonColor: $buttonColor)
-            } else {
-                VStack {
-                    Text("Senolop")
-                    Display(mode: $mode, calculator: $calculator)
-#if os(iOS)
-                    ColorPicker(selection: $buttonColor) {
-                        Text("Button color")
-                    }
-#endif
-                }
-                .padding()
-                
-                CalculatorView(mode: $mode,
-                               calculator: $calculator,
-                               buttonColor: $buttonColor)
+            VStack {
+                Text("Senolop")
+                Display(mode: $mode, calculator: $calculator)
             }
+            .padding()
             
+            CalculatorView(mode: $mode,
+                           calculator: $calculator,
+                           buttonColor: $buttonColor)
         }
         .navigationTitle("Senolop")
 #if os(iOS)
