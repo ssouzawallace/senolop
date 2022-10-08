@@ -31,7 +31,6 @@ jobs:
           if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device"
-          
       - name: Test
         env:
           scheme: ${{ 'default' }}
@@ -43,59 +42,3 @@ jobs:
           if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           xcodebuild test-without-building -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device"
-
-
-#       - name: Import Code-Signing Certificates
-#         # You may pin to the exact commit or the version.
-#         # uses: Apple-Actions/import-codesign-certs@253ddeeac23f2bdad1646faac5c8c2832e800071
-#         uses: Apple-Actions/import-codesign-certs@v1
-#         with:
-#           # The name of the keychain to import into.
-#           keychain: signing_temp
-#           # A boolean indicating whether to create the keychain.
-#           create-keychain: true
-#           # The password to use with the keychain. Gets auto-generated if keychain is "signing_temp".
-# #           keychain-password: # optional
-#           # The path to the PKCS12 file to import.
-# #           p12-filepath: # optional
-#           # The certificates in a PKCS12 file encoded as a base64 string.
-# #           p12-file-base64: # optional
-#           # The password used to import the PKCS12 file.
-# #           p12-password: 
-          
-          
-#       - name: Download Apple Provisioning Profiles
-#           # You may pin to the exact commit or the version.
-#           # uses: Apple-Actions/download-provisioning-profiles@3167792207a5b26099bc0ca22b5010a323dd2a0b
-#           uses: Apple-Actions/download-provisioning-profiles@v1
-#           with:
-#             # The bundle identifier of the application
-#             bundle-id: tech.wcorp.Senolop
-#             # The type of profile to download. One of IOS_APP_DEVELOPMENT, IOS_APP_STORE, IOS_APP_ADHOC, IOS_APP_INHOUSE, MAC_APP_DEVELOPMENT, MAC_APP_STORE, MAC_APP_DIRECT, TVOS_APP_DEVELOPMENT, TVOS_APP_STORE, TVOS_APP_ADHOC, TVOS_APP_INHOUSE
-#             profile-type: # optional
-#             # The AppStore Connect API Key Issuer Identifier
-#             issuer-id: 
-#             # The Key ID for AppStore Connect API
-#             api-key-id: 
-#             # The PKCS8 format Private Key for AppStore Connect API
-#             api-private-key: MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgcLCm1CN+SPKSH2aP
-# IeUQFUlRPShllsPLHlCNL9i5XhagCgYIKoZIzj0DAQehRANCAARS8Dbr3qnzvPM2
-# M5Jy3Nk5I3e5Fbz2rlsPqQ7eYNutXL4DX+7Qpm9DsgAsh1VPlz5ROBfylrttexec
-# POE2dnqz
-
-
-#       - name: Upload app to TestFlight
-#         # You may pin to the exact commit or the version.
-#         # uses: Apple-Actions/upload-testflight-build@54dc215b4cd5529730db39f11c84efdb71414e07
-#         uses: Apple-Actions/upload-testflight-build@v1
-#         with:
-#           # The path to the app (ipa etc)
-#           app-path: .
-#           # The type of app to upload (osx | ios | appletvos)
-#           app-type: ios
-#           # The AppStoreConnect API Key Issuer Identifier
-#           issuer-id: wallace
-#           # The Key ID for AppStore Connect API
-#           api-key-id: 3Z9743C25W
-#           # The PKCS8 format Private Key for AppStore Connect API
-#           api-private-key: MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgcLCm1CN+SPKSH2aPIeUQFUlRPShllsPLHlCNL9i5XhagCgYIKoZIzj0DAQehRANCAARS8Dbr3qnzvPM2M5Jy3Nk5I3e5Fbz2rlsPqQ7eYNutXL4DX+7Qpm9DsgAsh1VPlz5ROBfylrttexecPOE2dnqz
