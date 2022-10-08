@@ -32,9 +32,9 @@ struct RPNCalculator: Calculator {
     }
     
     enum VisualizationMode: String, CaseIterable {
-        case basic = "Basic"
-        case scientific = "Scientific"
-        case programmer = "Programmer"
+        case basic = "Básica"
+        case scientific = "Científica"
+        case programmer = "Programador"
     }
     
     enum Mode: String {
