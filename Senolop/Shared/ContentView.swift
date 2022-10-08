@@ -46,22 +46,32 @@ struct ContentView: View {
     }
     
     var body: some View {
-        NavigationView {
-            
-            VStack {
-                Text("Senolop")
+        NavigationSplitView {
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                CalculatorView(mode: $mode,
+                               calculator: $calculator,
+                               buttonColor: $buttonColor)
+            } else {
                 Display(mode: $mode, calculator: $calculator)
+                    .padding()
+                ColorPicker("Button color", selection: $buttonColor)
+                    .padding()
             }
-            .padding()
             
-            CalculatorView(mode: $mode,
-                           calculator: $calculator,
-                           buttonColor: $buttonColor)
+        } detail: {
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                Display(mode: $mode, calculator: $calculator)
+                    .padding()
+                ColorPicker("Button color", selection: $buttonColor)
+                    .padding()
+            } else {
+                CalculatorView(mode: $mode,
+                               calculator: $calculator,
+                               buttonColor: $buttonColor)
+            }
+            
         }
         .navigationTitle("Senolop")
-#if os(iOS)
-        .navigationViewStyle(.columns)
-#endif
         .toolbar {
             ToolbarItemGroup {
                 Button(action: copy) {
