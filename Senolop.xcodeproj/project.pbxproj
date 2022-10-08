@@ -26,6 +26,7 @@
 		174AC98528EE85C700E32729 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97928EE85C700E32729 /* Keyboard.swift */; };
 		174AC98628EE85C700E32729 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97A28EE85C700E32729 /* IntroView.swift */; };
 		174AC98728EE85C700E32729 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97B28EE85C700E32729 /* ContentView.swift */; };
+		174CAE1228F14AEB00901A71 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174CAE1128F14AEA00901A71 /* Charts.framework */; platformFilters = (ios, tvos, ); };
 		17606B7228F11AD9002031DC /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17606B7128F11AD9002031DC /* CalculatorView.swift */; };
 		179F3D1128EF644000445748 /* BasicKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522ED428EF5AFA006A178B /* BasicKeyboard.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		174AC97A28EE85C700E32729 /* IntroView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		174AC97B28EE85C700E32729 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		174AC98828EF285000E32729 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		174CAE1128F14AEA00901A71 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS16.0.sdk/System/Library/Frameworks/Charts.framework; sourceTree = DEVELOPER_DIR; };
 		17522ED428EF5AFA006A178B /* BasicKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicKeyboard.swift; sourceTree = "<group>"; };
 		17606B7128F11AD9002031DC /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				174CAE1228F14AEB00901A71 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +122,7 @@
 				174AC95428EE84FA00E32729 /* SenolopTests */,
 				17080FE428EF6D76002D7118 /* SenolopUITests */,
 				174AC93C28EE84F800E32729 /* Products */,
+				174CAE1028F14AE900901A71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,6 +179,14 @@
 				174AC97B28EE85C700E32729 /* ContentView.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		174CAE1028F14AE900901A71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				174CAE1128F14AEA00901A71 /* Charts.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		179F3D1228EF644D00445748 /* Keyboard */ = {
