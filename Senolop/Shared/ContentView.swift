@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     enum Style {
-    case kids
-    case adult
-case fun
-}
+        case kids
+        case adult
+        case fun
+    }
     @State private var buttonColor: Color = .accentColor
     @State private var mode: RPNCalculator.VisualizationMode = .programmer
     @State private var calculator = RPNCalculator()
@@ -28,7 +28,7 @@ case fun
     func clear() {
         
     }
-
+    
     func switchStyle(_ style: Style) {
         
     }
@@ -48,31 +48,32 @@ case fun
     var body: some View {
         NavigationView {
             
-
+            if #available(iOS 15, *) {
+                CalculatorView(mode: $mode,
+                               calculator: $calculator,
+                               buttonColor: $buttonColor)
+            } else {
+                VStack {
+                    Text("Senolop")
+                    Display(mode: $mode, calculator: $calculator)
 #if os(iOS)
-            CalculatorView(mode: $mode, calculator: $calculator, buttonColor: $buttonColor)
-#endif
-
-#if os(macOS)
-            VStack {
-                Text("Senolop")
-                Display(mode: $mode, calculator: $calculator)
-                    #if os(iOS)
                     ColorPicker(selection: $buttonColor) {
                         Text("Button color")
                     }
-                    #endif
-            }
-            .padding()
-            
-            CalculatorView(mode: $mode, calculator: $calculator, buttonColor: $buttonColor)
 #endif
+                }
+                .padding()
+                
+                CalculatorView(mode: $mode,
+                               calculator: $calculator,
+                               buttonColor: $buttonColor)
+            }
             
         }
         .navigationTitle("Senolop")
-        #if os(iOS)
+#if os(iOS)
         .navigationViewStyle(.columns)
-        #endif
+#endif
         .toolbar {
             ToolbarItemGroup {
                 Button(action: copy) {
