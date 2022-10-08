@@ -33,6 +33,7 @@ struct Display: View {
                     Text("10")
                     Text("12")
                 }
+                .pickerStyle(.segmented)
                 BinariesDisplay(value: Int(calculator.stack.last?.value ?? 0))
             }
         }
