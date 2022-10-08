@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		17080FE628EF6D76002D7118 /* SenolopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17080FE528EF6D76002D7118 /* SenolopUITests.swift */; };
 		17080FE828EF6D76002D7118 /* SenolopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17080FE728EF6D76002D7118 /* SenolopUITestsLaunchTests.swift */; };
-		17080FF128EF6F80002D7118 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17080FF028EF6F80002D7118 /* SnapshotHelper.swift */; };
 		174AC93F28EE84F800E32729 /* SenolopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC93E28EE84F800E32729 /* SenolopApp.swift */; };
 		174AC94128EE84F800E32729 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC94028EE84F800E32729 /* Persistence.swift */; };
 		174AC94428EE84F800E32729 /* Senolop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 174AC94228EE84F800E32729 /* Senolop.xcdatamodeld */; };
@@ -28,6 +27,7 @@
 		174AC98728EE85C700E32729 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97B28EE85C700E32729 /* ContentView.swift */; };
 		174CAE1228F14AEB00901A71 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174CAE1128F14AEA00901A71 /* Charts.framework */; platformFilters = (ios, tvos, ); };
 		17606B7228F11AD9002031DC /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17606B7128F11AD9002031DC /* CalculatorView.swift */; };
+		176C710628F1662600BE97F8 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176C710228F165B700BE97F8 /* SnapshotHelper.swift */; };
 		179F3D1128EF644000445748 /* BasicKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522ED428EF5AFA006A178B /* BasicKeyboard.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +52,6 @@
 		17080FE328EF6D75002D7118 /* SenolopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SenolopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17080FE528EF6D76002D7118 /* SenolopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopUITests.swift; sourceTree = "<group>"; };
 		17080FE728EF6D76002D7118 /* SenolopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		17080FF028EF6F80002D7118 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		174AC93B28EE84F800E32729 /* Senolop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Senolop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		174AC93E28EE84F800E32729 /* SenolopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopApp.swift; sourceTree = "<group>"; };
 		174AC94028EE84F800E32729 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -76,6 +75,11 @@
 		174CAE1128F14AEA00901A71 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS16.0.sdk/System/Library/Frameworks/Charts.framework; sourceTree = DEVELOPER_DIR; };
 		17522ED428EF5AFA006A178B /* BasicKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicKeyboard.swift; sourceTree = "<group>"; };
 		17606B7128F11AD9002031DC /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		176C710128F165B700BE97F8 /* Appfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
+		176C710228F165B700BE97F8 /* SnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		176C710328F165B700BE97F8 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
+		176C710428F165B700BE97F8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		176C710528F165B700BE97F8 /* Snapfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Snapfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +111,6 @@
 		17080FE428EF6D76002D7118 /* SenolopUITests */ = {
 			isa = PBXGroup;
 			children = (
-				17080FF028EF6F80002D7118 /* SnapshotHelper.swift */,
 				17080FE528EF6D76002D7118 /* SenolopUITests.swift */,
 				17080FE728EF6D76002D7118 /* SenolopUITestsLaunchTests.swift */,
 			);
@@ -118,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				174AC98828EF285000E32729 /* README.md */,
+				176C710028F165B700BE97F8 /* fastlane */,
 				174AC93D28EE84F800E32729 /* Senolop */,
 				174AC95428EE84FA00E32729 /* SenolopTests */,
 				17080FE428EF6D76002D7118 /* SenolopUITests */,
@@ -170,13 +174,13 @@
 		174AC96E28EE85C700E32729 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				174AC97B28EE85C700E32729 /* ContentView.swift */,
 				17606B7128F11AD9002031DC /* CalculatorView.swift */,
 				174AC97528EE85C700E32729 /* SubscriptionView.swift */,
 				174AC97A28EE85C700E32729 /* IntroView.swift */,
 				174AC97428EE85C700E32729 /* BinariesDisplay.swift */,
 				174AC97628EE85C700E32729 /* Display.swift */,
 				179F3D1228EF644D00445748 /* Keyboard */,
-				174AC97B28EE85C700E32729 /* ContentView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -187,6 +191,18 @@
 				174CAE1128F14AEA00901A71 /* Charts.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		176C710028F165B700BE97F8 /* fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				176C710128F165B700BE97F8 /* Appfile */,
+				176C710228F165B700BE97F8 /* SnapshotHelper.swift */,
+				176C710328F165B700BE97F8 /* Fastfile */,
+				176C710428F165B700BE97F8 /* README.md */,
+				176C710528F165B700BE97F8 /* Snapfile */,
+			);
+			path = fastlane;
 			sourceTree = "<group>";
 		};
 		179F3D1228EF644D00445748 /* Keyboard */ = {
@@ -269,6 +285,7 @@
 				TargetAttributes = {
 					17080FE228EF6D75002D7118 = {
 						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 174AC93A28EE84F800E32729;
 					};
 					174AC93A28EE84F800E32729 = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -331,7 +348,7 @@
 			files = (
 				17080FE628EF6D76002D7118 /* SenolopUITests.swift in Sources */,
 				17080FE828EF6D76002D7118 /* SenolopUITestsLaunchTests.swift in Sources */,
-				17080FF128EF6F80002D7118 /* SnapshotHelper.swift in Sources */,
+				176C710628F1662600BE97F8 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +414,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Senolop;
 			};
 			name = Debug;
 		};
@@ -416,6 +434,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Senolop;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -536,7 +555,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Senolop/Senolop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_ASSET_PATHS = "\"Senolop/Preview Content\"";
 				DEVELOPMENT_TEAM = 55XL2R5538;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -551,8 +570,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -560,12 +578,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.Senolop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 13.0;
 			};
 			name = Debug;
 		};
@@ -576,7 +595,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Senolop/Senolop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_ASSET_PATHS = "\"Senolop/Preview Content\"";
 				DEVELOPMENT_TEAM = 55XL2R5538;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -591,8 +610,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -600,12 +618,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.Senolop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 13.0;
 			};
 			name = Release;
 		};
