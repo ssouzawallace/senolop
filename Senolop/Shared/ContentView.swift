@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    enum Style {
+    case kids
+    case adult
+case fun
+}
     @State private var buttonColor: Color = .accentColor
-    @State private var mode: RPNCalculator.VisualizationMode = .basic
+    @State private var mode: RPNCalculator.VisualizationMode = .programmer
     @State private var calculator = RPNCalculator()
     
     func copy() {
@@ -23,25 +28,32 @@ struct ContentView: View {
     func clear() {
         
     }
-    
-    func switchStyle(_ id: Int) {
+
+    func switchStyle(_ style: Style) {
         
     }
     
     func switchStyle1() {
-        switchStyle(1)
+        switchStyle(.kids)
     }
     
     func switchStyle2() {
-        switchStyle(2)
+        switchStyle(.adult)
     }
     
     func switchStyle3() {
-        switchStyle(3)
+        switchStyle(.fun)
     }
     
     var body: some View {
         NavigationView {
+            
+
+#if os(iOS)
+            CalculatorView(mode: $mode, calculator: $calculator, buttonColor: $buttonColor)
+#endif
+
+#if os(macOS)
             VStack {
                 Text("Senolop")
                 Display(mode: $mode, calculator: $calculator)
@@ -52,21 +64,10 @@ struct ContentView: View {
                     #endif
             }
             .padding()
-            VStack(alignment: .center, spacing: 0) {
-                Display(mode: $mode, calculator: $calculator)
-                Picker("Mode", selection: $mode) {
-                    Text(RPNCalculator.VisualizationMode.basic.rawValue).tag(RPNCalculator.VisualizationMode.basic)
-                    Text(RPNCalculator.VisualizationMode.scientific.rawValue).tag(RPNCalculator.VisualizationMode.scientific)
-                    Text(RPNCalculator.VisualizationMode.programmer.rawValue).tag(RPNCalculator.VisualizationMode.programmer)
-                }
-                .pickerStyle(.segmented)
-                .padding()
-                Keyboard(calculator: $calculator, mode: mode)
-                    .padding()
-            }
-            .padding()
-            .foregroundColor(buttonColor)
-            .background(Color("BackgroundColor"))
+            
+            CalculatorView(mode: $mode, calculator: $calculator, buttonColor: $buttonColor)
+#endif
+            
         }
         .navigationTitle("Senolop")
         #if os(iOS)
@@ -100,6 +101,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .previewInterfaceOrientation(.landscapeRight)
     }
 }
