@@ -11,7 +11,7 @@ struct BinariesDisplay: View {
     let value: Int
     var text: String {
         guard value != 0 else {
-            return String(repeating: " 0000", count: 4)
+            return String(repeating: " 0000", count: 8) + "\n" + String(repeating: " 0000", count: 8)
         }
         var value = value
         var result = ""
