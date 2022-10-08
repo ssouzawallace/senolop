@@ -11,7 +11,7 @@ struct BinariesDisplay: View {
     let value: Int
     var text: String {
         guard value != 0 else {
-            return "0"
+            return String(repeating: " 0000", count: 4)
         }
         var value = value
         var result = ""
@@ -23,11 +23,13 @@ struct BinariesDisplay: View {
     }
     var body: some View {
         Text(text)
+            .font(.callout)
+            .padding()
     }
 }
 
 struct BinariesDisplay_Previews: PreviewProvider {
     static var previews: some View {
-        BinariesDisplay(value: 10)
+        BinariesDisplay(value: 0)
     }
 }
