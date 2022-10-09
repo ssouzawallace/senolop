@@ -43,30 +43,16 @@ struct ContentView: View {
     }
     
     var body: some View {
-        NavigationSplitView {
-            if UIDevice.current.userInterfaceIdiom == .phone {
-                CalculatorView(mode: $mode,
-                               calculator: $calculator,
-                               buttonColor: $buttonColor)
-            } else {
+        NavigationView {
+            if #available(macOS 13, *) {
                 Display(mode: $mode, calculator: $calculator)
                     .padding()
                 ColorPicker("Button color", selection: $buttonColor)
                     .padding()
             }
-            
-        } detail: {
-            if UIDevice.current.userInterfaceIdiom == .phone {
-                Display(mode: $mode, calculator: $calculator)
-                    .padding()
-                ColorPicker("Button color", selection: $buttonColor)
-                    .padding()
-            } else {
-                CalculatorView(mode: $mode,
-                               calculator: $calculator,
-                               buttonColor: $buttonColor)
-            }
-            
+            CalculatorView(mode: $mode,
+                           calculator: $calculator,
+                           buttonColor: $buttonColor)
         }
         .navigationTitle("Senolop")
         .toolbar {
