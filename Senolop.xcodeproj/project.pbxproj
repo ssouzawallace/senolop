@@ -283,6 +283,7 @@
 				TargetAttributes = {
 					17080FE228EF6D75002D7118 = {
 						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 174AC93A28EE84F800E32729;
 					};
 					174AC93A28EE84F800E32729 = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -411,6 +412,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Senolop;
 			};
 			name = Debug;
 		};
@@ -430,6 +432,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Senolop;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
