@@ -10,7 +10,9 @@ import SwiftUI
 struct ButtonLabel: View {
     let content: String
     var attributedContent: AttributedString {
-        AttributedString(stringLiteral: content)
+        var attributedContent = AttributedString(stringLiteral: content)
+        attributedContent.setAttributes(AttributeContainer([.strokeColor:Color.red]))
+        return attributedContent
     }
     init(_ content: String) {
         self.content = content
@@ -25,7 +27,6 @@ struct ButtonLabel: View {
         .padding()
         .lineLimit(1)
         .frame(maxWidth: .infinity)
-        .scaledToFit()
 }
 }
 

@@ -44,6 +44,5 @@ struct Display_Previews: PreviewProvider {
     static var previews: some View {
         Display(mode: Binding.constant(.basic),
                 calculator: Binding.constant(RPNCalculator()))
-            .previewInterfaceOrientation(.landscapeLeft)
     }
 }

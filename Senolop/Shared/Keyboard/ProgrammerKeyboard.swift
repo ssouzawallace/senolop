@@ -70,7 +70,9 @@ struct ProgrammerKeyboard: View {
                     ButtonLabel("inverter palavra")
                 }
             }
+            
             NumericProgrammerKeyboard(calculator: $calculator)
+            
             VStack {
                 HStack {
                     VStack {
@@ -137,7 +139,8 @@ struct ProgrammerKeyboard: View {
                 }
             }
         }
-        .fixedSize(horizontal: true, vertical: true)
+        .padding()
+        .frame(maxWidth: .infinity)
         .buttonBorderShape(.roundedRectangle)
         .buttonStyle(.bordered)
     }
@@ -146,6 +149,5 @@ struct ProgrammerKeyboard: View {
 struct ProgrammerKeyboard_Previews: PreviewProvider {
     static var previews: some View {
         ProgrammerKeyboard(calculator: Binding.constant(RPNCalculator()))
-            .previewInterfaceOrientation(.landscapeLeft)
     }
 }

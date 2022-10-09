@@ -31,8 +31,7 @@ struct BasicKeyboard: View {
                 Button {
                     calculator.deletePressed()
                 } label: {
-                    Image(systemName: "delete.backward")
-                        .accessibilityHint("Delete the current row.")
+                    ButtonLabel("􁂈")
                 }
             }
             
@@ -149,18 +148,18 @@ struct BasicKeyboard: View {
                         Button {
                             calculator.commaPressed()
                         } label: {
-                            Text(".")
+                            ButtonLabel(".")
                         }
                         Button {
                             calculator.returnPressed()
                         } label: {
-                            Text("⏎")
+                            ButtonLabel("⏎")
                         }
                     }
                 }
             }
         }
-        .fixedSize(horizontal: true, vertical: true)
+        .padding()
         .buttonBorderShape(.roundedRectangle)
         .buttonStyle(.bordered)
     }

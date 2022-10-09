@@ -48,15 +48,28 @@ struct ContentView: View {
     }
     
     var body: some View {
-        NavigationView {
-            if #available(macOS 13, *) {
+        NavigationSplitView(sidebar: {
+            VStack {
+                Text("Senolop")
+                Display(mode: $mode, calculator: $calculator)
+                CalculatorView(mode: $mode,
+                               calculator: $calculator,
+                               buttonColor: $buttonColor)
+            }
+        }, content: {
+            VStack {
                 Display(mode: $mode, calculator: $calculator)
                     .padding()
+                CalculatorView(mode: $mode,
+                               calculator: $calculator,
+                               buttonColor: $buttonColor)
             }
-            CalculatorView(mode: $mode,
-                           calculator: $calculator,
-                           buttonColor: $buttonColor)
-        }
+            .padding()
+        }, detail: {
+            Display(mode: $mode, calculator: $calculator)
+        })
+        
+        .padding()
         .background(Color(backgroundColorName))
         .navigationTitle("Senolop")
         .toolbar {

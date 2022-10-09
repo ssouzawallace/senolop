@@ -29,6 +29,7 @@ struct NumericProgrammerKeyboard: View {
                     ButtonLabel("F")
                 }
             }
+            
             HStack {
                 Button {
                     calculator.hexDigitPressed("A")
@@ -46,6 +47,7 @@ struct NumericProgrammerKeyboard: View {
                     ButtonLabel("C")
                 }
             }
+            
             HStack {
                 Button {
                     calculator.digitPressed(7)
@@ -63,6 +65,7 @@ struct NumericProgrammerKeyboard: View {
                     ButtonLabel("9")
                 }
             }
+            
             HStack {
                 Button {
                     calculator.digitPressed(4)
@@ -80,6 +83,7 @@ struct NumericProgrammerKeyboard: View {
                     ButtonLabel("6")
                 }
             }
+            
             HStack {
                 Button {
                     calculator.digitPressed(1)
@@ -97,6 +101,7 @@ struct NumericProgrammerKeyboard: View {
                     ButtonLabel("3")
                 }
             }
+            
             HStack {
                 Button {
                     calculator.ffPressed()
@@ -115,7 +120,7 @@ struct NumericProgrammerKeyboard: View {
                 }
             }
         }
-        .fixedSize(horizontal: true, vertical: true)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .buttonBorderShape(.roundedRectangle)
         .buttonStyle(.bordered)
     }

@@ -21,17 +21,15 @@ struct CalculatorView: View {
                 Text(RPNCalculator.VisualizationMode.programmer.rawValue).tag(RPNCalculator.VisualizationMode.programmer)
             }
             .pickerStyle(.segmented)
-            .padding()
+            
             Keyboard(calculator: $calculator, mode: mode)
-                .padding()
         }
-        .padding()
         .foregroundColor(buttonColor)
     }
 }
 
 struct CalculatorView_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatorView(mode: .constant(.programmer), calculator: .constant(RPNCalculator()), buttonColor: .constant(.accentColor))
+        CalculatorView(mode: .constant(.basic), calculator: .constant(RPNCalculator()), buttonColor: .constant(.accentColor))
     }
 }
