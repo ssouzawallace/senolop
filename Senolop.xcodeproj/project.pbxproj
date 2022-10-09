@@ -11,7 +11,6 @@
 		174AC94128EE84F800E32729 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC94028EE84F800E32729 /* Persistence.swift */; };
 		174AC94428EE84F800E32729 /* Senolop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 174AC94228EE84F800E32729 /* Senolop.xcdatamodeld */; };
 		174AC94C28EE84FA00E32729 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 174AC94B28EE84FA00E32729 /* Preview Assets.xcassets */; };
-		174AC95628EE84FA00E32729 /* SenolopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC95528EE84FA00E32729 /* SenolopTests.swift */; };
 		174AC97C28EE85C700E32729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 174AC96F28EE85C700E32729 /* Assets.xcassets */; };
 		174AC97E28EE85C700E32729 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97228EE85C700E32729 /* Calculator.swift */; };
 		174AC97F28EE85C700E32729 /* ScientificKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97328EE85C700E32729 /* ScientificKeyboard.swift */; };
@@ -23,12 +22,13 @@
 		174AC98528EE85C700E32729 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97928EE85C700E32729 /* Keyboard.swift */; };
 		174AC98628EE85C700E32729 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97A28EE85C700E32729 /* IntroView.swift */; };
 		174AC98728EE85C700E32729 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97B28EE85C700E32729 /* ContentView.swift */; };
+		1759791A28F32678006701E8 /* SenolopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759791928F32678006701E8 /* SenolopTests.swift */; };
 		17606B7228F11AD9002031DC /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17606B7128F11AD9002031DC /* CalculatorView.swift */; };
 		179F3D1128EF644000445748 /* BasicKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522ED428EF5AFA006A178B /* BasicKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		174AC95228EE84FA00E32729 /* PBXContainerItemProxy */ = {
+		1759791B28F32678006701E8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 174AC93328EE84F800E32729 /* Project object */;
 			proxyType = 1;
@@ -44,7 +44,6 @@
 		174AC94328EE84F800E32729 /* Senolop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Senolop.xcdatamodel; sourceTree = "<group>"; };
 		174AC94928EE84FA00E32729 /* Senolop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Senolop.entitlements; sourceTree = "<group>"; };
 		174AC94B28EE84FA00E32729 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		174AC95128EE84FA00E32729 /* SenolopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SenolopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		174AC95528EE84FA00E32729 /* SenolopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopTests.swift; sourceTree = "<group>"; };
 		174AC96F28EE85C700E32729 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Shared/Assets.xcassets; sourceTree = "<group>"; };
 		174AC97228EE85C700E32729 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
@@ -60,6 +59,8 @@
 		174AC98828EF285000E32729 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		174CAE1128F14AEA00901A71 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS16.0.sdk/System/Library/Frameworks/Charts.framework; sourceTree = DEVELOPER_DIR; };
 		17522ED428EF5AFA006A178B /* BasicKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicKeyboard.swift; sourceTree = "<group>"; };
+		1759791728F32677006701E8 /* SenolopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SenolopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1759791928F32678006701E8 /* SenolopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopTests.swift; sourceTree = "<group>"; };
 		17606B7128F11AD9002031DC /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		176C710128F165B700BE97F8 /* Appfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
 		176C710328F165B700BE97F8 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
@@ -74,7 +75,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		174AC94E28EE84FA00E32729 /* Frameworks */ = {
+		1759791428F32677006701E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -91,6 +92,7 @@
 				176C710028F165B700BE97F8 /* fastlane */,
 				174AC93D28EE84F800E32729 /* Senolop */,
 				174AC95428EE84FA00E32729 /* SenolopTests */,
+				1759791828F32678006701E8 /* SenolopTests */,
 				174AC93C28EE84F800E32729 /* Products */,
 				174CAE1028F14AE900901A71 /* Frameworks */,
 			);
@@ -100,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				174AC93B28EE84F800E32729 /* Senolop.app */,
-				174AC95128EE84FA00E32729 /* SenolopTests.xctest */,
+				1759791728F32677006701E8 /* SenolopTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,6 +160,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1759791828F32678006701E8 /* SenolopTests */ = {
+			isa = PBXGroup;
+			children = (
+				1759791928F32678006701E8 /* SenolopTests.swift */,
+			);
+			path = SenolopTests;
+			sourceTree = "<group>";
+		};
 		176C710028F165B700BE97F8 /* fastlane */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,22 +210,22 @@
 			productReference = 174AC93B28EE84F800E32729 /* Senolop.app */;
 			productType = "com.apple.product-type.application";
 		};
-		174AC95028EE84FA00E32729 /* SenolopTests */ = {
+		1759791628F32677006701E8 /* SenolopTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 174AC96828EE84FA00E32729 /* Build configuration list for PBXNativeTarget "SenolopTests" */;
+			buildConfigurationList = 1759791D28F32678006701E8 /* Build configuration list for PBXNativeTarget "SenolopTests" */;
 			buildPhases = (
-				174AC94D28EE84FA00E32729 /* Sources */,
-				174AC94E28EE84FA00E32729 /* Frameworks */,
-				174AC94F28EE84FA00E32729 /* Resources */,
+				1759791328F32677006701E8 /* Sources */,
+				1759791428F32677006701E8 /* Frameworks */,
+				1759791528F32677006701E8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				174AC95328EE84FA00E32729 /* PBXTargetDependency */,
+				1759791C28F32678006701E8 /* PBXTargetDependency */,
 			);
 			name = SenolopTests;
 			productName = SenolopTests;
-			productReference = 174AC95128EE84FA00E32729 /* SenolopTests.xctest */;
+			productReference = 1759791728F32677006701E8 /* SenolopTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -231,8 +241,9 @@
 					174AC93A28EE84F800E32729 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
-					174AC95028EE84FA00E32729 = {
+					1759791628F32677006701E8 = {
 						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 174AC93A28EE84F800E32729;
 					};
 				};
 			};
@@ -250,7 +261,7 @@
 			projectRoot = "";
 			targets = (
 				174AC93A28EE84F800E32729 /* Senolop */,
-				174AC95028EE84FA00E32729 /* SenolopTests */,
+				1759791628F32677006701E8 /* SenolopTests */,
 			);
 		};
 /* End PBXProject section */
@@ -265,7 +276,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		174AC94F28EE84FA00E32729 /* Resources */ = {
+		1759791528F32677006701E8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -297,21 +308,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		174AC94D28EE84FA00E32729 /* Sources */ = {
+		1759791328F32677006701E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				174AC95628EE84FA00E32729 /* SenolopTests.swift in Sources */,
+				1759791A28F32678006701E8 /* SenolopTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		174AC95328EE84FA00E32729 /* PBXTargetDependency */ = {
+		1759791C28F32678006701E8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 174AC93A28EE84F800E32729 /* Senolop */;
-			targetProxy = 174AC95228EE84FA00E32729 /* PBXContainerItemProxy */;
+			targetProxy = 1759791B28F32678006701E8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -505,45 +516,44 @@
 			};
 			name = Release;
 		};
-		174AC96928EE84FA00E32729 /* Debug */ = {
+		1759791E28F32678006701E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 55XL2R5538;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.SenolopTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Senolop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Senolop";
 			};
 			name = Debug;
 		};
-		174AC96A28EE84FA00E32729 /* Release */ = {
+		1759791F28F32678006701E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 55XL2R5538;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.SenolopTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Senolop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Senolop";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -568,11 +578,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		174AC96828EE84FA00E32729 /* Build configuration list for PBXNativeTarget "SenolopTests" */ = {
+		1759791D28F32678006701E8 /* Build configuration list for PBXNativeTarget "SenolopTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				174AC96928EE84FA00E32729 /* Debug */,
-				174AC96A28EE84FA00E32729 /* Release */,
+				1759791E28F32678006701E8 /* Debug */,
+				1759791F28F32678006701E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
