@@ -16,17 +16,17 @@ struct BasicKeyboard: View {
                 Button {
                     calculator.swapPressed()
                 } label: {
-                    Text("x↔y")
+                    ButtonLabel("x↔y")
                 }
                 Button {
                     calculator.rowDownPressed()
                 } label: {
-                    Text("R↓")
+                    ButtonLabel("R↓")
                 }
                 Button {
                     calculator.rowUpPressed()
                 } label: {
-                    Text("R↑")
+                    ButtonLabel("R↑")
                 }
                 Button {
                     calculator.deletePressed()
@@ -34,7 +34,6 @@ struct BasicKeyboard: View {
                     Image(systemName: "delete.backward")
                         .accessibilityHint("Delete the current row.")
                 }
-                
             }
             
             HStack {
@@ -42,31 +41,31 @@ struct BasicKeyboard: View {
                     Button {
                         calculator.acPressed()
                     } label: {
-                        Text("AC")
+                        ButtonLabel("AC")
                     }
                 } else {
                     Button {
                         calculator.cPressed()
                     } label: {
-                        Text("C")
+                        ButtonLabel("C")
                     }
                 }
                 
                 Button {
                     calculator.invertSignalPressed()
                 } label: {
-                    Text("±")
+                    ButtonLabel("±")
                 }
                 Button {
                     calculator.moduloPressed()
                 } label: {
-                    Text("%")
+                    ButtonLabel("%")
                 }
                 .disabled(true)
                 Button {
                     calculator.divisionPressed()
                 } label: {
-                    Text("÷")
+                    ButtonLabel("÷")
                 }
             }
             
@@ -76,17 +75,22 @@ struct BasicKeyboard: View {
                         Button {
                             calculator.digitPressed(7)
                         } label: {
-                            Text("7")
+                            ButtonLabel("7")
                         }
                         Button {
                             calculator.digitPressed(8)
                         } label: {
-                            Text("8")
+                            ButtonLabel("8")
                         }
                         Button {
                             calculator.digitPressed(9)
                         } label: {
-                            Text("9")
+                            ButtonLabel("9")
+                        }
+                        Button {
+                            calculator.multiplicationPressed()
+                        } label: {
+                            ButtonLabel("×")
                         }
                     }
                     
@@ -94,17 +98,22 @@ struct BasicKeyboard: View {
                         Button {
                             calculator.digitPressed(4)
                         } label: {
-                            Text("4")
+                            ButtonLabel("4")
                         }
                         Button {
                             calculator.digitPressed(5)
                         } label: {
-                            Text("5")
+                            ButtonLabel("5")
                         }
                         Button {
                             calculator.digitPressed(6)
                         } label: {
-                            Text("6")
+                            ButtonLabel("6")
+                        }
+                        Button {
+                            calculator.minusPressed()
+                        } label: {
+                            ButtonLabel("−")
                         }
                     }
                     
@@ -112,17 +121,22 @@ struct BasicKeyboard: View {
                         Button {
                             calculator.digitPressed(1)
                         } label: {
-                            Text("1")
+                            ButtonLabel("1")
                         }
                         Button {
                             calculator.digitPressed(2)
                         } label: {
-                            Text("2")
+                            ButtonLabel("2")
                         }
                         Button {
                             calculator.digitPressed(3)
                         } label: {
-                            Text("3")
+                            ButtonLabel("3")
+                        }
+                        Button {
+                            calculator.plusPressed()
+                        } label: {
+                            ButtonLabel("+")
                         }
                     }
                     
@@ -130,36 +144,18 @@ struct BasicKeyboard: View {
                         Button {
                             calculator.digitPressed(0)
                         } label: {
-                            Text("0")
+                            ButtonLabel("0")
                         }
-                        
                         Button {
                             calculator.commaPressed()
                         } label: {
                             Text(".")
                         }
-                    }
-                }
-                VStack {
-                    Button {
-                        calculator.multiplicationPressed()
-                    } label: {
-                        Text("×")
-                    }
-                    Button {
-                        calculator.minusPressed()
-                    } label: {
-                        Text("−")
-                    }
-                    Button {
-                        calculator.plusPressed()
-                    } label: {
-                        Text("+")
-                    }
-                    Button {
-                        calculator.returnPressed()
-                    } label: {
-                        Text("⏎")
+                        Button {
+                            calculator.returnPressed()
+                        } label: {
+                            Text("⏎")
+                        }
                     }
                 }
             }

@@ -18,56 +18,56 @@ struct ProgrammerKeyboard: View {
                         Button {
                             calculator.andPressed()
                         } label: {
-                            Text("AND")
+                            ButtonLabel("AND")
                         }
                         Button {
                             calculator.norPressed()
                         } label: {
-                            Text("NOR")
+                            ButtonLabel("NOR")
                         }
                         Button {
                             calculator.leftShiftPressed()
                         } label: {
-                            Text("<<")
+                            ButtonLabel("<<")
                         }
                         Button {
                             calculator.xLeftShiftYPressed()
                         } label: {
-                            Text("X<<Y")
+                            ButtonLabel("X<<Y")
                         }
                     }
                     VStack {
                         Button {
                             calculator.orPressed()
                         } label: {
-                            Text("OR")
+                            ButtonLabel("OR")
                         }
                         Button {
                             calculator.xorPressed()
                         } label: {
-                            Text("XOR")
+                            ButtonLabel("XOR")
                         }
                         Button {
                             calculator.rightShiftPressed()
                         } label: {
-                            Text(">>")
+                            ButtonLabel(">>")
                         }
                         Button {
                             calculator.xRightShiftYPressed()
                         } label: {
-                            Text("X>>Y")
+                            ButtonLabel("X>>Y")
                         }
                     }
                 }
                 Button {
                     calculator.invertBytePressed()
                 } label: {
-                    Text("inverter byte")
+                    ButtonLabel("inverter byte")
                 }
                 Button {
                     calculator.invertWordPressed()
                 } label: {
-                    Text("inverter palavra")
+                    ButtonLabel("inverter palavra")
                 }
             }
             NumericProgrammerKeyboard(calculator: $calculator)
@@ -77,63 +77,63 @@ struct ProgrammerKeyboard: View {
                         Button {
                             calculator.acPressed()
                         } label: {
-                            Text("AC")
+                            ButtonLabel("AC")
                         }
                         Button {
                             calculator.rolPressed()
                         } label: {
-                            Text("RoL")
+                            ButtonLabel("RoL")
                         }
                         Button {
                             
                         } label: {
-                            Text("2´s")
+                            ButtonLabel("2´s")
                         }
                         .disabled(true)
                         Button {
                             calculator.divisionPressed()
                         } label: {
-                            Text("÷")
+                            ButtonLabel("÷")
                         }
                         Button {
                             calculator.multiplicationPressed()
                         } label: {
-                            Text("×")
+                            ButtonLabel("×")
                         }
                     }
                     VStack {
                         Button {
                             calculator.cPressed()
                         } label: {
-                            Text("C")
+                            ButtonLabel("C")
                         }
                         Button {
                             calculator.rorPressed()
                         } label: {
-                            Text("RoR")
+                            ButtonLabel("RoR")
                         }
                         Button {
                             
                         } label: {
-                            Text("1´s")
+                            ButtonLabel("1´s")
                         }
                         .disabled(true)
                         Button {
                             calculator.minusPressed()
                         } label: {
-                            Text("−")
+                            ButtonLabel("−")
                         }
                         Button {
                             calculator.plusPressed()
                         } label: {
-                            Text("+")
+                            ButtonLabel("+")
                         }
                     }
                 }
                 Button {
                     calculator.returnPressed()
                 } label: {
-                    Text("⏎")
+                    ButtonLabel("⏎")
                 }
             }
         }

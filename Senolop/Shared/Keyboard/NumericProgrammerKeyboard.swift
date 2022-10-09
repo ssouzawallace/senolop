@@ -16,102 +16,102 @@ struct NumericProgrammerKeyboard: View {
                 Button {
                     calculator.hexDigitPressed("D")
                 } label: {
-                    Text("D")
+                    ButtonLabel("D")
                 }
                 Button {
                     calculator.hexDigitPressed("E")
                 } label: {
-                    Text("E")
+                    ButtonLabel("E")
                 }
                 Button {
                     calculator.hexDigitPressed("F")
                 } label: {
-                    Text("F")
+                    ButtonLabel("F")
                 }
             }
             HStack {
                 Button {
                     calculator.hexDigitPressed("A")
                 } label: {
-                    Text("A")
+                    ButtonLabel("A")
                 }
                 Button {
                     calculator.hexDigitPressed("B")
                 } label: {
-                    Text("B")
+                    ButtonLabel("B")
                 }
                 Button {
                     calculator.hexDigitPressed("C")
                 } label: {
-                    Text("C")
+                    ButtonLabel("C")
                 }
             }
             HStack {
                 Button {
                     calculator.digitPressed(7)
                 } label: {
-                    Text("7")
+                    ButtonLabel("7")
                 }
                 Button {
                     calculator.digitPressed(8)
                 } label: {
-                    Text("8")
+                    ButtonLabel("8")
                 }
                 Button {
                     calculator.digitPressed(9)
                 } label: {
-                    Text("9")
+                    ButtonLabel("9")
                 }
             }
             HStack {
                 Button {
                     calculator.digitPressed(4)
                 } label: {
-                    Text("4")
+                    ButtonLabel("4")
                 }
                 Button {
                     calculator.digitPressed(5)
                 } label: {
-                    Text("5")
+                    ButtonLabel("5")
                 }
                 Button {
                     calculator.digitPressed(6)
                 } label: {
-                    Text("6")
+                    ButtonLabel("6")
                 }
             }
             HStack {
                 Button {
                     calculator.digitPressed(1)
                 } label: {
-                    Text("1")
+                    ButtonLabel("1")
                 }
                 Button {
                     calculator.digitPressed(2)
                 } label: {
-                    Text("2")
+                    ButtonLabel("2")
                 }
                 Button {
                     calculator.digitPressed(3)
                 } label: {
-                    Text("3")
+                    ButtonLabel("3")
                 }
             }
             HStack {
                 Button {
                     calculator.ffPressed()
                 } label: {
-                    Text("FF")
+                    ButtonLabel("FF")
                 }
                 Button {
                     calculator.digitPressed(0)
                 } label: {
-                    Text("0")
+                    ButtonLabel("0")
                 }
                 Button {
                     calculator.zeroZeroPressed()
                 } label: {
-                    Text("00")
+                    ButtonLabel("00")
                 }
             }
         }

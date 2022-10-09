@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17080FE628EF6D76002D7118 /* SenolopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17080FE528EF6D76002D7118 /* SenolopUITests.swift */; };
+		17080FE828EF6D76002D7118 /* SenolopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17080FE728EF6D76002D7118 /* SenolopUITestsLaunchTests.swift */; };
+		1708BDE828F1AAB2004C1013 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708BDE728F1AAB2004C1013 /* WelcomeView.swift */; };
+		1708BDEA28F1AB8C004C1013 /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708BDE928F1AB8C004C1013 /* ButtonLabel.swift */; };
 		174AC93F28EE84F800E32729 /* SenolopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC93E28EE84F800E32729 /* SenolopApp.swift */; };
 		174AC94128EE84F800E32729 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC94028EE84F800E32729 /* Persistence.swift */; };
 		174AC94428EE84F800E32729 /* Senolop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 174AC94228EE84F800E32729 /* Senolop.xcdatamodeld */; };
@@ -38,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1708BDE728F1AAB2004C1013 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		1708BDE928F1AB8C004C1013 /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
 		174AC93B28EE84F800E32729 /* Senolop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Senolop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		174AC93E28EE84F800E32729 /* SenolopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopApp.swift; sourceTree = "<group>"; };
 		174AC94028EE84F800E32729 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -82,6 +88,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		176C713628F17D7B00BE97F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -110,10 +123,10 @@
 		174AC93D28EE84F800E32729 /* Senolop */ = {
 			isa = PBXGroup;
 			children = (
+				174AC96E28EE85C700E32729 /* Shared */,
 				174AC93E28EE84F800E32729 /* SenolopApp.swift */,
 				174AC97228EE85C700E32729 /* Calculator.swift */,
 				174AC94028EE84F800E32729 /* Persistence.swift */,
-				174AC96E28EE85C700E32729 /* Shared */,
 				174AC96F28EE85C700E32729 /* Assets.xcassets */,
 				174AC94928EE84FA00E32729 /* Senolop.entitlements */,
 				174AC94228EE84F800E32729 /* Senolop.xcdatamodeld */,
@@ -148,6 +161,7 @@
 				174AC97428EE85C700E32729 /* BinariesDisplay.swift */,
 				174AC97628EE85C700E32729 /* Display.swift */,
 				179F3D1228EF644D00445748 /* Keyboard */,
+				1708BDE728F1AAB2004C1013 /* WelcomeView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -178,6 +192,25 @@
 			path = fastlane;
 			sourceTree = "<group>";
 		};
+		176C710C28F17D1700BE97F8 /* Senolop Apple Watch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				176C715428F1839600BE97F8 /* Assets.xcassets */,
+				176C710D28F17D1700BE97F8 /* Senolop_Apple_WatchApp.swift */,
+				176C710F28F17D1700BE97F8 /* ContentView.swift */,
+				176C711328F17D1900BE97F8 /* Preview Content */,
+			);
+			path = "Senolop Apple Watch Watch App";
+			sourceTree = "<group>";
+		};
+		176C711328F17D1900BE97F8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				176C711428F17D1900BE97F8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		179F3D1228EF644D00445748 /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +219,7 @@
 				174AC97328EE85C700E32729 /* ScientificKeyboard.swift */,
 				174AC97828EE85C700E32729 /* ProgrammerKeyboard.swift */,
 				17522ED428EF5AFA006A178B /* BasicKeyboard.swift */,
+				1708BDE928F1AB8C004C1013 /* ButtonLabel.swift */,
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
@@ -228,6 +262,23 @@
 			productReference = 1759791728F32677006701E8 /* SenolopTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		176C713828F17D7B00BE97F8 /* Senolop Apple Watch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 176C714428F17D7D00BE97F8 /* Build configuration list for PBXNativeTarget "Senolop Apple Watch Watch App" */;
+			buildPhases = (
+				176C713528F17D7B00BE97F8 /* Sources */,
+				176C713628F17D7B00BE97F8 /* Frameworks */,
+				176C713728F17D7B00BE97F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Senolop Apple Watch Watch App";
+			productName = "Senolop Apple Watch Watch App";
+			productReference = 176C713928F17D7B00BE97F8 /* Senolop Apple Watch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -244,6 +295,9 @@
 					1759791628F32677006701E8 = {
 						CreatedOnToolsVersion = 14.0.1;
 						TestTargetID = 174AC93A28EE84F800E32729;
+					};
+					176C713828F17D7B00BE97F8 = {
+						CreatedOnToolsVersion = 14.0.1;
 					};
 				};
 			};
@@ -283,6 +337,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		176C713728F17D7B00BE97F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				176C715528F1839600BE97F8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -293,8 +355,10 @@
 				174AC93F28EE84F800E32729 /* SenolopApp.swift in Sources */,
 				17606B7228F11AD9002031DC /* CalculatorView.swift in Sources */,
 				174AC98128EE85C700E32729 /* SubscriptionView.swift in Sources */,
+				1708BDE828F1AAB2004C1013 /* WelcomeView.swift in Sources */,
 				174AC98728EE85C700E32729 /* ContentView.swift in Sources */,
 				174AC98328EE85C700E32729 /* NumericProgrammerKeyboard.swift in Sources */,
+				1708BDEA28F1AB8C004C1013 /* ButtonLabel.swift in Sources */,
 				174AC98028EE85C700E32729 /* BinariesDisplay.swift in Sources */,
 				174AC98628EE85C700E32729 /* IntroView.swift in Sources */,
 				174AC98228EE85C700E32729 /* Display.swift in Sources */,
@@ -313,6 +377,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1759791A28F32678006701E8 /* SenolopTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		176C713528F17D7B00BE97F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				176C715128F1820800BE97F8 /* ContentView.swift in Sources */,
+				176C715228F182EA00BE97F8 /* Senolop_Apple_WatchApp.swift in Sources */,
+				176C714C28F1811600BE97F8 /* Calculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,8 +545,8 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TVOS_DEPLOYMENT_TARGET = 13.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TVOS_DEPLOYMENT_TARGET = 15.0;
 			};
 			name = Debug;
 		};
@@ -511,8 +585,8 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TVOS_DEPLOYMENT_TARGET = 13.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TVOS_DEPLOYMENT_TARGET = 15.0;
 			};
 			name = Release;
 		};
@@ -583,6 +657,15 @@
 			buildConfigurations = (
 				1759791E28F32678006701E8 /* Debug */,
 				1759791F28F32678006701E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		176C714428F17D7D00BE97F8 /* Build configuration list for PBXNativeTarget "Senolop Apple Watch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				176C714528F17D7D00BE97F8 /* Debug */,
+				176C714628F17D7D00BE97F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

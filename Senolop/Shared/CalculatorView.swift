@@ -27,8 +27,6 @@ struct CalculatorView: View {
         }
         .padding()
         .foregroundColor(buttonColor)
-        .background(Color("BackgroundColor"))
-
     }
 }
 

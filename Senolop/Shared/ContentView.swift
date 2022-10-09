@@ -14,20 +14,25 @@ struct ContentView: View {
         case fun
     }
     @State private var buttonColor: Color = .accentColor
-    @State private var mode: RPNCalculator.VisualizationMode = .programmer
+    @State private var mode: RPNCalculator.VisualizationMode = .basic
     @State private var calculator = RPNCalculator()
+    @State private var backgroundColorName = "BackgroundColor 1"
     
     func copy() {
-        UIPasteboard.general.string = calculator.stack.enumerated().reduce("", { partialResult, currentItem in
-            partialResult + "\n" + "\(currentItem.offset): \(currentItem.element.value)"
-        })
     }
     
     func back() {
     }
     
     func switchStyle(_ style: Style) {
-        
+        switch style {
+        case .adult:
+            backgroundColorName = "BackgroundColor 1"
+        case .kids:
+            backgroundColorName = "BackgroundColor 2"
+        case .fun:
+            backgroundColorName = "BackgroundColor 3"
+        }
     }
     
     func switchStyle1() {
@@ -47,13 +52,12 @@ struct ContentView: View {
             if #available(macOS 13, *) {
                 Display(mode: $mode, calculator: $calculator)
                     .padding()
-                ColorPicker("Button color", selection: $buttonColor)
-                    .padding()
             }
             CalculatorView(mode: $mode,
                            calculator: $calculator,
                            buttonColor: $buttonColor)
         }
+        .background(Color(backgroundColorName))
         .navigationTitle("Senolop")
         .toolbar {
             ToolbarItemGroup {
