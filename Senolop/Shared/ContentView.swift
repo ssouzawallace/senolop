@@ -48,7 +48,7 @@ struct ContentView: View {
     }
     
     var body: some View {
-        NavigationSplitView(sidebar: {
+        NavigationView {
             VStack {
                 Text("Senolop")
                 Display(mode: $mode, calculator: $calculator)
@@ -56,19 +56,7 @@ struct ContentView: View {
                                calculator: $calculator,
                                buttonColor: $buttonColor)
             }
-        }, content: {
-            VStack {
-                Display(mode: $mode, calculator: $calculator)
-                    .padding()
-                CalculatorView(mode: $mode,
-                               calculator: $calculator,
-                               buttonColor: $buttonColor)
-            }
-            .padding()
-        }, detail: {
-            Display(mode: $mode, calculator: $calculator)
-        })
-        
+        }
         .padding()
         .background(Color(backgroundColorName))
         .navigationTitle("Senolop")
