@@ -20,6 +20,7 @@ struct CalculatorView: View {
                 Text(RPNCalculator.VisualizationMode.scientific.rawValue).tag(RPNCalculator.VisualizationMode.scientific)
                 Text(RPNCalculator.VisualizationMode.programmer.rawValue).tag(RPNCalculator.VisualizationMode.programmer)
             }
+            .padding()
             .pickerStyle(.segmented)
             
             Keyboard(calculator: $calculator, mode: mode)
