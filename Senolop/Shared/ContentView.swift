@@ -49,13 +49,13 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
+            if #available(macOS 12, *) {
                 Text("Senolop")
                 Display(mode: $mode, calculator: $calculator)
-                CalculatorView(mode: $mode,
-                               calculator: $calculator,
-                               buttonColor: $buttonColor)
             }
+            CalculatorView(mode: $mode,
+                           calculator: $calculator,
+                           buttonColor: $buttonColor)
         }
         .padding()
         .background(Color(backgroundColorName))
