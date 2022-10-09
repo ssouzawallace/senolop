@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17080FE628EF6D76002D7118 /* SenolopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17080FE528EF6D76002D7118 /* SenolopUITests.swift */; };
-		17080FE828EF6D76002D7118 /* SenolopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17080FE728EF6D76002D7118 /* SenolopUITestsLaunchTests.swift */; };
 		174AC93F28EE84F800E32729 /* SenolopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC93E28EE84F800E32729 /* SenolopApp.swift */; };
 		174AC94128EE84F800E32729 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC94028EE84F800E32729 /* Persistence.swift */; };
 		174AC94428EE84F800E32729 /* Senolop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 174AC94228EE84F800E32729 /* Senolop.xcdatamodeld */; };
@@ -26,18 +24,10 @@
 		174AC98628EE85C700E32729 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97A28EE85C700E32729 /* IntroView.swift */; };
 		174AC98728EE85C700E32729 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97B28EE85C700E32729 /* ContentView.swift */; };
 		17606B7228F11AD9002031DC /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17606B7128F11AD9002031DC /* CalculatorView.swift */; };
-		176C710628F1662600BE97F8 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176C710228F165B700BE97F8 /* SnapshotHelper.swift */; };
 		179F3D1128EF644000445748 /* BasicKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522ED428EF5AFA006A178B /* BasicKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		17080FE928EF6D76002D7118 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 174AC93328EE84F800E32729 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 174AC93A28EE84F800E32729;
-			remoteInfo = Senolop;
-		};
 		174AC95228EE84FA00E32729 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 174AC93328EE84F800E32729 /* Project object */;
@@ -48,9 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		17080FE328EF6D75002D7118 /* SenolopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SenolopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		17080FE528EF6D76002D7118 /* SenolopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopUITests.swift; sourceTree = "<group>"; };
-		17080FE728EF6D76002D7118 /* SenolopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		174AC93B28EE84F800E32729 /* Senolop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Senolop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		174AC93E28EE84F800E32729 /* SenolopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopApp.swift; sourceTree = "<group>"; };
 		174AC94028EE84F800E32729 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -75,20 +62,11 @@
 		17522ED428EF5AFA006A178B /* BasicKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicKeyboard.swift; sourceTree = "<group>"; };
 		17606B7128F11AD9002031DC /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		176C710128F165B700BE97F8 /* Appfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
-		176C710228F165B700BE97F8 /* SnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		176C710328F165B700BE97F8 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
 		176C710428F165B700BE97F8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		176C710528F165B700BE97F8 /* Snapfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Snapfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		17080FE028EF6D75002D7118 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		174AC93828EE84F800E32729 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -106,15 +84,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		17080FE428EF6D76002D7118 /* SenolopUITests */ = {
-			isa = PBXGroup;
-			children = (
-				17080FE528EF6D76002D7118 /* SenolopUITests.swift */,
-				17080FE728EF6D76002D7118 /* SenolopUITestsLaunchTests.swift */,
-			);
-			path = SenolopUITests;
-			sourceTree = "<group>";
-		};
 		174AC93228EE84F800E32729 = {
 			isa = PBXGroup;
 			children = (
@@ -122,7 +91,6 @@
 				176C710028F165B700BE97F8 /* fastlane */,
 				174AC93D28EE84F800E32729 /* Senolop */,
 				174AC95428EE84FA00E32729 /* SenolopTests */,
-				17080FE428EF6D76002D7118 /* SenolopUITests */,
 				174AC93C28EE84F800E32729 /* Products */,
 				174CAE1028F14AE900901A71 /* Frameworks */,
 			);
@@ -133,7 +101,6 @@
 			children = (
 				174AC93B28EE84F800E32729 /* Senolop.app */,
 				174AC95128EE84FA00E32729 /* SenolopTests.xctest */,
-				17080FE328EF6D75002D7118 /* SenolopUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,10 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				176C710128F165B700BE97F8 /* Appfile */,
-				176C710228F165B700BE97F8 /* SnapshotHelper.swift */,
 				176C710328F165B700BE97F8 /* Fastfile */,
 				176C710428F165B700BE97F8 /* README.md */,
-				176C710528F165B700BE97F8 /* Snapfile */,
 			);
 			path = fastlane;
 			sourceTree = "<group>";
@@ -218,24 +183,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		17080FE228EF6D75002D7118 /* SenolopUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 17080FEB28EF6D76002D7118 /* Build configuration list for PBXNativeTarget "SenolopUITests" */;
-			buildPhases = (
-				17080FDF28EF6D75002D7118 /* Sources */,
-				17080FE028EF6D75002D7118 /* Frameworks */,
-				17080FE128EF6D75002D7118 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				17080FEA28EF6D76002D7118 /* PBXTargetDependency */,
-			);
-			name = SenolopUITests;
-			productName = SenolopUITests;
-			productReference = 17080FE328EF6D75002D7118 /* SenolopUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		174AC93A28EE84F800E32729 /* Senolop */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 174AC96528EE84FA00E32729 /* Build configuration list for PBXNativeTarget "Senolop" */;
@@ -281,10 +228,6 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					17080FE228EF6D75002D7118 = {
-						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = 174AC93A28EE84F800E32729;
-					};
 					174AC93A28EE84F800E32729 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -308,19 +251,11 @@
 			targets = (
 				174AC93A28EE84F800E32729 /* Senolop */,
 				174AC95028EE84FA00E32729 /* SenolopTests */,
-				17080FE228EF6D75002D7118 /* SenolopUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		17080FE128EF6D75002D7118 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		174AC93928EE84F800E32729 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -340,16 +275,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		17080FDF28EF6D75002D7118 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				17080FE628EF6D76002D7118 /* SenolopUITests.swift in Sources */,
-				17080FE828EF6D76002D7118 /* SenolopUITestsLaunchTests.swift in Sources */,
-				176C710628F1662600BE97F8 /* SnapshotHelper.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		174AC93728EE84F800E32729 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -383,11 +308,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		17080FEA28EF6D76002D7118 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 174AC93A28EE84F800E32729 /* Senolop */;
-			targetProxy = 17080FE928EF6D76002D7118 /* PBXContainerItemProxy */;
-		};
 		174AC95328EE84FA00E32729 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 174AC93A28EE84F800E32729 /* Senolop */;
@@ -396,47 +316,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		17080FEC28EF6D76002D7118 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 55XL2R5538;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.SenolopUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Senolop;
-			};
-			name = Debug;
-		};
-		17080FED28EF6D76002D7118 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 55XL2R5538;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.SenolopUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Senolop;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		174AC96328EE84FA00E32729 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -553,7 +432,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Senolop/Senolop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_ASSET_PATHS = "\"Senolop/Preview Content\"";
 				DEVELOPMENT_TEAM = 55XL2R5538;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -593,7 +472,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Senolop/Senolop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_ASSET_PATHS = "\"Senolop/Preview Content\"";
 				DEVELOPMENT_TEAM = 55XL2R5538;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -671,15 +550,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		17080FEB28EF6D76002D7118 /* Build configuration list for PBXNativeTarget "SenolopUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				17080FEC28EF6D76002D7118 /* Debug */,
-				17080FED28EF6D76002D7118 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		174AC93628EE84F800E32729 /* Build configuration list for PBXProject "Senolop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
