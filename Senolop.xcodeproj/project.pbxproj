@@ -25,7 +25,6 @@
 		174AC98528EE85C700E32729 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97928EE85C700E32729 /* Keyboard.swift */; };
 		174AC98628EE85C700E32729 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97A28EE85C700E32729 /* IntroView.swift */; };
 		174AC98728EE85C700E32729 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97B28EE85C700E32729 /* ContentView.swift */; };
-		174CAE1228F14AEB00901A71 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174CAE1128F14AEA00901A71 /* Charts.framework */; platformFilters = (ios, tvos, ); };
 		17606B7228F11AD9002031DC /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17606B7128F11AD9002031DC /* CalculatorView.swift */; };
 		176C710628F1662600BE97F8 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176C710228F165B700BE97F8 /* SnapshotHelper.swift */; };
 		179F3D1128EF644000445748 /* BasicKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522ED428EF5AFA006A178B /* BasicKeyboard.swift */; };
@@ -94,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				174CAE1228F14AEB00901A71 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
