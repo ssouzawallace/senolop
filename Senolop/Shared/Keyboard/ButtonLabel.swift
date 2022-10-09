@@ -9,18 +9,24 @@ import SwiftUI
 
 struct ButtonLabel: View {
     let content: String
-    
+    var attributedContent: AttributedString {
+        AttributedString(stringLiteral: content)
+    }
     init(_ content: String) {
         self.content = content
     }
     
     var body: some View {
-        Image(systemName: content + ".circle.fill")
-            .padding()
-            .lineLimit(1)
-            .frame(maxWidth: .infinity)
-            .scaledToFit()
-    }
+        Label {
+            Text(attributedContent)
+        } icon: {
+//            Image(systemName: content + ".circle.fill")
+        }        
+        .padding()
+        .lineLimit(1)
+        .frame(maxWidth: .infinity)
+        .scaledToFit()
+}
 }
 
 struct MyButton_Previews: PreviewProvider {
