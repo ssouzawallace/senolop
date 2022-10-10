@@ -15,14 +15,17 @@ struct CalculatorView: View {
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
             Display(mode: $mode, calculator: $calculator)
+                .padding()
+            
             Picker("Mode", selection: $mode) {
                 Text(RPNCalculator.VisualizationMode.basic.rawValue).tag(RPNCalculator.VisualizationMode.basic)
                 Text(RPNCalculator.VisualizationMode.scientific.rawValue).tag(RPNCalculator.VisualizationMode.scientific)
                 Text(RPNCalculator.VisualizationMode.programmer.rawValue).tag(RPNCalculator.VisualizationMode.programmer)
             }
+            .pickerStyle(.segmented)
             .padding()
-            .pickerStyle(.segmented)            
-            Keyboard(calculator: $calculator, mode: mode)
+            
+            Keyboard(calculator: $calculator, mode: mode)                
                 .padding()
         }
         .foregroundColor(buttonColor)
