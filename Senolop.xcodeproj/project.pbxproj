@@ -69,6 +69,8 @@
 		176C710128F165B700BE97F8 /* Appfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
 		176C710328F165B700BE97F8 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
 		176C710428F165B700BE97F8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		179A647828F4073A00F1E797 /* deploy.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = deploy.yml; sourceTree = "<group>"; };
+		179A647928F4073A00F1E797 /* dependabot.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = dependabot.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		174AC93228EE84F800E32729 = {
 			isa = PBXGroup;
 			children = (
+				179A647628F4073A00F1E797 /* .github */,
 				174AC98828EF285000E32729 /* README.md */,
 				176C710028F165B700BE97F8 /* fastlane */,
 				174AC93D28EE84F800E32729 /* Senolop */,
@@ -189,6 +192,23 @@
 				176C710428F165B700BE97F8 /* README.md */,
 			);
 			path = fastlane;
+			sourceTree = "<group>";
+		};
+		179A647628F4073A00F1E797 /* .github */ = {
+			isa = PBXGroup;
+			children = (
+				179A647728F4073A00F1E797 /* workflows */,
+				179A647928F4073A00F1E797 /* dependabot.yml */,
+			);
+			path = .github;
+			sourceTree = "<group>";
+		};
+		179A647728F4073A00F1E797 /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				179A647828F4073A00F1E797 /* deploy.yml */,
+			);
+			path = workflows;
 			sourceTree = "<group>";
 		};
 		179F3D1228EF644D00445748 /* Keyboard */ = {
