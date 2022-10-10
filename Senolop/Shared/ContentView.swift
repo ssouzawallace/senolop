@@ -49,6 +49,10 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
+            if #available(macOS 10, *) {
+                Display(mode: $mode,
+                        calculator: $calculator)
+            }
             CalculatorView(mode: $mode,
                            calculator: $calculator,
                            buttonColor: $buttonColor)
