@@ -49,13 +49,17 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            if #available(macOS 10, *) {
-                Display(mode: $mode,
-                        calculator: $calculator)
-            }
+#if os(macOS)
+            Display(mode: $mode,
+                    calculator: $calculator)
             CalculatorView(mode: $mode,
                            calculator: $calculator,
                            buttonColor: $buttonColor)
+#else
+            CalculatorView(mode: $mode,
+                           calculator: $calculator,
+                           buttonColor: $buttonColor)
+#endif
         }
         .background(Color(backgroundColorName))
         .navigationTitle("Senolop")
