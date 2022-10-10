@@ -13,295 +13,96 @@ struct ScientificKeyboard: View {
     var body: some View {
         HStack {
             VStack {
-                Button {
-                } label: {
-                    ButtonLabel("(")
-                }
-                .disabled(true)
-
-                if calculator.moreFunctions {
-                    Button {
-                        calculator.lessFunctionsPressed()
-                    } label: {
-                        ButtonLabel("2nd")
-                    }
-                    .background(.orange)
-                } else {
-                    Button {
-                        calculator.moreFunctionsPressed()
-                    } label: {
-                        ButtonLabel("2nd")
-                    }
-                }
-                
-                Button {
-                    calculator.inversePressed()
-                } label: {
-                    ButtonLabel("1/x")
-                }
-                
-                Button {
-                    calculator.xFactorialPressed()
-                } label: {
-                    ButtonLabel("x!")
-                }
-                
-                
+                CalculatorButton(action: { calculator.buttonPressed() }, labelContent: "(")
+                CalculatorButton(action: { calculator.lessFunctionsPressed() }, labelContent: "2nd")
+                CalculatorButton(action: { calculator.buttonPressed() }, labelContent: "?")
+                CalculatorButton(action: { calculator.inversePressed() }, labelContent: "1/2")
+                CalculatorButton(action: { calculator.xFactorialPressed() }, labelContent: "x!")
+                                
                 if calculator.mode == .deg {
-                    Button {
-                        calculator.radPressed()
-                    } label: {
-                        ButtonLabel("Rad")
-                    }
+                    CalculatorButton(action: { calculator.radPressed() }, labelContent: "Rad")
+                }
+                CalculatorButton(action: { calculator.degPressed() }, labelContent: "Deg")
+            }
+            
+            VStack {
+                CalculatorButton(action: { calculator.buttonPressed() }, labelContent: ")")
+                CalculatorButton(action: { calculator.x2Pressed() }, labelContent: "x^2")
+                CalculatorButton(action: { calculator.sqrtPressed() }, labelContent: "sqrt(x)")
+                if calculator.moreFunctions {
+                    CalculatorButton(action: { calculator.sinInvPressed() }, labelContent: "sin⁻¹")
+                    CalculatorButton(action: { calculator.sinhInvPressed() }, labelContent: "sinh⁻¹")
                 } else {
-                    Button {
-                        calculator.degPressed()
-                    } label: {
-                        ButtonLabel("Deg")
-                    }
+                    CalculatorButton(action: { calculator.sinPressed() }, labelContent: "sin")
+                    CalculatorButton(action: { calculator.sinhPressed() }, labelContent: "sinh")
                 }
             }
             
             VStack {
-                Button {
-                } label: {
-                    ButtonLabel(")")
-                }
-                .disabled(true)
-
-                Button {
-                    calculator.x2Pressed()
-                } label: {
-                    ButtonLabel("x^2")
-                }
+                CalculatorButton(action: { calculator.mcPressed() }, labelContent: "MC")
+                CalculatorButton(action: { calculator.x3Pressed() }, labelContent: "x^3")
+                CalculatorButton(action: { calculator.sqrt3Pressed() }, labelContent: "sqrt(x, 3)")
                 
-                Button {
-                    calculator.sqrtPressed()
-                } label: {
-                    ButtonLabel("sqrt(x)")
-                }
+                
+                
+                CalculatorButton(action: { calculator.sinhPressed() }, labelContent: "sinh")
+                CalculatorButton(action: { calculator.sinhPressed() }, labelContent: "sinh")
+                
+                
                 
                 if calculator.moreFunctions {
-                    Button {
-                        calculator.sinInvPressed()
-                    } label: {
-                        ButtonLabel("sin⁻¹")
-                    }
+                    CalculatorButton(action: { calculator.cosInvPressed() }, labelContent: "cos⁻¹")
+                    CalculatorButton(action: { calculator.coshInvPressed() }, labelContent: "cosh⁻¹")
                 } else {
-                    Button {
-                        calculator.sinPressed()
-                    } label: {
-                        ButtonLabel("sin")
-                    }
-                }
-                
-                if calculator.moreFunctions {
-                    Button {
-                        calculator.sinhInvPressed()
-                    } label: {
-                        ButtonLabel("sinh⁻¹")
-                    }
-                } else {
-                    Button {
-                        calculator.sinhPressed()
-                    } label: {
-                        ButtonLabel("sinh")
-                    }
+                    CalculatorButton(action: { calculator.cosPressed() }, labelContent: "cos")
+                    CalculatorButton(action: { calculator.coshPressed() }, labelContent: "cosh")
                 }
             }
             
             VStack {
-                Button {
-                    calculator.mcPressed()
-                } label: {
-                    ButtonLabel("mc")
-                }
-
-                Button {
-                    calculator.x3Pressed()
-                } label: {
-                    ButtonLabel("x^3")
-                }
-                
-                Button {
-                    calculator.sqrt3Pressed()
-                } label: {
-                    ButtonLabel("sqrt(x, 3)")
-                }
+                CalculatorButton(action: { calculator.mPlusPressed() }, labelContent: "M+")
+                CalculatorButton(action: { calculator.yxPressed() }, labelContent: "y^x")
+                CalculatorButton(action: { calculator.sqrtyxPressed() }, labelContent: "sqrt(y, x)")
                 
                 if calculator.moreFunctions {
-                    Button {
-                        calculator.cosInvPressed()
-                    } label: {
-                        ButtonLabel("cos⁻¹")
-                    }
+                    CalculatorButton(action: { calculator.tanInvPressed() }, labelContent: "tan⁻¹")
+                    CalculatorButton(action: { calculator.tanhInvPressed() }, labelContent: "tanh⁻¹")
                 } else {
-                    Button {
-                        calculator.cosPressed()
-                    } label: {
-                        ButtonLabel("cos")
-                    }
-                }
-                
-                if calculator.moreFunctions {
-                    Button {
-                        calculator.coshInvPressed()
-                    } label: {
-                        ButtonLabel("cosh⁻¹")
-                    }
-                } else {
-                    Button {
-                        calculator.coshPressed()
-                    } label: {
-                        ButtonLabel("cosh")
-                    }
+                    CalculatorButton(action: { calculator.tanPressed() }, labelContent: "tan")
+                    CalculatorButton(action: { calculator.tanhPressed() }, labelContent: "tanh")
                 }
             }
             
             VStack {
-                Button {
-                    calculator.mPlusPressed()
-                } label: {
-                    ButtonLabel("m+")
-                }
-
-                Button {
-                    calculator.yxPressed()
-                } label: {
-                    ButtonLabel("y^x")
-                }
+                CalculatorButton(action: { calculator.mMinusPressed() }, labelContent: "tan")
+                CalculatorButton(action: { calculator.xPoweredByYPressed() }, labelContent: "x^y")
+                CalculatorButton(action: { calculator.ePoweredByXPressed() }, labelContent: "e^x")
                 
-                Button {
-                    calculator.sqrtyxPressed()
-                } label: {
-                    ButtonLabel("sqrt(y, x)")
-                }
-                .disabled(true)
                 
                 if calculator.moreFunctions {
-                    Button {
-                        calculator.tanInvPressed()
-                    } label: {
-                        ButtonLabel("tan⁻¹")
-                    }
+                    CalculatorButton(action: { calculator.lnyPressed() }, labelContent: "lny")
                 } else {
-                    Button {
-                        calculator.tanPressed()
-                    } label: {
-                        ButtonLabel("tan")
-                    }
+                    CalculatorButton(action: { calculator.lognPressed() }, labelContent: "ln")
                 }
                 
-                if calculator.moreFunctions {
-                    Button {
-                        calculator.tanhInvPressed()
-                    } label: {
-                        ButtonLabel("tanh⁻¹")
-                    }
-                } else {
-                    Button {
-                        calculator.tanhPressed()
-                    } label: {
-                        ButtonLabel("tanh")
-                    }
-                }
+                CalculatorButton(action: { calculator.ePressed() }, labelContent: "e")
+                CalculatorButton(action: { calculator.piPressed() }, labelContent: "π")
             }
             
             VStack {
-                Button {
-                    calculator.mMinusPressed()
-                } label: {
-                    ButtonLabel("m-")
-                }
-
-                if calculator.moreFunctions {
-                    Button {
-                        calculator.xPoweredByYPressed()
-                    } label: {
-                        ButtonLabel("x^y")
-                    }
-                } else {
-                    Button {
-                        calculator.ePoweredByXPressed()
-                    } label: {
-                        ButtonLabel("e^x")
-                    }
-                }
-                
+                CalculatorButton(action: { calculator.mrPressed() }, labelContent: "MR")
+                CalculatorButton(action: { calculator.twoPoweredByXPressed() }, labelContent: "2ˆx")
+                CalculatorButton(action: { calculator.tenPoweredByXPressed() }, labelContent: "10^x")
+                CalculatorButton(action: { calculator.piPressed() }, labelContent: "π")
                 
                 if calculator.moreFunctions {
-                    Button {
-                        calculator.lnyPressed()
-                    } label: {
-                        ButtonLabel("lny")
-                    }
+                    CalculatorButton(action: { calculator.log2Pressed() }, labelContent: "log2")
                 } else {
-                    Button {
-                        calculator.lognPressed()
-                    } label: {
-                        ButtonLabel("ln")
-                    }
-                }
-                
-                Button {
-                    calculator.ePressed()
-                } label: {
-                    ButtonLabel("e")
-                }
-                
-                Button {
-                    calculator.piPressed()
-                } label: {
-                    ButtonLabel("π")
-                }
-            }
-            
-            VStack {
-                Button {
-                    calculator.mrPressed()
-                } label: {
-                    ButtonLabel("mr")
-                }
-
-                if calculator.moreFunctions {
-                    Button {
-                        calculator.twoPoweredByXPressed()
-                    } label: {
-                        ButtonLabel("2^x")
-                    }
-                } else {
-                    Button {
-                        calculator.tenPoweredByXPressed()
-                    } label: {
-                        ButtonLabel("10^x")
-                    }
-                }
-                
-                if calculator.moreFunctions {
-                    Button {
-                        calculator.log2Pressed()
-                    } label: {
-                        ButtonLabel("log2")
-                    }
-                } else {
-                    Button {
-                        calculator.log10Pressed()
-                    } label: {
-                        ButtonLabel("log10")
-                    }
+                    CalculatorButton(action: { calculator.log10Pressed() }, labelContent: "log10")
                 }
                                 
-                Button {
-                    calculator.eePressed()
-                } label: {
-                    ButtonLabel("EE")
-                }
-                
-                Button {
-                    calculator.randPressed()
-                } label: {
-                    ButtonLabel("Rand")
-                }
+                CalculatorButton(action: { calculator.eePressed() }, labelContent: "EE")
+                CalculatorButton(action: { calculator.randPressed() }, labelContent: "Rand")
             }
         }
         .fixedSize(horizontal: true, vertical: true)
