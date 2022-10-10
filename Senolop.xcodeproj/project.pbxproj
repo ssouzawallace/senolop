@@ -89,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		170B37A828F3DB4500FFF7CF /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				174AC97228EE85C700E32729 /* Calculator.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
 		174AC93228EE84F800E32729 = {
 			isa = PBXGroup;
 			children = (
@@ -114,9 +122,9 @@
 		174AC93D28EE84F800E32729 /* Senolop */ = {
 			isa = PBXGroup;
 			children = (
-				174AC96E28EE85C700E32729 /* Shared */,
 				174AC93E28EE84F800E32729 /* SenolopApp.swift */,
-				174AC97228EE85C700E32729 /* Calculator.swift */,
+				170B37A828F3DB4500FFF7CF /* Calculator */,
+				174AC96E28EE85C700E32729 /* Shared */,
 				174AC94028EE84F800E32729 /* Persistence.swift */,
 				174AC96F28EE85C700E32729 /* Assets.xcassets */,
 				174AC94928EE84FA00E32729 /* Senolop.entitlements */,
