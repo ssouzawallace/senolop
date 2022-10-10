@@ -74,11 +74,10 @@ struct CalculatorButton: View {
             performAction()
         }, label: {
             Text(attributedContent)
+                .padding()
                 .lineLimit(1)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .frame(maxWidth: .infinity)
         })
-        .font(.callout)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .buttonBorderShape(.roundedRectangle)
         .buttonStyle(.bordered)
     }
