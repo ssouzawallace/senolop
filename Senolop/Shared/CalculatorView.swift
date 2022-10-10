@@ -21,9 +21,9 @@ struct CalculatorView: View {
                 Text(RPNCalculator.VisualizationMode.programmer.rawValue).tag(RPNCalculator.VisualizationMode.programmer)
             }
             .padding()
-            .pickerStyle(.segmented)
-            
+            .pickerStyle(.segmented)            
             Keyboard(calculator: $calculator, mode: mode)
+                .padding()
         }
         .foregroundColor(buttonColor)
     }

@@ -13,155 +13,54 @@ struct BasicKeyboard: View {
     var body: some View {
         VStack {
             HStack {
-                Button {
-                    calculator.swapPressed()
-                } label: {
-                    ButtonLabel("x↔y")
-                }
-                Button {
-                    calculator.rowDownPressed()
-                } label: {
-                    ButtonLabel("R↓")
-                }
-                Button {
-                    calculator.rowUpPressed()
-                } label: {
-                    ButtonLabel("R↑")
-                }
-                Button {
-                    calculator.deletePressed()
-                } label: {
-                    ButtonLabel("􁂈")
-                }
+                CalculatorButton(action: { calculator.swapPressed() }, labelContent: "x↔y")
+                
+                CalculatorButton(action: { calculator.rowDownPressed() }, labelContent: "R↓")
+                
+                CalculatorButton(action: { calculator.rowUpPressed() }, labelContent: "R↑")
+                
+                CalculatorButton(action: { calculator.deletePressed() }, labelContent: "􁂈")
             }
             
             HStack {
-                if calculator.cleanState {
-                    Button {
-                        calculator.acPressed()
-                    } label: {
-                        ButtonLabel("AC")
-                    }
-                } else {
-                    Button {
-                        calculator.cPressed()
-                    } label: {
-                        ButtonLabel("C")
-                    }
-                }
-                
-                Button {
-                    calculator.invertSignalPressed()
-                } label: {
-                    ButtonLabel("±")
-                }
-                Button {
-                    calculator.moduloPressed()
-                } label: {
-                    ButtonLabel("%")
-                }
-                .disabled(true)
-                Button {
-                    calculator.divisionPressed()
-                } label: {
-                    ButtonLabel("÷")
-                }
+                CalculatorButton(action: { calculator.acPressed() }, labelContent: "AC")
+                CalculatorButton(action: { calculator.cPressed() }, labelContent: "C")
+                CalculatorButton(action: { calculator.invertSignalPressed() }, labelContent: "􀛺")
+                CalculatorButton(action: { calculator.moduloPressed() }, labelContent: "􀘾")
+                CalculatorButton(action: { calculator.divisionPressed() }, labelContent: "􀅿")
             }
             
             HStack {
                 VStack {
                     HStack {
-                        Button {
-                            calculator.digitPressed(7)
-                        } label: {
-                            ButtonLabel("7")
-                        }
-                        Button {
-                            calculator.digitPressed(8)
-                        } label: {
-                            ButtonLabel("8")
-                        }
-                        Button {
-                            calculator.digitPressed(9)
-                        } label: {
-                            ButtonLabel("9")
-                        }
-                        Button {
-                            calculator.multiplicationPressed()
-                        } label: {
-                            ButtonLabel("×")
-                        }
+                        CalculatorButton(action: { calculator.digitPressed(7) }, labelContent: "7")
+                        CalculatorButton(action: { calculator.digitPressed(8) }, labelContent: "8")
+                        CalculatorButton(action: { calculator.digitPressed(9) }, labelContent: "9")
+                        CalculatorButton(action: { calculator.multiplicationPressed() }, labelContent: "􀅾")
                     }
                     
                     HStack {
-                        Button {
-                            calculator.digitPressed(4)
-                        } label: {
-                            ButtonLabel("4")
-                        }
-                        Button {
-                            calculator.digitPressed(5)
-                        } label: {
-                            ButtonLabel("5")
-                        }
-                        Button {
-                            calculator.digitPressed(6)
-                        } label: {
-                            ButtonLabel("6")
-                        }
-                        Button {
-                            calculator.minusPressed()
-                        } label: {
-                            ButtonLabel("−")
-                        }
+                        CalculatorButton(action: { calculator.digitPressed(4) }, labelContent: "4")
+                        CalculatorButton(action: { calculator.digitPressed(5) }, labelContent: "5")
+                        CalculatorButton(action: { calculator.digitPressed(6) }, labelContent: "6")
+                        CalculatorButton(action: { calculator.minusPressed() }, labelContent: "􀅽")
                     }
                     
                     HStack {
-                        Button {
-                            calculator.digitPressed(1)
-                        } label: {
-                            ButtonLabel("1")
-                        }
-                        Button {
-                            calculator.digitPressed(2)
-                        } label: {
-                            ButtonLabel("2")
-                        }
-                        Button {
-                            calculator.digitPressed(3)
-                        } label: {
-                            ButtonLabel("3")
-                        }
-                        Button {
-                            calculator.plusPressed()
-                        } label: {
-                            ButtonLabel("+")
-                        }
+                        CalculatorButton(action: { calculator.digitPressed(1) }, labelContent: "1")
+                        CalculatorButton(action: { calculator.digitPressed(2) }, labelContent: "2")
+                        CalculatorButton(action: { calculator.digitPressed(3) }, labelContent: "3")
+                        CalculatorButton(action: { calculator.minusPressed() }, labelContent: "􀅼")
                     }
                     
                     HStack {
-                        Button {
-                            calculator.digitPressed(0)
-                        } label: {
-                            ButtonLabel("0")
-                        }
-                        Button {
-                            calculator.commaPressed()
-                        } label: {
-                            ButtonLabel(".")
-                        }
-                        Button {
-                            calculator.returnPressed()
-                        } label: {
-                            ButtonLabel("⏎")
-                        }
+                        CalculatorButton(action: { calculator.digitPressed(0) }, labelContent: "0")
+                        CalculatorButton(action: { calculator.commaPressed() }, labelContent: ".")
+                        CalculatorButton(action: { calculator.returnPressed() }, labelContent: "􀅇")
                     }
                 }
             }
         }
-        .padding()
-        .buttonBorderShape(.roundedRectangle)
-        .buttonStyle(.bordered)
     }
 }
 

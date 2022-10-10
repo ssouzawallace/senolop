@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1708BDE828F1AAB2004C1013 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708BDE728F1AAB2004C1013 /* WelcomeView.swift */; };
-		1708BDEA28F1AB8C004C1013 /* ButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708BDE928F1AB8C004C1013 /* ButtonLabel.swift */; };
+		1708BDEA28F1AB8C004C1013 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708BDE928F1AB8C004C1013 /* CalculatorButton.swift */; };
 		174AC93F28EE84F800E32729 /* SenolopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC93E28EE84F800E32729 /* SenolopApp.swift */; };
 		174AC94128EE84F800E32729 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC94028EE84F800E32729 /* Persistence.swift */; };
 		174AC94428EE84F800E32729 /* Senolop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 174AC94228EE84F800E32729 /* Senolop.xcdatamodeld */; };
@@ -41,7 +41,7 @@
 
 /* Begin PBXFileReference section */
 		1708BDE728F1AAB2004C1013 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		1708BDE928F1AB8C004C1013 /* ButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLabel.swift; sourceTree = "<group>"; };
+		1708BDE928F1AB8C004C1013 /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 		174AC93B28EE84F800E32729 /* Senolop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Senolop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		174AC93E28EE84F800E32729 /* SenolopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopApp.swift; sourceTree = "<group>"; };
 		174AC94028EE84F800E32729 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 				174AC97328EE85C700E32729 /* ScientificKeyboard.swift */,
 				174AC97828EE85C700E32729 /* ProgrammerKeyboard.swift */,
 				17522ED428EF5AFA006A178B /* BasicKeyboard.swift */,
-				1708BDE928F1AB8C004C1013 /* ButtonLabel.swift */,
+				1708BDE928F1AB8C004C1013 /* CalculatorButton.swift */,
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
@@ -302,7 +302,7 @@
 				1708BDE828F1AAB2004C1013 /* WelcomeView.swift in Sources */,
 				174AC98728EE85C700E32729 /* ContentView.swift in Sources */,
 				174AC98328EE85C700E32729 /* NumericProgrammerKeyboard.swift in Sources */,
-				1708BDEA28F1AB8C004C1013 /* ButtonLabel.swift in Sources */,
+				1708BDEA28F1AB8C004C1013 /* CalculatorButton.swift in Sources */,
 				174AC98028EE85C700E32729 /* BinariesDisplay.swift in Sources */,
 				174AC98628EE85C700E32729 /* IntroView.swift in Sources */,
 				174AC98228EE85C700E32729 /* Display.swift in Sources */,
