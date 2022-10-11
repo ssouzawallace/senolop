@@ -104,7 +104,6 @@
 		174AC93228EE84F800E32729 = {
 			isa = PBXGroup;
 			children = (
-				17D94F4F28F5E1620031E20A /* HapticsHelper.swift */,
 				179A647628F4073A00F1E797 /* .github */,
 				174AC98828EF285000E32729 /* README.md */,
 				176C710028F165B700BE97F8 /* fastlane */,
@@ -159,6 +158,7 @@
 		174AC96E28EE85C700E32729 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				17D94F4F28F5E1620031E20A /* HapticsHelper.swift */,
 				174AC97B28EE85C700E32729 /* ContentView.swift */,
 				17606B7128F11AD9002031DC /* CalculatorView.swift */,
 				174AC97528EE85C700E32729 /* SubscriptionView.swift */,

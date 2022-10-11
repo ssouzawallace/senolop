@@ -35,7 +35,11 @@ struct HapticsHelper {
         print("\(#function) -> reason: \(reason)")
     }
     
-    func vibrate() {
+    func shake() {
+        // TODO: shake gesture vibration
+    }
+    
+    func tap() {
         let hapticDict = [
             CHHapticPattern.Key.pattern: [
                 [CHHapticPattern.Key.event: [

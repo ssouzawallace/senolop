@@ -30,7 +30,7 @@ struct CalculatorButton: View {
     
     func performAction() {
         action()
-        helper.vibrate()
+        helper.tap()
     }
     
     var attributedContent: AttributedString {
