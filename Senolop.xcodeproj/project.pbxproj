@@ -27,6 +27,7 @@
 		1759791A28F32678006701E8 /* SenolopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759791928F32678006701E8 /* SenolopTests.swift */; };
 		17606B7228F11AD9002031DC /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17606B7128F11AD9002031DC /* CalculatorView.swift */; };
 		179F3D1128EF644000445748 /* BasicKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522ED428EF5AFA006A178B /* BasicKeyboard.swift */; };
+		17D94F5028F5E1620031E20A /* HapticsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D94F4F28F5E1620031E20A /* HapticsHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		176C710428F165B700BE97F8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		179A647828F4073A00F1E797 /* deploy.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = deploy.yml; sourceTree = "<group>"; };
 		179A647928F4073A00F1E797 /* dependabot.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = dependabot.yml; sourceTree = "<group>"; };
+		17D94F4F28F5E1620031E20A /* HapticsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		174AC93228EE84F800E32729 = {
 			isa = PBXGroup;
 			children = (
+				17D94F4F28F5E1620031E20A /* HapticsHelper.swift */,
 				179A647628F4073A00F1E797 /* .github */,
 				174AC98828EF285000E32729 /* README.md */,
 				176C710028F165B700BE97F8 /* fastlane */,
@@ -324,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17D94F5028F5E1620031E20A /* HapticsHelper.swift in Sources */,
 				174AC93F28EE84F800E32729 /* SenolopApp.swift in Sources */,
 				17606B7228F11AD9002031DC /* CalculatorView.swift in Sources */,
 				174AC98128EE85C700E32729 /* SubscriptionView.swift in Sources */,
