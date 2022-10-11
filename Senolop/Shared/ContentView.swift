@@ -49,15 +49,18 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            if #available(macOS 12, *) {
-                Text("Senolop")
-                Display(mode: $mode, calculator: $calculator)
-            }
+#if os(macOS)
+            Display(mode: $mode,
+                    calculator: $calculator)
             CalculatorView(mode: $mode,
                            calculator: $calculator,
                            buttonColor: $buttonColor)
+#else
+            CalculatorView(mode: $mode,
+                           calculator: $calculator,
+                           buttonColor: $buttonColor)
+#endif
         }
-        .padding()
         .background(Color(backgroundColorName))
         .navigationTitle("Senolop")
         .toolbar {
