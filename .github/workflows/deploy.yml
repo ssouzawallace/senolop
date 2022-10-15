@@ -20,6 +20,21 @@ jobs:
           default=$(echo $scheme_list | ruby -e "require 'json'; puts JSON.parse(STDIN.gets)['project']['targets'][0]")
           echo $default | cat >default
           echo Using default scheme: $default
+- name: Download Apple Provisioning Profiles
+  # You may pin to the exact commit or the version.
+  # uses: Apple-Actions/download-provisioning-profiles@3167792207a5b26099bc0ca22b5010a323dd2a0b
+  uses: Apple-Actions/download-provisioning-profiles@v1
+  with:
+    # The bundle identifier of the application
+    bundle-id: 'tech.wcorp.Senolop'
+    # The type of profile to download. One of IOS_APP_DEVELOPMENT, IOS_APP_STORE, IOS_APP_ADHOC, IOS_APP_INHOUSE, MAC_APP_DEVELOPMENT, MAC_APP_STORE, MAC_APP_DIRECT, TVOS_APP_DEVELOPMENT, TVOS_APP_STORE, TVOS_APP_ADHOC, TVOS_APP_INHOUSE
+    profile-type: # optional
+    # The AppStore Connect API Key Issuer Identifier
+    issuer-id: '69a6de80-0090-47e3-e053-5b8c7c11a4d1'
+    # The Key ID for AppStore Connect API
+    api-key-id: '3Z9743C25W'
+    # The PKCS8 format Private Key for AppStore Connect API
+    api-private-key: '_missing_
       - name: Build iOS
         env:
           scheme: ${{ 'iOS' }}
