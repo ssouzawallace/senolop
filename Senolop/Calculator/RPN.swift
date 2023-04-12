@@ -8,11 +8,6 @@
 import Foundation
 
 struct RPN: Calculator {
-    struct Item: Identifiable {
-        var value: Double
-        let id = UUID()
-    }
-    
     enum VisualizationMode: String, CaseIterable {
         case basic = "Básica"
         case scientific = "Científica"
@@ -31,15 +26,20 @@ struct RPN: Calculator {
     }
     var mode: Mode = .deg
     var moreFunctions = false
-    var cleanState = true
+    private var clearAll = true {
+        didSet {
+            cleanStateTitle = clearAll ? "AC" : "C"
+        }
+    }
+    var cleanStateTitle: String = "AC"
     var stack: [Item] = [Item(value: 0)]
     
-    mutating func digitPressed(_ digit: Int) {
+    mutating func digitPressed(_ digit: UInt8) {
         guard digit >= 0 && digit <= 9 else {
             raise(0)
             return
         }
-        cleanState = false
+        clearAll = false
         let value: Double = stack.popLast()?.value ?? 0
         stack.append(Item(value: value*10 + (addsComma ? Double("0"+String(digit))! : Double(digit))))
     }
@@ -66,14 +66,13 @@ struct RPN: Calculator {
         stack[0].value - Double(Int(stack[0].value)) != 0.0
     }
     
-    mutating func acPressed() {
-        cleanState = true
-        stack = [Item(value: 0)]
-    }
-    
-    mutating func cPressed() {
-        cleanState = true
-        stack.removeLast()
+    mutating func clearPressed() {
+        if clearAll {
+            stack = []
+        } else {
+            clearAll = true
+            stack.removeLast()
+        }
         stack.append(Item(value: 0))
     }
     
@@ -107,7 +106,7 @@ struct RPN: Calculator {
         
     }
 
-    mutating func moduloPressed() {
+    mutating func percentPressed() {
         guard let elementA = stack.popLast() else { return }
         guard let elementB = stack.popLast() else { return }
     
@@ -126,13 +125,13 @@ struct RPN: Calculator {
         stack.append(Item(value: elementA.value - elementB.value))
     }
     
-    mutating func divisionPressed() {
+    mutating func dividePressed() {
         guard let elementA = stack.popLast() else { return }
         guard let elementB = stack.popLast() else { return }
         stack.append(Item(value: elementA.value / elementB.value))
     }
     
-    mutating func multiplicationPressed() {
+    mutating func multiplyPressed() {
         guard let elementA = stack.popLast() else { return }
         guard let elementB = stack.popLast() else { return }
         stack.append(Item(value: elementA.value * elementB.value))
@@ -159,8 +158,9 @@ struct RPN: Calculator {
     }
     
     mutating func xFactorialPressed() {
-        guard let element = stack.popLast() else { return }
-        stack.append(Item(value: Double(Int(element.value).fact())))
+        guard let _ = stack.popLast() else { return }
+        // FIXME: calcular fatorial
+//        stack.append(Item(value: Double(Int(element.value).fact())))
     }
     
     mutating func x2Pressed() {

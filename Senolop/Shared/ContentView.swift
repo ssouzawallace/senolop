@@ -15,7 +15,7 @@ struct ContentView: View {
     }
     @State private var buttonColor: Color = .accentColor
     @State private var mode: RPN.VisualizationMode = .basic
-    @State private var calculator = RPN()
+    @State private var calculator: Calculator = RPN()
     @State private var backgroundColorName = "BackgroundColor 1"
     
     func copy() {
@@ -49,11 +49,16 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            CalculatorView(mode: $mode,
-                                       calculator: $calculator,
-                                       buttonColor: $buttonColor)
-//                Display(mode: $mode,
-//                        calculator: $calculator)
+            Picker("Mode", selection: $mode) {
+                Text(RPN.VisualizationMode.basic.rawValue).tag(RPN.VisualizationMode.basic)
+                Text(RPN.VisualizationMode.scientific.rawValue).tag(RPN.VisualizationMode.scientific)
+                Text(RPN.VisualizationMode.programmer.rawValue).tag(RPN.VisualizationMode.programmer)
+            }
+            .pickerStyle(.segmented)
+            .padding()
+            
+            CalculatorView(mode: $mode,                                       
+                           calculator: $calculator)
             
         }
         .background(Color(backgroundColorName))

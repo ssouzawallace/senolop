@@ -8,59 +8,85 @@
 import SwiftUI
 
 struct ProgrammerKeyboard: View {
-    @Binding var calculator: RPN
+    @Binding var calculator: Calculator
     
     var body: some View {
-        HStack {
-            VStack {
-                HStack {
-                    VStack {
-                        CalculatorButton(action: { calculator.andPressed() }, labelContent: .string("AND"))
-                        CalculatorButton(action: { calculator.norPressed() }, labelContent: .string("NOR"))
-                        CalculatorButton(action: { calculator.leftShiftPressed() }, labelContent: .string("<<"))
-                        CalculatorButton(action: { calculator.xLeftShiftYPressed() }, labelContent: .string("X<<Y"))
-                    }
-                    VStack {
-                        CalculatorButton(action: { calculator.orPressed() }, labelContent: .string("OR"))
-                        CalculatorButton(action: { calculator.xorPressed() }, labelContent: .string("XOR"))
-                        CalculatorButton(action: { calculator.rightShiftPressed() }, labelContent: .string(">>"))
-                        CalculatorButton(action: { calculator.xRightShiftYPressed() }, labelContent: .string("X>>Y"))
-                    }
-                }
-                CalculatorButton(action: { calculator.invertBytePressed() }, labelContent: .string("INVERTER BYTE"))
-                CalculatorButton(action: { calculator.invertWordPressed() }, labelContent: .string("INVERTER PALAVRA"))
+        VStack {
+            HStack {
+                Button("AND", action: { })
+                Button("OR", action: { })
+                Button("D", action: { })
+                Button("E", action: { })
+                Button("F", action: { })
+                Button("AC", action: { })
+                Button("C", action: { })
             }
-            
-            NumericProgrammerKeyboard(calculator: $calculator)
-            
-            VStack {
-                HStack {
-                    VStack {
-                        CalculatorButton(action: { calculator.acPressed() }, labelContent: .string("AC"))
-                        CalculatorButton(action: { calculator.rolPressed() }, labelContent: .string("RoL"))
-                        CalculatorButton(action: { calculator.buttonPressed()}, labelContent: .string("2's"))
-                        CalculatorButton(action: { calculator.divisionPressed() }, labelContent: .symbol("divide"))
-                        CalculatorButton(action: { calculator.multiplicationPressed() }, labelContent: .symbol("multiply"))
-                    }
-                    VStack {
-                        CalculatorButton(action: { calculator.cPressed() }, labelContent: .string("C"))
-                        CalculatorButton(action: { calculator.rorPressed() }, labelContent: .string("RoR"))
-                        CalculatorButton(action: { calculator.buttonPressed() }, labelContent: .string("1's"))
-                        CalculatorButton(action: { calculator.minusPressed() }, labelContent: .symbol("minus"))
-                        CalculatorButton(action: { calculator.plusPressed() }, labelContent: .symbol("plus"))
-                    }
+            HStack {
+                Button("NOR", action: { })
+                Button("XOR", action: { })
+                Button("A", action: { })
+                Button("B", action: { })
+                Button("C", action: { })
+                Button("RoL", action: { })
+                Button("RoR", action: { })
+            }
+            HStack {
+                Button("<<", action: { })
+                Button(">>", action: { })
+                Button("7", action: { calculator.digitPressed(7) })
+                Button("8", action: { calculator.digitPressed(8) })
+                Button("9", action: { calculator.digitPressed(9) })
+                Button("2's", action: { })
+                Button("1's", action: { })
+            }
+            HStack {
+                Button("X<<Y", action: { })
+                Button("X>>Y", action: { })
+                Button("4", action: { calculator.digitPressed(4) })
+                Button("5", action: { calculator.digitPressed(5) })
+                Button("6", action: { calculator.digitPressed(6) })
+                Button(action: { calculator.dividePressed() }) {
+                    Image(systemName: "divide")
                 }
-                Button {
-                    calculator.returnPressed()
-                } label: {
-                    CalculatorButton(action: { calculator.returnPressed() }, labelContent: .symbol("return.left"))
+                .buttonStyle(MyStyle(proeminent: true))
+                Button(action: { calculator.minusPressed() }) {
+                    Image(systemName: "minus")
                 }
+                .buttonStyle(MyStyle(proeminent: true))
+            }
+            HStack {
+                Button("byte flip", action: { })
+                    .buttonStyle(MyStyle(squared: false))
+                Button("1", action: { calculator.digitPressed(1) })
+                Button("2", action: { calculator.digitPressed(2) })
+                Button("3", action: { calculator.digitPressed(3) })
+                Button(action: { calculator.multiplyPressed() }) {
+                    Image(systemName: "multiply")
+                }
+                .buttonStyle(MyStyle(proeminent: true))
+                Button(action: { calculator.plusPressed() }) {
+                    Image(systemName: "plus")
+                }
+                .buttonStyle(MyStyle(proeminent: true))
+            }
+            HStack {
+                Button("word flip", action: { })
+                    .buttonStyle(MyStyle(squared: false))
+                
+                Button("FF", action: { })
+                
+                Button("0", action: { calculator.digitPressed(0) })
+                
+                Button("00", action: {  })
+                    
+                Button("enter", action: { calculator.returnPressed() })
+                    .buttonStyle(MyStyle(squared: false, proeminent: true))
+                
             }
         }
-        .padding()
-        .frame(maxWidth: .infinity)
-        .buttonBorderShape(.roundedRectangle)
-        .buttonStyle(.bordered)
+        .fixedSize(horizontal: true, vertical: false)
+        .buttonStyle(MyStyle())
+        .scaledToFit()
     }
 }
 

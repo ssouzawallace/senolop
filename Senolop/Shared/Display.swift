@@ -11,7 +11,7 @@ struct Display: View {
     @Binding var mode: RPN.VisualizationMode
     @State private var baseMode: RPN.BaseMode = .ten
     @State private var multiSelection = Set<UUID>()
-    @Binding var calculator: RPN
+    @Binding var calculator: Calculator
     
     var body: some View {
         VStack {
@@ -19,7 +19,7 @@ struct Display: View {
                 ForEach(calculator.stack) { element in
                     VStack(alignment: .trailing) {
                         Text("\(Double(element.value))")
-                        Divider()
+                            
                     }
                 }
                 .scaleEffect(x: 1, y: -1, anchor: .center)
@@ -27,6 +27,7 @@ struct Display: View {
             }
             .scaleEffect(x: 1, y: -1, anchor: .center)
             .listStyle(.plain)
+            
             if mode == .programmer {
                 Picker("Mode", selection: $baseMode) {
                     Text("8")

@@ -9,7 +9,12 @@ import SwiftUI
 
 struct WelcomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Senolop")
+                .font(.custom("Futura", size: 42))
+            Text("RPN CALCULATOR")
+                .font(.custom("Futura", size: 42))
+        }
     }
 }
 

@@ -73,3 +73,33 @@ struct MyButton_Previews: PreviewProvider {
         }, labelContent: .string("0"))
     }
 }
+
+struct MyStyle: ButtonStyle {
+    var squared = true
+    var proeminent = false
+    var special = false
+    private var color: Color {
+        if proeminent {
+            return Color("AccentColor")
+        } else {
+            if special {
+                return .yellow
+            } else {
+                return .gray
+            }
+        }
+    }
+    func makeBody(configuration: Configuration) -> some View {
+        ZStack(alignment: .center) {
+            Capsule(style: .continuous)
+                .fill(color)
+                .if(squared) { view in
+                    view.aspectRatio(1, contentMode: .fit)
+                }
+            
+            configuration.label
+        }
+        .opacity(configuration.isPressed ? 0.5 : 1.0)
+//        .font(.largeTitle)
+    }
+}
