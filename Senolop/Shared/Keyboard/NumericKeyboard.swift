@@ -24,33 +24,7 @@ struct NumericKeyboard: View {
     let spacing: CGFloat = 8
     
     var body: some View {
-        VStack(spacing: spacing) {
-//            HStack {
-//                Button(action: {  }) {
-//                    HStack {
-//                        Text("X")
-//                        Image(systemName: "arrow.left.and.right")
-//                        Text("Y")
-//                    }
-//                }
-//                .buttonStyle(MyStyle(special: true))
-//                Button(action: {  }) {
-//                    HStack {
-//                        Text("R")
-//                        Image(systemName: "arrow.down")
-//                    }
-//                }
-//                .buttonStyle(MyStyle(special: true))
-//                Button(action: {  }) {
-//                    HStack {
-//                        Text("R")
-//                        Image(systemName: "arrow.up")
-//                    }
-//                }
-//                .buttonStyle(MyStyle(special: true))
-//                Button("drop", action: { })
-//                    .buttonStyle(MyStyle(special: true))
-//            }            
+        VStack(alignment: .center, spacing: spacing) {
             HStack {
                 Button(calculator.cleanStateTitle, action: { calculator.clearPressed() })
                     .buttonStyle(MyStyle(special: true))
@@ -106,6 +80,7 @@ struct NumericKeyboard: View {
                 
             }
         }
+        .fixedSize(horizontal: false, vertical: true)
         .buttonStyle(MyStyle())
         .scaledToFit()
     }

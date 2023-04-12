@@ -39,6 +39,7 @@ struct RPN: Calculator {
             raise(0)
             return
         }
+        
         clearAll = false
         let value: Double = stack.popLast()?.value ?? 0
         stack.append(Item(value: value*10 + (addsComma ? Double("0"+String(digit))! : Double(digit))))
@@ -91,7 +92,7 @@ struct RPN: Calculator {
     
     mutating func returnPressed() {
         guard let newElement = stack.last else { return }
-        stack.append(newElement)
+        stack.append(Item(value: newElement.value))
     }
     
     mutating func deletePressed() {

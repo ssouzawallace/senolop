@@ -19,7 +19,6 @@ struct Display: View {
                 ForEach(calculator.stack) { element in
                     VStack(alignment: .trailing) {
                         Text("\(Double(element.value))")
-                            
                     }
                 }
                 .scaleEffect(x: 1, y: -1, anchor: .center)

@@ -145,10 +145,9 @@
 		174AC93D28EE84F800E32729 /* Senolop */ = {
 			isa = PBXGroup;
 			children = (
-				174AC96E28EE85C700E32729 /* Shared */,
-				17DE35CC295B8013002FA5C8 /* Keyboard */,
-				170B37A828F3DB4500FFF7CF /* Calculator */,
 				174AC93E28EE84F800E32729 /* SenolopApp.swift */,
+				174AC96E28EE85C700E32729 /* Shared */,
+				170B37A828F3DB4500FFF7CF /* Calculator */,
 				174AC96F28EE85C700E32729 /* Assets.xcassets */,
 				174AC94928EE84FA00E32729 /* Senolop.entitlements */,
 				174AC94A28EE84FA00E32729 /* Preview Content */,
@@ -232,13 +231,6 @@
 				17DE35CD295B8029002FA5C8 /* NumericKeyboard.swift */,
 				174AC97328EE85C700E32729 /* ScientificKeyboard.swift */,
 				174AC97828EE85C700E32729 /* ProgrammerKeyboard.swift */,
-			);
-			path = Keyboard;
-			sourceTree = "<group>";
-		};
-		17DE35CC295B8013002FA5C8 /* Keyboard */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = Keyboard;
 			sourceTree = "<group>";
@@ -399,7 +391,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Senolop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Senolop";
-				TVOS_DEPLOYMENT_TARGET = 16.1;
+				TVOS_DEPLOYMENT_TARGET = 16.0;
 			};
 			name = Debug;
 		};
@@ -419,7 +411,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Senolop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Senolop";
-				TVOS_DEPLOYMENT_TARGET = 16.1;
+				TVOS_DEPLOYMENT_TARGET = 16.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

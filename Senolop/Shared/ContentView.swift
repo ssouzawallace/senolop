@@ -48,40 +48,46 @@ struct ContentView: View {
     }
     
     var body: some View {
-        NavigationView {
-            Picker("Mode", selection: $mode) {
-                Text(RPN.VisualizationMode.basic.rawValue).tag(RPN.VisualizationMode.basic)
-                Text(RPN.VisualizationMode.scientific.rawValue).tag(RPN.VisualizationMode.scientific)
-                Text(RPN.VisualizationMode.programmer.rawValue).tag(RPN.VisualizationMode.programmer)
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            CalculatorView(mode: $mode,
+                                  calculator: $calculator)
+        } else {
+            NavigationView {
+                Picker("Mode", selection: $mode) {
+                    Text(RPN.VisualizationMode.basic.rawValue).tag(RPN.VisualizationMode.basic)
+                    Text(RPN.VisualizationMode.scientific.rawValue).tag(RPN.VisualizationMode.scientific)
+                    Text(RPN.VisualizationMode.programmer.rawValue).tag(RPN.VisualizationMode.programmer)
+                }
+                .pickerStyle(.segmented)
+                .padding()
+                
+                CalculatorView(mode: $mode,
+                               calculator: $calculator)
+                .padding()
+                
             }
-            .pickerStyle(.segmented)
-            .padding()
-            
-            CalculatorView(mode: $mode,                                       
-                           calculator: $calculator)
-            
-        }
-        .background(Color(backgroundColorName))
-        .navigationTitle("Senolop")
-        .toolbar {
-            ToolbarItemGroup {
-                Button(action: copy) {
-                    Image(systemName: "doc.on.doc")
-                }
-                Button(action: {}) {
-                    Image(systemName: "square.and.arrow.up")
-                }
-                Button(action: back) {
-                    Image(systemName: "xmark.circle")
-                }
-                Button(action: switchStyle1) {
-                    Image(systemName: "1.circle")
-                }
-                Button(action: switchStyle2) {
-                    Image(systemName: "2.circle")
-                }
-                Button(action: switchStyle3) {
-                    Image(systemName: "3.circle")
+            .background(Color(backgroundColorName))
+            .navigationTitle("Senolop")
+            .toolbar {
+                ToolbarItemGroup {
+                    Button(action: copy) {
+                        Image(systemName: "doc.on.doc")
+                    }
+                    Button(action: {}) {
+                        Image(systemName: "square.and.arrow.up")
+                    }
+                    Button(action: back) {
+                        Image(systemName: "xmark.circle")
+                    }
+                    Button(action: switchStyle1) {
+                        Image(systemName: "1.circle")
+                    }
+                    Button(action: switchStyle2) {
+                        Image(systemName: "2.circle")
+                    }
+                    Button(action: switchStyle3) {
+                        Image(systemName: "3.circle")
+                    }
                 }
             }
         }

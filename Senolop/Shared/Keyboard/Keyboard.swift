@@ -26,7 +26,7 @@ struct Keyboard: View {
 struct Keyboard_Previews: PreviewProvider {
     static var previews: some View {
         Keyboard(calculator: Binding.constant(RPN()),
-                 mode: .constant(.programmer))
+                 mode: .constant(.basic))
         .previewInterfaceOrientation(.landscapeRight)
     }
 }

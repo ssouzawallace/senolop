@@ -18,12 +18,13 @@ final class SenolopTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testKeyboardBehavior() throws {
+        var calculator: Calculator = RPN()
+        calculator.digitPressed(1)
+        calculator.digitPressed(1)
+        calculator.digitPressed(3)
+        calculator.digitPressed(4)
+        XCTAssertEqual(calculator.stack.last?.value, 1134)
     }
 
     func testPerformanceExample() throws {

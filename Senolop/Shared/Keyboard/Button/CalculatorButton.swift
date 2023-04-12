@@ -100,6 +100,5 @@ struct MyStyle: ButtonStyle {
             configuration.label
         }
         .opacity(configuration.isPressed ? 0.5 : 1.0)
-//        .font(.largeTitle)
     }
 }

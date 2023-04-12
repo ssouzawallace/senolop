@@ -12,19 +12,23 @@ struct CalculatorView: View {
     @Binding var calculator: Calculator
 
     var body: some View {
-        VStack(alignment: .center, spacing: 0) {
+        VStack {
             Display(mode: $mode, calculator: $calculator)
                 .scaledToFit()
             Keyboard(calculator: $calculator, mode: $mode)
-                .scaledToFill()
+                .scaledToFit()
         }
-        .scaledToFill()
+        .if(UIDevice.current.userInterfaceIdiom == .phone) { view in
+            view.fixedSize(horizontal: false, vertical: true)
+        }
+        .scaledToFit()
+        .padding()
     }
 }
 
 struct CalculatorView_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatorView(mode: .constant(.scientific),
+        CalculatorView(mode: .constant(.basic),
                        calculator: .constant(RPN()))
     }
 }
