@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct Keyboard: View {
-    @Binding var calculator: RPNCalculator
-    var mode: RPNCalculator.VisualizationMode
+    @Binding var calculator: RPN
+    var mode: RPN.VisualizationMode
     
     var body: some View {
         switch mode {
@@ -25,7 +25,7 @@ struct Keyboard: View {
 
 struct Keyboard_Previews: PreviewProvider {
     static var previews: some View {
-        Keyboard(calculator: Binding.constant(RPNCalculator()),
+        Keyboard(calculator: Binding.constant(RPN()),
                  mode: .programmer)
         .previewInterfaceOrientation(.landscapeRight)
     }

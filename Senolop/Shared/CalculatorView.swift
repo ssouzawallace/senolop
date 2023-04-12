@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CalculatorView: View {
-    @Binding var mode: RPNCalculator.VisualizationMode
-    @Binding var calculator: RPNCalculator
+    @Binding var mode: RPN.VisualizationMode
+    @Binding var calculator: RPN
     @Binding var buttonColor: Color
 
     var body: some View {
@@ -18,9 +18,9 @@ struct CalculatorView: View {
                 .padding()
             
             Picker("Mode", selection: $mode) {
-                Text(RPNCalculator.VisualizationMode.basic.rawValue).tag(RPNCalculator.VisualizationMode.basic)
-                Text(RPNCalculator.VisualizationMode.scientific.rawValue).tag(RPNCalculator.VisualizationMode.scientific)
-                Text(RPNCalculator.VisualizationMode.programmer.rawValue).tag(RPNCalculator.VisualizationMode.programmer)
+                Text(RPN.VisualizationMode.basic.rawValue).tag(RPN.VisualizationMode.basic)
+                Text(RPN.VisualizationMode.scientific.rawValue).tag(RPN.VisualizationMode.scientific)
+                Text(RPN.VisualizationMode.programmer.rawValue).tag(RPN.VisualizationMode.programmer)
             }
             .pickerStyle(.segmented)
             .padding()
@@ -34,6 +34,6 @@ struct CalculatorView: View {
 
 struct CalculatorView_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatorView(mode: .constant(.basic), calculator: .constant(RPNCalculator()), buttonColor: .constant(.accentColor))
+        CalculatorView(mode: .constant(.basic), calculator: .constant(RPN()), buttonColor: .constant(.accentColor))
     }
 }

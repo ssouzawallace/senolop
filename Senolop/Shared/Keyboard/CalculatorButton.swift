@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct CalculatorButton: View {
+    
+    enum LabelContent {
+        case symbol(String)
+        case string(String)
+    }
+    
     let action: () -> Void
-    let labelContent: String    
+    let labelContent: LabelContent
     let expandHorizontally: Bool
+    let expandVertically: Bool
+    let squared: Bool
     let backgroundColor: Color?
     let helper = HapticsHelper.sharedInstance
+    
+    var labelContentList: [String] = []
     
     /// Creates a button that displays a custom label.
     ///
@@ -21,10 +31,12 @@ struct CalculatorButton: View {
     ///   - label: A view that describes the purpose of the button's `action`.
     ///   ///   - expandHorizontally: Does the button fills the container view horizontally. Default is `false`.
     ///   ///   - backgroundColor: The buttons background color. Default is `nil`.
-    public init(action: @escaping () -> Void, labelContent: String, expandHorizontally: Bool = true, backgroundColor: Color? = nil) {
+    public init(action: @escaping () -> Void, labelContent: LabelContent, expandHorizontally: Bool = true, expandVertically: Bool = true, squared: Bool = true, backgroundColor: Color? = nil) {
         self.action = action
         self.labelContent = labelContent
         self.expandHorizontally = expandHorizontally
+        self.expandVertically = expandVertically
+        self.squared = squared
         self.backgroundColor = backgroundColor
     }
     
@@ -33,21 +45,24 @@ struct CalculatorButton: View {
         helper.tap()
     }
     
-    var attributedContent: AttributedString {
-        AttributedString(labelContent)
-    }
-    
     var body: some View {
         Button(action: {
             performAction()
         }, label: {
-            Text(attributedContent)
-                .lineLimit(1)
-                .frame(maxWidth: expandHorizontally ? .infinity : nil)
+            ZStack {
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(.purple)
+                switch labelContent {
+                case .symbol(let systemName):
+                    Image(systemName: systemName)
+                case .string(let string):
+                    Text(AttributedString(string))
+                    
+                }
+            }
         })
-        .background(backgroundColor)
-        .buttonBorderShape(.roundedRectangle)
-        .buttonStyle(.bordered)
+        .frame(width: expandHorizontally ? .infinity : nil, height: expandVertically ? .infinity : nil)
+        .aspectRatio(squared ? 1 : nil, contentMode: .fill)
     }
 }
 
@@ -55,6 +70,6 @@ struct MyButton_Previews: PreviewProvider {
     static var previews: some View {
         CalculatorButton(action: {
             /* do nothing */
-        }, labelContent: "0")
+        }, labelContent: .string("0"))
     }
 }

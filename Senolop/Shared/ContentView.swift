@@ -14,8 +14,8 @@ struct ContentView: View {
         case fun
     }
     @State private var buttonColor: Color = .accentColor
-    @State private var mode: RPNCalculator.VisualizationMode = .basic
-    @State private var calculator = RPNCalculator()
+    @State private var mode: RPN.VisualizationMode = .basic
+    @State private var calculator = RPN()
     @State private var backgroundColorName = "BackgroundColor 1"
     
     func copy() {
@@ -49,17 +49,12 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-#if os(macOS)
-            Display(mode: $mode,
-                    calculator: $calculator)
             CalculatorView(mode: $mode,
-                           calculator: $calculator,
-                           buttonColor: $buttonColor)
-#else
-            CalculatorView(mode: $mode,
-                           calculator: $calculator,
-                           buttonColor: $buttonColor)
-#endif
+                                       calculator: $calculator,
+                                       buttonColor: $buttonColor)
+//                Display(mode: $mode,
+//                        calculator: $calculator)
+            
         }
         .background(Color(backgroundColorName))
         .navigationTitle("Senolop")

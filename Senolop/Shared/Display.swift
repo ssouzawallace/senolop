@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct Display: View {
-    @Binding var mode: RPNCalculator.VisualizationMode
-    @State private var baseMode: RPNCalculator.BaseMode = .ten
+    @Binding var mode: RPN.VisualizationMode
+    @State private var baseMode: RPN.BaseMode = .ten
     @State private var multiSelection = Set<UUID>()
-    @Binding var calculator: RPNCalculator
+    @Binding var calculator: RPN
     
     var body: some View {
         VStack {
@@ -44,6 +44,6 @@ struct Display: View {
 struct Display_Previews: PreviewProvider {
     static var previews: some View {
         Display(mode: Binding.constant(.basic),
-                calculator: Binding.constant(RPNCalculator()))
+                calculator: Binding.constant(RPN()))
     }
 }

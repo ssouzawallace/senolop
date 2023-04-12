@@ -8,27 +8,27 @@
 import SwiftUI
 
 struct ProgrammerKeyboard: View {
-    @Binding var calculator: RPNCalculator
+    @Binding var calculator: RPN
     
     var body: some View {
         HStack {
             VStack {
                 HStack {
                     VStack {
-                        CalculatorButton(action: { calculator.andPressed() }, labelContent: "AND")
-                        CalculatorButton(action: { calculator.norPressed() }, labelContent: "NOR")
-                        CalculatorButton(action: { calculator.leftShiftPressed() }, labelContent: "<<")
-                        CalculatorButton(action: { calculator.xLeftShiftYPressed() }, labelContent: "X<<Y")
+                        CalculatorButton(action: { calculator.andPressed() }, labelContent: .string("AND"))
+                        CalculatorButton(action: { calculator.norPressed() }, labelContent: .string("NOR"))
+                        CalculatorButton(action: { calculator.leftShiftPressed() }, labelContent: .string("<<"))
+                        CalculatorButton(action: { calculator.xLeftShiftYPressed() }, labelContent: .string("X<<Y"))
                     }
                     VStack {
-                        CalculatorButton(action: { calculator.orPressed() }, labelContent: "OR")
-                        CalculatorButton(action: { calculator.xorPressed() }, labelContent: "XOR")
-                        CalculatorButton(action: { calculator.rightShiftPressed() }, labelContent: ">>")
-                        CalculatorButton(action: { calculator.xRightShiftYPressed() }, labelContent: "X>>Y")
+                        CalculatorButton(action: { calculator.orPressed() }, labelContent: .string("OR"))
+                        CalculatorButton(action: { calculator.xorPressed() }, labelContent: .string("XOR"))
+                        CalculatorButton(action: { calculator.rightShiftPressed() }, labelContent: .string(">>"))
+                        CalculatorButton(action: { calculator.xRightShiftYPressed() }, labelContent: .string("X>>Y"))
                     }
                 }
-                CalculatorButton(action: { calculator.invertBytePressed() }, labelContent: "INVERTER BYTE")
-                CalculatorButton(action: { calculator.invertWordPressed() }, labelContent: "INVERTER PALAVRA")
+                CalculatorButton(action: { calculator.invertBytePressed() }, labelContent: .string("INVERTER BYTE"))
+                CalculatorButton(action: { calculator.invertWordPressed() }, labelContent: .string("INVERTER PALAVRA"))
             }
             
             NumericProgrammerKeyboard(calculator: $calculator)
@@ -36,24 +36,24 @@ struct ProgrammerKeyboard: View {
             VStack {
                 HStack {
                     VStack {
-                        CalculatorButton(action: { calculator.acPressed() }, labelContent: "AC")
-                        CalculatorButton(action: { calculator.rolPressed() }, labelContent: "RoL")
-                        CalculatorButton(action: { calculator.buttonPressed()}, labelContent: "2's")
-                        CalculatorButton(action: { calculator.divisionPressed() }, labelContent: "􀅿")
-                        CalculatorButton(action: { calculator.multiplicationPressed() }, labelContent: "􀅾")
+                        CalculatorButton(action: { calculator.acPressed() }, labelContent: .string("AC"))
+                        CalculatorButton(action: { calculator.rolPressed() }, labelContent: .string("RoL"))
+                        CalculatorButton(action: { calculator.buttonPressed()}, labelContent: .string("2's"))
+                        CalculatorButton(action: { calculator.divisionPressed() }, labelContent: .symbol("divide"))
+                        CalculatorButton(action: { calculator.multiplicationPressed() }, labelContent: .symbol("multiply"))
                     }
                     VStack {
-                        CalculatorButton(action: { calculator.cPressed() }, labelContent: "C")
-                        CalculatorButton(action: { calculator.rorPressed() }, labelContent: "RoR")
-                        CalculatorButton(action: { calculator.buttonPressed() }, labelContent: "1's")
-                        CalculatorButton(action: { calculator.minusPressed() }, labelContent: "􀅽")
-                        CalculatorButton(action: { calculator.plusPressed() }, labelContent: "􀅼")
+                        CalculatorButton(action: { calculator.cPressed() }, labelContent: .string("C"))
+                        CalculatorButton(action: { calculator.rorPressed() }, labelContent: .string("RoR"))
+                        CalculatorButton(action: { calculator.buttonPressed() }, labelContent: .string("1's"))
+                        CalculatorButton(action: { calculator.minusPressed() }, labelContent: .symbol("minus"))
+                        CalculatorButton(action: { calculator.plusPressed() }, labelContent: .symbol("plus"))
                     }
                 }
                 Button {
                     calculator.returnPressed()
                 } label: {
-                    CalculatorButton(action: { calculator.returnPressed() }, labelContent: "􀅇")
+                    CalculatorButton(action: { calculator.returnPressed() }, labelContent: .symbol("return.left"))
                 }
             }
         }
@@ -66,6 +66,6 @@ struct ProgrammerKeyboard: View {
 
 struct ProgrammerKeyboard_Previews: PreviewProvider {
     static var previews: some View {
-        ProgrammerKeyboard(calculator: Binding.constant(RPNCalculator()))
+        ProgrammerKeyboard(calculator: Binding.constant(RPN()))
     }
 }

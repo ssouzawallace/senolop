@@ -8,64 +8,98 @@
 import SwiftUI
 
 struct BasicKeyboard: View {
-    @Binding var calculator: RPNCalculator
+    @State var buttonWidth = 0.0
+    @Binding var calculator: RPN
     
     var body: some View {
+        HStack {
+            VStack {
+                HStack {
+                    VStack {
+                        CalculatorButton(action: { calculator.swapPressed() }, labelContent: .string("x↔y"))
+                        CalculatorButton(action: { calculator.digitPressed(7) }, labelContent: .string("7"))
+                        CalculatorButton(action: { calculator.digitPressed(4) }, labelContent: .string("4"))
+                        CalculatorButton(action: { calculator.digitPressed(1) }, labelContent: .string("1"))
+                    }
+                    VStack {
+                        CalculatorButton(action: { calculator.rowDownPressed() }, labelContent: .string("R↓"))
+                        CalculatorButton(action: { calculator.digitPressed(8) }, labelContent: .string("8"))
+                        CalculatorButton(action: { calculator.digitPressed(5) }, labelContent: .string("5"))
+                        CalculatorButton(action: { calculator.digitPressed(2) }, labelContent: .string("2"))
+                    }
+                }
+                CalculatorButton(action: { calculator.digitPressed(0) }, labelContent: .string("0"), expandVertically: false, squared: false)
+            }
+            VStack {
+                CalculatorButton(action: { calculator.rowUpPressed() }, labelContent: .string("R↑"))
+                CalculatorButton(action: { calculator.digitPressed(9) }, labelContent: .string("9"))
+                CalculatorButton(action: { calculator.digitPressed(6) }, labelContent: .string("6"))
+                CalculatorButton(action: { calculator.digitPressed(3) }, labelContent: .string("3"))
+                CalculatorButton(action: { calculator.returnPressed() }, labelContent: .string("."))
+            }
+        }
+        .padding()
+        .scaledToFit()
+        
         VStack {
             HStack {
-                CalculatorButton(action: { calculator.swapPressed() }, labelContent: "x↔y")
                 
-                CalculatorButton(action: { calculator.rowDownPressed() }, labelContent: "R↓")
                 
-                CalculatorButton(action: { calculator.rowUpPressed() }, labelContent: "R↑")
                 
-                CalculatorButton(action: { calculator.deletePressed() }, labelContent: "􁂈")
+                
+                
+                
+                CalculatorButton(action: { calculator.deletePressed() }, labelContent: .symbol("delete.left"))
             }
             
             HStack {
-                CalculatorButton(action: { calculator.acPressed() }, labelContent: "AC")
-                CalculatorButton(action: { calculator.cPressed() }, labelContent: "C")
-                CalculatorButton(action: { calculator.invertSignalPressed() }, labelContent: "􀛺")
-                CalculatorButton(action: { calculator.moduloPressed() }, labelContent: "􀘾")
-                CalculatorButton(action: { calculator.divisionPressed() }, labelContent: "􀅿")
+                CalculatorButton(action: { calculator.acPressed() }, labelContent: .string("AC"))
+                CalculatorButton(action: { calculator.cPressed() }, labelContent: .string("C"))
+                CalculatorButton(action: { calculator.invertSignalPressed() }, labelContent: .symbol("plusminus"))
+                CalculatorButton(action: { calculator.moduloPressed() }, labelContent: .symbol("percent"))
+                CalculatorButton(action: { calculator.divisionPressed() }, labelContent: .symbol("divide"))
             }
             
             HStack {
                 VStack {
                     HStack {
-                        CalculatorButton(action: { calculator.digitPressed(7) }, labelContent: "7")
-                        CalculatorButton(action: { calculator.digitPressed(8) }, labelContent: "8")
-                        CalculatorButton(action: { calculator.digitPressed(9) }, labelContent: "9")
-                        CalculatorButton(action: { calculator.multiplicationPressed() }, labelContent: "􀅾")
+                        
+                        
+                        CalculatorButton(action: { calculator.multiplicationPressed() }, labelContent: .symbol("multiply"))
                     }
                     
                     HStack {
-                        CalculatorButton(action: { calculator.digitPressed(4) }, labelContent: "4")
-                        CalculatorButton(action: { calculator.digitPressed(5) }, labelContent: "5")
-                        CalculatorButton(action: { calculator.digitPressed(6) }, labelContent: "6")
-                        CalculatorButton(action: { calculator.minusPressed() }, labelContent: "􀅽")
+                        
+                        
+                        
+                        CalculatorButton(action: { calculator.minusPressed() }, labelContent: .symbol("minus"))
                     }
                     
                     HStack {
-                        CalculatorButton(action: { calculator.digitPressed(1) }, labelContent: "1")
-                        CalculatorButton(action: { calculator.digitPressed(2) }, labelContent: "2")
-                        CalculatorButton(action: { calculator.digitPressed(3) }, labelContent: "3")
-                        CalculatorButton(action: { calculator.minusPressed() }, labelContent: "􀅼")
+                        
+                        
+                        
+                        CalculatorButton(action: { calculator.minusPressed() }, labelContent: .symbol("plus"))
                     }
                     
                     HStack {
-                        CalculatorButton(action: { calculator.digitPressed(0) }, labelContent: "0")
-                        CalculatorButton(action: { calculator.commaPressed() }, labelContent: ".")
-                        CalculatorButton(action: { calculator.returnPressed() }, labelContent: "􀅇")
+                        Spacer()
+                        ZStack {
+                            Spacer()
+                            
+                        }
+                        
+                        CalculatorButton(action: { calculator.returnPressed() }, labelContent: .symbol("return.left"))
                     }
                 }
             }
         }
+        .padding()
     }
 }
 
 struct BasicKeyboard_Previews: PreviewProvider {
     static var previews: some View {
-        BasicKeyboard(calculator: Binding.constant(RPNCalculator()))
+        BasicKeyboard(calculator: Binding.constant(RPN()))
     }
 }

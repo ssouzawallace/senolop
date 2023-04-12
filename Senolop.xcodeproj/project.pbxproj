@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17012AEA290868F500D7449C /* RPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17012AE9290868F500D7449C /* RPN.swift */; };
+		17012AEC2908699400D7449C /* Scientific.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17012AEB2908699300D7449C /* Scientific.swift */; };
+		17012AEE2908699C00D7449C /* Programmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17012AED2908699C00D7449C /* Programmer.swift */; };
 		1708BDE828F1AAB2004C1013 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708BDE728F1AAB2004C1013 /* WelcomeView.swift */; };
 		1708BDEA28F1AB8C004C1013 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708BDE928F1AB8C004C1013 /* CalculatorButton.swift */; };
 		174AC93F28EE84F800E32729 /* SenolopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC93E28EE84F800E32729 /* SenolopApp.swift */; };
@@ -24,32 +27,26 @@
 		174AC98528EE85C700E32729 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97928EE85C700E32729 /* Keyboard.swift */; };
 		174AC98628EE85C700E32729 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97A28EE85C700E32729 /* IntroView.swift */; };
 		174AC98728EE85C700E32729 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97B28EE85C700E32729 /* ContentView.swift */; };
-		1759791A28F32678006701E8 /* SenolopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759791928F32678006701E8 /* SenolopTests.swift */; };
 		17606B7228F11AD9002031DC /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17606B7128F11AD9002031DC /* CalculatorView.swift */; };
 		179F3D1128EF644000445748 /* BasicKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17522ED428EF5AFA006A178B /* BasicKeyboard.swift */; };
 		17D94F5028F5E1620031E20A /* HapticsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D94F4F28F5E1620031E20A /* HapticsHelper.swift */; };
+		17DE35CE295B8029002FA5C8 /* NumericKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DE35CD295B8029002FA5C8 /* NumericKeyboard.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		1759791B28F32678006701E8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 174AC93328EE84F800E32729 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 174AC93A28EE84F800E32729;
-			remoteInfo = Senolop;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		17012AE9290868F500D7449C /* RPN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPN.swift; sourceTree = "<group>"; };
+		17012AEB2908699300D7449C /* Scientific.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scientific.swift; sourceTree = "<group>"; };
+		17012AED2908699C00D7449C /* Programmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Programmer.swift; sourceTree = "<group>"; };
 		1708BDE728F1AAB2004C1013 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		1708BDE928F1AB8C004C1013 /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
+		170E381428FA3BFE00A98A3C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		170E381628FA3BFE00A98A3C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		174AC93B28EE84F800E32729 /* Senolop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Senolop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		174AC93E28EE84F800E32729 /* SenolopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopApp.swift; sourceTree = "<group>"; };
 		174AC94028EE84F800E32729 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		174AC94328EE84F800E32729 /* Senolop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Senolop.xcdatamodel; sourceTree = "<group>"; };
 		174AC94928EE84FA00E32729 /* Senolop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Senolop.entitlements; sourceTree = "<group>"; };
 		174AC94B28EE84FA00E32729 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		174AC95528EE84FA00E32729 /* SenolopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopTests.swift; sourceTree = "<group>"; };
 		174AC96F28EE85C700E32729 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Shared/Assets.xcassets; sourceTree = "<group>"; };
 		174AC97228EE85C700E32729 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		174AC97328EE85C700E32729 /* ScientificKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScientificKeyboard.swift; sourceTree = "<group>"; };
@@ -62,10 +59,7 @@
 		174AC97A28EE85C700E32729 /* IntroView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		174AC97B28EE85C700E32729 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		174AC98828EF285000E32729 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		174CAE1128F14AEA00901A71 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS16.0.sdk/System/Library/Frameworks/Charts.framework; sourceTree = DEVELOPER_DIR; };
 		17522ED428EF5AFA006A178B /* BasicKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicKeyboard.swift; sourceTree = "<group>"; };
-		1759791728F32677006701E8 /* SenolopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SenolopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1759791928F32678006701E8 /* SenolopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopTests.swift; sourceTree = "<group>"; };
 		17606B7128F11AD9002031DC /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		176C710128F165B700BE97F8 /* Appfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
 		176C710328F165B700BE97F8 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
@@ -73,17 +67,11 @@
 		179A647828F4073A00F1E797 /* deploy.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = deploy.yml; sourceTree = "<group>"; };
 		179A647928F4073A00F1E797 /* dependabot.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = dependabot.yml; sourceTree = "<group>"; };
 		17D94F4F28F5E1620031E20A /* HapticsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsHelper.swift; sourceTree = "<group>"; };
+		17DE35CD295B8029002FA5C8 /* NumericKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		174AC93828EE84F800E32729 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1759791428F32677006701E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -97,6 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				174AC97228EE85C700E32729 /* Calculator.swift */,
+				17012AE9290868F500D7449C /* RPN.swift */,
+				17012AEB2908699300D7449C /* Scientific.swift */,
+				17012AED2908699C00D7449C /* Programmer.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -104,12 +95,10 @@
 		174AC93228EE84F800E32729 = {
 			isa = PBXGroup;
 			children = (
-				179A647628F4073A00F1E797 /* .github */,
 				174AC98828EF285000E32729 /* README.md */,
+				179A647628F4073A00F1E797 /* .github */,
 				176C710028F165B700BE97F8 /* fastlane */,
 				174AC93D28EE84F800E32729 /* Senolop */,
-				174AC95428EE84FA00E32729 /* SenolopTests */,
-				1759791828F32678006701E8 /* SenolopTests */,
 				174AC93C28EE84F800E32729 /* Products */,
 				174CAE1028F14AE900901A71 /* Frameworks */,
 			);
@@ -119,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				174AC93B28EE84F800E32729 /* Senolop.app */,
-				1759791728F32677006701E8 /* SenolopTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,9 +115,10 @@
 		174AC93D28EE84F800E32729 /* Senolop */ = {
 			isa = PBXGroup;
 			children = (
-				174AC93E28EE84F800E32729 /* SenolopApp.swift */,
-				170B37A828F3DB4500FFF7CF /* Calculator */,
 				174AC96E28EE85C700E32729 /* Shared */,
+				17DE35CC295B8013002FA5C8 /* Keyboard */,
+				170B37A828F3DB4500FFF7CF /* Calculator */,
+				174AC93E28EE84F800E32729 /* SenolopApp.swift */,
 				174AC94028EE84F800E32729 /* Persistence.swift */,
 				174AC96F28EE85C700E32729 /* Assets.xcassets */,
 				174AC94928EE84FA00E32729 /* Senolop.entitlements */,
@@ -147,25 +136,17 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		174AC95428EE84FA00E32729 /* SenolopTests */ = {
-			isa = PBXGroup;
-			children = (
-				174AC95528EE84FA00E32729 /* SenolopTests.swift */,
-			);
-			path = SenolopTests;
-			sourceTree = "<group>";
-		};
 		174AC96E28EE85C700E32729 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				17D94F4F28F5E1620031E20A /* HapticsHelper.swift */,
+				179F3D1228EF644D00445748 /* Keyboard */,
+				178960BE28F6180A00E04794 /* Helpers */,
 				174AC97B28EE85C700E32729 /* ContentView.swift */,
 				17606B7128F11AD9002031DC /* CalculatorView.swift */,
 				174AC97528EE85C700E32729 /* SubscriptionView.swift */,
 				174AC97A28EE85C700E32729 /* IntroView.swift */,
 				174AC97428EE85C700E32729 /* BinariesDisplay.swift */,
 				174AC97628EE85C700E32729 /* Display.swift */,
-				179F3D1228EF644D00445748 /* Keyboard */,
 				1708BDE728F1AAB2004C1013 /* WelcomeView.swift */,
 			);
 			path = Shared;
@@ -174,17 +155,10 @@
 		174CAE1028F14AE900901A71 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				174CAE1128F14AEA00901A71 /* Charts.framework */,
+				170E381428FA3BFE00A98A3C /* WidgetKit.framework */,
+				170E381628FA3BFE00A98A3C /* SwiftUI.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1759791828F32678006701E8 /* SenolopTests */ = {
-			isa = PBXGroup;
-			children = (
-				1759791928F32678006701E8 /* SenolopTests.swift */,
-			);
-			path = SenolopTests;
 			sourceTree = "<group>";
 		};
 		176C710028F165B700BE97F8 /* fastlane */ = {
@@ -195,6 +169,14 @@
 				176C710428F165B700BE97F8 /* README.md */,
 			);
 			path = fastlane;
+			sourceTree = "<group>";
+		};
+		178960BE28F6180A00E04794 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				17D94F4F28F5E1620031E20A /* HapticsHelper.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		179A647628F4073A00F1E797 /* .github */ = {
@@ -227,6 +209,14 @@
 			path = Keyboard;
 			sourceTree = "<group>";
 		};
+		17DE35CC295B8013002FA5C8 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				17DE35CD295B8029002FA5C8 /* NumericKeyboard.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,24 +237,6 @@
 			productReference = 174AC93B28EE84F800E32729 /* Senolop.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1759791628F32677006701E8 /* SenolopTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1759791D28F32678006701E8 /* Build configuration list for PBXNativeTarget "SenolopTests" */;
-			buildPhases = (
-				1759791328F32677006701E8 /* Sources */,
-				1759791428F32677006701E8 /* Frameworks */,
-				1759791528F32677006701E8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1759791C28F32678006701E8 /* PBXTargetDependency */,
-			);
-			name = SenolopTests;
-			productName = SenolopTests;
-			productReference = 1759791728F32677006701E8 /* SenolopTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -277,10 +249,6 @@
 				TargetAttributes = {
 					174AC93A28EE84F800E32729 = {
 						CreatedOnToolsVersion = 14.0.1;
-					};
-					1759791628F32677006701E8 = {
-						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = 174AC93A28EE84F800E32729;
 					};
 				};
 			};
@@ -298,7 +266,6 @@
 			projectRoot = "";
 			targets = (
 				174AC93A28EE84F800E32729 /* Senolop */,
-				1759791628F32677006701E8 /* SenolopTests */,
 			);
 		};
 /* End PBXProject section */
@@ -313,13 +280,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1759791528F32677006701E8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -327,15 +287,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17012AEC2908699400D7449C /* Scientific.swift in Sources */,
 				17D94F5028F5E1620031E20A /* HapticsHelper.swift in Sources */,
 				174AC93F28EE84F800E32729 /* SenolopApp.swift in Sources */,
 				17606B7228F11AD9002031DC /* CalculatorView.swift in Sources */,
 				174AC98128EE85C700E32729 /* SubscriptionView.swift in Sources */,
+				17012AEA290868F500D7449C /* RPN.swift in Sources */,
+				17DE35CE295B8029002FA5C8 /* NumericKeyboard.swift in Sources */,
 				1708BDE828F1AAB2004C1013 /* WelcomeView.swift in Sources */,
 				174AC98728EE85C700E32729 /* ContentView.swift in Sources */,
 				174AC98328EE85C700E32729 /* NumericProgrammerKeyboard.swift in Sources */,
 				1708BDEA28F1AB8C004C1013 /* CalculatorButton.swift in Sources */,
 				174AC98028EE85C700E32729 /* BinariesDisplay.swift in Sources */,
+				17012AEE2908699C00D7449C /* Programmer.swift in Sources */,
 				174AC98628EE85C700E32729 /* IntroView.swift in Sources */,
 				174AC98228EE85C700E32729 /* Display.swift in Sources */,
 				174AC98428EE85C700E32729 /* ProgrammerKeyboard.swift in Sources */,
@@ -348,23 +312,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1759791328F32677006701E8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1759791A28F32678006701E8 /* SenolopTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1759791C28F32678006701E8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 174AC93A28EE84F800E32729 /* Senolop */;
-			targetProxy = 1759791B28F32678006701E8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		174AC96328EE84FA00E32729 /* Debug */ = {
@@ -483,36 +431,40 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Senolop/Senolop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 25;
 				DEVELOPMENT_ASSET_PATHS = "\"Senolop/Preview Content\"";
 				DEVELOPMENT_TEAM = 55XL2R5538;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.Senolop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3";
-				TVOS_DEPLOYMENT_TARGET = 15.0;
+				TVOS_DEPLOYMENT_TARGET = 16.0;
 			};
 			name = Debug;
 		};
@@ -523,75 +475,40 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Senolop/Senolop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 25;
 				DEVELOPMENT_ASSET_PATHS = "\"Senolop/Preview Content\"";
 				DEVELOPMENT_TEAM = 55XL2R5538;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.Senolop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3";
-				TVOS_DEPLOYMENT_TARGET = 15.0;
-			};
-			name = Release;
-		};
-		1759791E28F32678006701E8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 55XL2R5538;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.SenolopTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Senolop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Senolop";
-			};
-			name = Debug;
-		};
-		1759791F28F32678006701E8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 55XL2R5538;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.SenolopTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Senolop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Senolop";
-				VALIDATE_PRODUCT = YES;
+				TVOS_DEPLOYMENT_TARGET = 16.0;
 			};
 			name = Release;
 		};
@@ -612,15 +529,6 @@
 			buildConfigurations = (
 				174AC96628EE84FA00E32729 /* Debug */,
 				174AC96728EE84FA00E32729 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1759791D28F32678006701E8 /* Build configuration list for PBXNativeTarget "SenolopTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1759791E28F32678006701E8 /* Debug */,
-				1759791F28F32678006701E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
