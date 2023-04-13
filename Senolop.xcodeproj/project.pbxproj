@@ -65,13 +65,7 @@
 		174AC97928EE85C700E32729 /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		174AC97A28EE85C700E32729 /* IntroView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		174AC97B28EE85C700E32729 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		174AC98828EF285000E32729 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		17606B7128F11AD9002031DC /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
-		176C710128F165B700BE97F8 /* Appfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Appfile; sourceTree = "<group>"; };
-		176C710328F165B700BE97F8 /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
-		176C710428F165B700BE97F8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		179A647828F4073A00F1E797 /* deploy.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = deploy.yml; sourceTree = "<group>"; };
-		179A647928F4073A00F1E797 /* dependabot.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = dependabot.yml; sourceTree = "<group>"; };
 		17DE35CD295B8029002FA5C8 /* NumericKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,9 +118,6 @@
 		174AC93228EE84F800E32729 = {
 			isa = PBXGroup;
 			children = (
-				174AC98828EF285000E32729 /* README.md */,
-				179A647628F4073A00F1E797 /* .github */,
-				176C710028F165B700BE97F8 /* fastlane */,
 				174AC93D28EE84F800E32729 /* Senolop */,
 				173C2BFB29E71FF20039DB93 /* SenolopTests */,
 				174AC93C28EE84F800E32729 /* Products */,
@@ -186,33 +177,6 @@
 				170E381628FA3BFE00A98A3C /* SwiftUI.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		176C710028F165B700BE97F8 /* fastlane */ = {
-			isa = PBXGroup;
-			children = (
-				176C710128F165B700BE97F8 /* Appfile */,
-				176C710328F165B700BE97F8 /* Fastfile */,
-				176C710428F165B700BE97F8 /* README.md */,
-			);
-			path = fastlane;
-			sourceTree = "<group>";
-		};
-		179A647628F4073A00F1E797 /* .github */ = {
-			isa = PBXGroup;
-			children = (
-				179A647728F4073A00F1E797 /* workflows */,
-				179A647928F4073A00F1E797 /* dependabot.yml */,
-			);
-			path = .github;
-			sourceTree = "<group>";
-		};
-		179A647728F4073A00F1E797 /* workflows */ = {
-			isa = PBXGroup;
-			children = (
-				179A647828F4073A00F1E797 /* deploy.yml */,
-			);
-			path = workflows;
 			sourceTree = "<group>";
 		};
 		179F3D1228EF644D00445748 /* Keyboard */ = {
