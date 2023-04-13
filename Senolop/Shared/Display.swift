@@ -8,42 +8,33 @@
 import SwiftUI
 
 struct Display: View {
-    @Binding var mode: RPN.VisualizationMode
-    @State private var baseMode: RPN.BaseMode = .ten
     @State private var multiSelection = Set<UUID>()
     @Binding var calculator: Calculator
     
     var body: some View {
-        VStack {
-            List {
-                ForEach(calculator.stack) { element in
-                    VStack(alignment: .trailing) {
-                        Text("\(Double(element.value))")
-                    }
+        List(calculator.stack.reversed()) { element in
+            VStack {
+                HStack {
+                    Spacer()
+                    Text("\(Double(element.value))".replacingOccurrences(of: ".", with: ","))
+                        .font(.largeTitle)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                        .scaleEffect(x: 1, y: -1, anchor: .center)
                 }
-                .scaleEffect(x: 1, y: -1, anchor: .center)
-                .flipsForRightToLeftLayoutDirection(true)
+                Divider()
+                    .background(.secondary)
             }
-            .scaleEffect(x: 1, y: -1, anchor: .center)
-            .listStyle(.plain)
-            
-            if mode == .programmer {
-                Picker("Mode", selection: $baseMode) {
-                    Text("8")
-                    Text("10")
-                    Text("12")
-                }
-                .padding()
-                .pickerStyle(.segmented)
-                BinariesDisplay(value: Int(calculator.stack.last?.value ?? 0))
-            }
+            .listRowSeparator(.hidden)
         }
+        .scaleEffect(x: 1, y: -1, anchor: .center)
+        .flipsForRightToLeftLayoutDirection(true)
+        .listStyle(.plain)
     }
 }
 
 struct Display_Previews: PreviewProvider {
     static var previews: some View {
-        Display(mode: Binding.constant(.basic),
-                calculator: Binding.constant(RPN()))
+        Display(calculator: .constant(RPN()))
     }
 }

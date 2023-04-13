@@ -48,30 +48,30 @@ struct ProgrammerKeyboard: View {
                 Button(action: { calculator.dividePressed() }) {
                     Image(systemName: "divide")
                 }
-                .buttonStyle(MyStyle(proeminent: true))
+                .buttonStyle(CalculatorButtonStyle(proeminent: true))
                 Button(action: { calculator.minusPressed() }) {
                     Image(systemName: "minus")
                 }
-                .buttonStyle(MyStyle(proeminent: true))
+                .buttonStyle(CalculatorButtonStyle(proeminent: true))
             }
             HStack {
                 Button("byte flip", action: { })
-                    .buttonStyle(MyStyle(squared: false))
+                    .buttonStyle(CalculatorButtonStyle(squared: false))
                 Button("1", action: { calculator.digitPressed(1) })
                 Button("2", action: { calculator.digitPressed(2) })
                 Button("3", action: { calculator.digitPressed(3) })
                 Button(action: { calculator.multiplyPressed() }) {
                     Image(systemName: "multiply")
                 }
-                .buttonStyle(MyStyle(proeminent: true))
+                .buttonStyle(CalculatorButtonStyle(proeminent: true))
                 Button(action: { calculator.plusPressed() }) {
                     Image(systemName: "plus")
                 }
-                .buttonStyle(MyStyle(proeminent: true))
+                .buttonStyle(CalculatorButtonStyle(proeminent: true))
             }
             HStack {
                 Button("word flip", action: { })
-                    .buttonStyle(MyStyle(squared: false))
+                    .buttonStyle(CalculatorButtonStyle(squared: false))
                 
                 Button("FF", action: { })
                 
@@ -80,12 +80,12 @@ struct ProgrammerKeyboard: View {
                 Button("00", action: {  })
                     
                 Button("enter", action: { calculator.returnPressed() })
-                    .buttonStyle(MyStyle(squared: false, proeminent: true))
+                    .buttonStyle(CalculatorButtonStyle(squared: false, proeminent: true))
                 
             }
         }
         .fixedSize(horizontal: true, vertical: false)
-        .buttonStyle(MyStyle())
+        .buttonStyle(CalculatorButtonStyle())
         .scaledToFit()
     }
 }

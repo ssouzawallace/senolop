@@ -19,6 +19,10 @@ protocol Calculator {
     
     func buttonPressed()
     
+    mutating func swapPressed()
+    mutating func rollDownPressed()
+    mutating func rollUpPressed()
+    mutating func dropPressed()
     mutating func clearPressed()
     mutating func digitPressed(_ digit: UInt8)
     mutating func commaPressed()

@@ -62,7 +62,7 @@ struct ScientificKeyboard: View {
         }
         .fixedSize(horizontal: true, vertical: false)
         .padding()
-        .buttonStyle(MyStyle())
+        .buttonStyle(CalculatorButtonStyle())
         .scaledToFit()
     }
 }

@@ -26,20 +26,44 @@ struct NumericKeyboard: View {
     var body: some View {
         VStack(alignment: .center, spacing: spacing) {
             HStack {
+                Button(action: { calculator.swapPressed() }) {
+                    HStack {
+                        Text("X")
+                        Image(systemName: "arrow.left.and.right")
+                        Text("Y")
+                    }
+                }
+                Button(action: { calculator.rollDownPressed() }) {
+                    HStack {
+                        Text("R")
+                        Image(systemName: "arrow.down")
+                    }
+                }
+                Button(action: { calculator.rollUpPressed() }) {
+                    HStack {
+                        Text("R")
+                        Image(systemName: "arrow.up")
+                    }
+                }
+                Button("drop", action: { calculator.dropPressed() })                
+            }
+            .buttonStyle(CalculatorButtonStyle(squared: false))
+            .fixedSize(horizontal: false, vertical: true)
+            HStack {
                 Button(calculator.cleanStateTitle, action: { calculator.clearPressed() })
-                    .buttonStyle(MyStyle(special: true))
+                    .buttonStyle(CalculatorButtonStyle(special: true))
                 Button(action: { calculator.invertSignalPressed() }) {
                     Image(systemName: "plus.forwardslash.minus")
                 }
-                .buttonStyle(MyStyle(special: true))
+                .buttonStyle(CalculatorButtonStyle(special: true))
                 Button(action: { calculator.percentPressed() }) {
                     Image(systemName: "percent")
                 }
-                .buttonStyle(MyStyle(special: true))
+                .buttonStyle(CalculatorButtonStyle(special: true))
                 Button(action: { calculator.dividePressed() }) {
                     Image(systemName: "divide")
                 }
-                .buttonStyle(MyStyle(proeminent: true))
+                .buttonStyle(CalculatorButtonStyle(proeminent: true))
             }
             HStack {
                 Button("7", action: { calculator.digitPressed(7) })
@@ -48,7 +72,7 @@ struct NumericKeyboard: View {
                 Button(action: {calculator.multiplyPressed() }) {
                     Image(systemName: "multiply")
                 }
-                .buttonStyle(MyStyle(proeminent: true))
+                .buttonStyle(CalculatorButtonStyle(proeminent: true))
             }
             HStack {
                 Button("4", action: { calculator.digitPressed(4) })
@@ -57,7 +81,7 @@ struct NumericKeyboard: View {
                 Button(action: { calculator.minusPressed() }) {
                     Image(systemName: "minus")
                 }
-                .buttonStyle(MyStyle(proeminent: true))
+                .buttonStyle(CalculatorButtonStyle(proeminent: true))
             }
             HStack {
                 Button("1", action: { calculator.digitPressed(1) })
@@ -66,23 +90,22 @@ struct NumericKeyboard: View {
                 Button(action: { calculator.plusPressed() }) {
                     Image(systemName: "plus")
                 }
-                .buttonStyle(MyStyle(proeminent: true))
+                .buttonStyle(CalculatorButtonStyle(proeminent: true))
             }
             HStack {
                 Button("0", action: { calculator.digitPressed(0) })
-                    .buttonStyle(MyStyle(squared: false))
+                    .buttonStyle(CalculatorButtonStyle(squared: false))
                     
                 HStack {
                     Button(",", action: { calculator.commaPressed() })
                     Button("enter", action: { calculator.returnPressed() })
-                    .buttonStyle(MyStyle(proeminent: true))
+                    .buttonStyle(CalculatorButtonStyle(proeminent: true))
                 }
                 
             }
         }
         .fixedSize(horizontal: false, vertical: true)
-        .buttonStyle(MyStyle())
-        .scaledToFit()
+        .buttonStyle(CalculatorButtonStyle())
     }
 }
 

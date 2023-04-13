@@ -13,6 +13,7 @@
 		1708BDE828F1AAB2004C1013 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708BDE728F1AAB2004C1013 /* WelcomeView.swift */; };
 		1708BDEA28F1AB8C004C1013 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708BDE928F1AB8C004C1013 /* CalculatorButton.swift */; };
 		173C2BFD29E71FF20039DB93 /* SenolopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173C2BFC29E71FF20039DB93 /* SenolopTests.swift */; };
+		173C2C0529E841CF0039DB93 /* CalculatorHapticsFeedbackHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173C2C0429E841CF0039DB93 /* CalculatorHapticsFeedbackHandler.swift */; };
 		174AC93F28EE84F800E32729 /* SenolopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC93E28EE84F800E32729 /* SenolopApp.swift */; };
 		174AC94C28EE84FA00E32729 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 174AC94B28EE84FA00E32729 /* Preview Assets.xcassets */; };
 		174AC97C28EE85C700E32729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 174AC96F28EE85C700E32729 /* Assets.xcassets */; };
@@ -26,7 +27,6 @@
 		174AC98628EE85C700E32729 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97A28EE85C700E32729 /* IntroView.swift */; };
 		174AC98728EE85C700E32729 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97B28EE85C700E32729 /* ContentView.swift */; };
 		17606B7228F11AD9002031DC /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17606B7128F11AD9002031DC /* CalculatorView.swift */; };
-		17D94F5028F5E1620031E20A /* HapticsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D94F4F28F5E1620031E20A /* HapticsHelper.swift */; };
 		17DE35CE295B8029002FA5C8 /* NumericKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DE35CD295B8029002FA5C8 /* NumericKeyboard.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +50,7 @@
 		170E381628FA3BFE00A98A3C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		173C2BFA29E71FF10039DB93 /* SenolopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SenolopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		173C2BFC29E71FF20039DB93 /* SenolopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopTests.swift; sourceTree = "<group>"; };
+		173C2C0429E841CF0039DB93 /* CalculatorHapticsFeedbackHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorHapticsFeedbackHandler.swift; sourceTree = "<group>"; };
 		174AC93B28EE84F800E32729 /* Senolop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Senolop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		174AC93E28EE84F800E32729 /* SenolopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopApp.swift; sourceTree = "<group>"; };
 		174AC94928EE84FA00E32729 /* Senolop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Senolop.entitlements; sourceTree = "<group>"; };
@@ -71,7 +72,6 @@
 		176C710428F165B700BE97F8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		179A647828F4073A00F1E797 /* deploy.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = deploy.yml; sourceTree = "<group>"; };
 		179A647928F4073A00F1E797 /* dependabot.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = dependabot.yml; sourceTree = "<group>"; };
-		17D94F4F28F5E1620031E20A /* HapticsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsHelper.swift; sourceTree = "<group>"; };
 		17DE35CD295B8029002FA5C8 /* NumericKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +100,7 @@
 				17012AE9290868F500D7449C /* RPN.swift */,
 				17012AEB2908699300D7449C /* Scientific.swift */,
 				17012AED2908699C00D7449C /* Programmer.swift */,
+				173C2C0429E841CF0039DB93 /* CalculatorHapticsFeedbackHandler.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -167,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				179F3D1228EF644D00445748 /* Keyboard */,
-				178960BE28F6180A00E04794 /* Helpers */,
 				174AC97B28EE85C700E32729 /* ContentView.swift */,
 				17606B7128F11AD9002031DC /* CalculatorView.swift */,
 				174AC97528EE85C700E32729 /* SubscriptionView.swift */,
@@ -196,14 +196,6 @@
 				176C710428F165B700BE97F8 /* README.md */,
 			);
 			path = fastlane;
-			sourceTree = "<group>";
-		};
-		178960BE28F6180A00E04794 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				17D94F4F28F5E1620031E20A /* HapticsHelper.swift */,
-			);
-			name = Helpers;
 			sourceTree = "<group>";
 		};
 		179A647628F4073A00F1E797 /* .github */ = {
@@ -344,7 +336,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				17012AEC2908699400D7449C /* Scientific.swift in Sources */,
-				17D94F5028F5E1620031E20A /* HapticsHelper.swift in Sources */,
 				174AC93F28EE84F800E32729 /* SenolopApp.swift in Sources */,
 				17606B7228F11AD9002031DC /* CalculatorView.swift in Sources */,
 				174AC98128EE85C700E32729 /* SubscriptionView.swift in Sources */,
@@ -352,6 +343,7 @@
 				17DE35CE295B8029002FA5C8 /* NumericKeyboard.swift in Sources */,
 				1708BDE828F1AAB2004C1013 /* WelcomeView.swift in Sources */,
 				174AC98728EE85C700E32729 /* ContentView.swift in Sources */,
+				173C2C0529E841CF0039DB93 /* CalculatorHapticsFeedbackHandler.swift in Sources */,
 				1708BDEA28F1AB8C004C1013 /* CalculatorButton.swift in Sources */,
 				174AC98028EE85C700E32729 /* BinariesDisplay.swift in Sources */,
 				17012AEE2908699C00D7449C /* Programmer.swift in Sources */,
@@ -561,12 +553,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.Senolop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TARGETED_DEVICE_FAMILY = 1;
 				TVOS_DEPLOYMENT_TARGET = 16.0;
 			};
 			name = Debug;
@@ -605,12 +597,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.Senolop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,3";
+				TARGETED_DEVICE_FAMILY = 1;
 				TVOS_DEPLOYMENT_TARGET = 16.0;
 			};
 			name = Release;
