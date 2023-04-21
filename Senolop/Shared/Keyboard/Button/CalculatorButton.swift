@@ -13,33 +13,53 @@ struct CalculatorButtonStyle: ButtonStyle {
     var special = false
     private var color: Color {
         if proeminent {
-            return Color("OperationButtonColor")
+            return .purple // Color("OperationButtonColor")
         } else {
             if special {
-                return Color("SpecialButtonColor")
+                return .blue // Color("SpecialButtonColor")
             } else {
-                return Color("NumericButtonColor")
+                return .yellow // Color("NumericButtonColor")
             }
         }
     }
     func makeBody(configuration: Configuration) -> some View {
-        ZStack(alignment: .center) {
+        ZStack {
             Capsule(style: .continuous)
-                .fill(color)
-                .if(squared) { view in
-                    view.aspectRatio(1, contentMode: .fit)
-                }
-            
+                .foregroundColor(color)
+        
             configuration.label
-                .font(.system(.title2,
-                              design: .none,
-                              weight: .medium))
-                .minimumScaleFactor(0.54)
-                .scaledToFit()
-            
-            
+                .font(.system(.title3))
+                .padding()
         }
-        .foregroundColor(.primary)
         .opacity(configuration.isPressed ? 0.5 : 1.0)
+    }
+}
+
+
+
+struct CalculatorButton: View {
+    var body: some View {
+        VStack {
+            Button("ABC", action: { })
+                .buttonStyle(.borderedProminent)
+                .buttonBorderShape(.roundedRectangle)
+            HStack {
+                Button("ABC", action: { })
+                Button("ABC", action: { })
+            }
+            .aspectRatio(1, contentMode: .fit)
+            VStack {
+                Button("ABC", action: { })
+                Button("ABC", action: { })
+            }
+        }
+        .buttonStyle(CalculatorButtonStyle(proeminent: true))
+        .buttonStyle(CalculatorButtonStyle(squared: false, proeminent: true))
+    }
+}
+
+struct CalculatorButton_Previews: PreviewProvider {
+    static var previews: some View {
+        CalculatorButton()
     }
 }
