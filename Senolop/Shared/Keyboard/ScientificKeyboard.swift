@@ -10,9 +10,11 @@ import SwiftUI
 struct ScientificKeyboard: View {
     @Binding var calculator: Calculator
     
+    private let spacing: CGFloat = 8
+    
     var body: some View {
         HStack {
-            VStack {
+            VStack(spacing: spacing) {
                 HStack {
                     Button("(", action: { })
                         .disabled(true)
@@ -59,17 +61,15 @@ struct ScientificKeyboard: View {
                 }
             }
             NumericKeyboard(calculator: $calculator)
-        }
-        .fixedSize(horizontal: true, vertical: false)
-        .padding()
-        .buttonStyle(CalculatorButtonStyle())
-        .scaledToFit()
+            .scaledToFit()
+        }        
+        .fixedSize(horizontal: false, vertical: true)
+        .buttonStyle(CalculatorButtonStyle(squared: true))
     }
 }
 
 struct ScientificKeyboard_Previews: PreviewProvider {
     static var previews: some View {
         ScientificKeyboard(calculator: Binding.constant(RPN()))
-            .previewInterfaceOrientation(.landscapeLeft)
     }
 }

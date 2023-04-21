@@ -9,9 +9,10 @@ import SwiftUI
 
 struct CalculatorView: View {
     @Binding var calculator: Calculator
-
+    
     var body: some View {
-        VStack {
+        let layout = AnyLayout(VStackLayout())
+        layout {
             Display(calculator: $calculator)
             Keyboard(calculator: $calculator)
                 .padding()
