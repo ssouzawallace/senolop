@@ -9,9 +9,41 @@ import SwiftUI
 
 @main
 struct SenolopApp: App {
+    
+    @State var calculator: Calculator = RPN(CalculatorHapticsFeedbackHandlerImpl())
+    
     var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+            #if os(macOS)
+            return WindowGroup {
+                ContentView(calculator: $calculator)
+                    .touchBar {
+                        Button {
+                            calculator.plusPressed()
+                        } label: {
+                            Image(systemName: "plus")
+                        }
+                        Button {
+                            calculator.minusPressed()
+                        } label: {
+                            Image(systemName: "minus")
+                        }
+                        Button {
+                            calculator.multiplyPressed()
+                        } label: {
+                            Image(systemName: "multiply")
+                        }
+                        Button {
+                            calculator.dividePressed()
+                        } label: {
+                            Image(systemName: "divide")
+                        }
+                    }
+                    .buttonStyle(CalculatorButtonStyle(proeminent: true))
+            }
+            #else
+            return WindowGroup {
+                ContentView(calculator: $calculator)
+            }
+            #endif
     }
 }
