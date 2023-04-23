@@ -111,7 +111,7 @@ struct NumericKeyboard: View {
             }
             
         }
-        .fixedSize(horizontal: true, vertical: true)
+        .fixedSize(horizontal: false, vertical: true)
         .buttonStyle(CalculatorButtonStyle(squared: true))
     }
 }
