@@ -1,169 +1,67 @@
 {
   "images" : [
     {
-      "filename" : "Icon-Spotlight-40.png",
-      "idiom" : "universal",
-      "platform" : "ios",
-      "scale" : "2x",
-      "size" : "20x20"
-    },
-    {
-      "filename" : "Icon-60.png",
-      "idiom" : "universal",
-      "platform" : "ios",
-      "scale" : "3x",
-      "size" : "20x20"
-    },
-    {
-      "filename" : "Icon-Small@2x.png",
-      "idiom" : "universal",
-      "platform" : "ios",
-      "scale" : "2x",
-      "size" : "29x29"
-    },
-    {
-      "filename" : "Icon-Small@3x.png",
-      "idiom" : "universal",
-      "platform" : "ios",
-      "scale" : "3x",
-      "size" : "29x29"
-    },
-    {
-      "filename" : "Icon-76.png",
-      "idiom" : "universal",
-      "platform" : "ios",
-      "scale" : "2x",
-      "size" : "38x38"
-    },
-    {
-      "filename" : "Icon@2x.png",
-      "idiom" : "universal",
-      "platform" : "ios",
-      "scale" : "3x",
-      "size" : "38x38"
-    },
-    {
-      "filename" : "Icon-Spotlight-40@2x.png",
-      "idiom" : "universal",
-      "platform" : "ios",
-      "scale" : "2x",
-      "size" : "40x40"
-    },
-    {
-      "filename" : "Icon-Spotlight-40@3x 1.png",
-      "idiom" : "universal",
-      "platform" : "ios",
-      "scale" : "3x",
-      "size" : "40x40"
-    },
-    {
-      "filename" : "Icon-Spotlight-40@3x.png",
-      "idiom" : "universal",
-      "platform" : "ios",
-      "scale" : "2x",
-      "size" : "60x60"
-    },
-    {
-      "filename" : "Icon-60@3x.png",
-      "idiom" : "universal",
-      "platform" : "ios",
-      "scale" : "3x",
-      "size" : "60x60"
-    },
-    {
-      "idiom" : "universal",
-      "platform" : "ios",
-      "scale" : "2x",
-      "size" : "64x64"
-    },
-    {
-      "idiom" : "universal",
-      "platform" : "ios",
-      "scale" : "3x",
-      "size" : "64x64"
-    },
-    {
-      "idiom" : "universal",
-      "platform" : "ios",
-      "scale" : "2x",
-      "size" : "68x68"
-    },
-    {
-      "filename" : "Icon-76@2x.png",
-      "idiom" : "universal",
-      "platform" : "ios",
-      "scale" : "2x",
-      "size" : "76x76"
-    },
-    {
-      "filename" : "Icon-iPadPro@2x.png",
-      "idiom" : "universal",
-      "platform" : "ios",
-      "scale" : "2x",
-      "size" : "83.5x83.5"
-    },
-    {
-      "filename" : "iTunesArtwork@2x.png",
+      "filename" : "iOS App Icon 1024x1024px.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
     },
     {
-      "filename" : "Icon_16x16.png",
+      "filename" : "macOS App Icon 16x16px.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
-      "filename" : "Icon_32x32.png",
+      "filename" : "macOS App Icon 32x32px 1.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
-      "filename" : "Icon_32x32 1.png",
+      "filename" : "macOS App Icon 32x32px.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
-      "filename" : "Icon_32x32@2x.png",
+      "filename" : "macOS App Icon 64x64px.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
-      "filename" : "Icon_128x128.png",
+      "filename" : "macOS App Icon 128x128px.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
-      "filename" : "Icon_128x128@2x.png",
+      "filename" : "macOS App Icon 256x256px.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
     },
     {
-      "filename" : "Icon_256x256.png",
+      "filename" : "macOS App Icon 256x256px 1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
     },
     {
-      "filename" : "Icon_512x512 1.png",
+      "filename" : "macOS App Icon 512x512px 1.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
-      "filename" : "Icon_512x512.png",
+      "filename" : "macOS App Icon 512x512px.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
     },
     {
-      "filename" : "Icon_512x512@2x.png",
+      "filename" : "macOS App Icon 1024x1024px.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"

@@ -24,8 +24,7 @@ struct Display: View {
                 }
                 Divider()
                     .background(.secondary)
-            }
-            .listRowSeparator(.hidden)
+            }            
         }
         .scaleEffect(x: 1, y: -1, anchor: .center)
         .flipsForRightToLeftLayoutDirection(true)
