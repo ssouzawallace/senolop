@@ -23,7 +23,10 @@ struct Display: View {
                         .scaleEffect(x: 1, y: -1, anchor: .center)
                 }
                 Divider()
-                    .background(.secondary)
+//                    .if(#available (iOS, 15) transform: { view in
+//                        view
+//                            .background(.secondary)
+//                    }                    
             }            
         }
         .scaleEffect(x: 1, y: -1, anchor: .center)

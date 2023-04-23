@@ -44,8 +44,12 @@ struct CalculatorButton: View {
     var body: some View {
         VStack {
             Button("ABC", action: { })
-                .buttonStyle(.borderedProminent)
-                .buttonBorderShape(.roundedRectangle)
+//                .if(#available (true), transform: { view in
+//                    view                    
+//                        .buttonStyle(.borderedProminent)
+//                        .buttonBorderShape(.roundedRectangle)
+//                    
+//                })
             HStack {
                 Button("ABC", action: { })
                 Button("ABC", action: { })
