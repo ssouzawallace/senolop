@@ -13,12 +13,15 @@ struct CalculatorButtonStyle: ButtonStyle {
     var special = false
     private var color: Color {
         if proeminent {
-            return .purple // Color("OperationButtonColor")
+            // return .purple // Color("OperationButtonColor")
+            return Color("OperationButtonColor")
         } else {
             if special {
-                return .blue // Color("SpecialButtonColor")
+                // return .blue // Color("SpecialButtonColor")
+                return Color("SpecialButtonColor")
             } else {
-                return .yellow // Color("NumericButtonColor")
+                // return .yellow // Color("NumericButtonColor")
+                return  Color("NumericButtonColor")
             }
         }
     }

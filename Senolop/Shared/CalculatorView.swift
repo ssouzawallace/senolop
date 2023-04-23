@@ -11,8 +11,7 @@ struct CalculatorView: View {
     @Binding var calculator: Calculator
     
     var body: some View {
-        let layout = AnyLayout(VStackLayout())
-        layout {
+        VStack {
             Display(calculator: $calculator)
             Keyboard(calculator: $calculator)
                 .padding()
