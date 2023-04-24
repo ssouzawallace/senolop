@@ -7,25 +7,25 @@
       "size" : "1024x1024"
     },
     {
-      "filename" : "macOS App Icon 16x16px.png",
+      "filename" : "iOS App Icon 16x16px.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
-      "filename" : "macOS App Icon 32x32px.png",
+      "filename" : "iOS App Icon 32x32px.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
-      "filename" : "macOS App Icon 32x32px 1.png",
+      "filename" : "iOS App Icon 32x32px 1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
-      "filename" : "macOS App Icon 64x64px.png",
+      "filename" : "iOS App Icon 64x64px.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
@@ -49,13 +49,13 @@
       "size" : "256x256"
     },
     {
-      "filename" : "macOS App Icon 512x512px.png",
+      "filename" : "macOS App Icon 512x512px 1.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
-      "filename" : "macOS App Icon 512x512px 1.png",
+      "filename" : "macOS App Icon 512x512px.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
