@@ -12,6 +12,7 @@
 		17012AEE2908699C00D7449C /* Programmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17012AED2908699C00D7449C /* Programmer.swift */; };
 		1708BDE828F1AAB2004C1013 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708BDE728F1AAB2004C1013 /* WelcomeView.swift */; };
 		1708BDEA28F1AB8C004C1013 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708BDE928F1AB8C004C1013 /* CalculatorButton.swift */; };
+		17340DE329F73CE80033D100 /* TouchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17340DE229F73CE80033D100 /* TouchBar.swift */; };
 		173C2BFD29E71FF20039DB93 /* SenolopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173C2BFC29E71FF20039DB93 /* SenolopTests.swift */; };
 		173C2C0529E841CF0039DB93 /* CalculatorHapticsFeedbackHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173C2C0429E841CF0039DB93 /* CalculatorHapticsFeedbackHandler.swift */; };
 		174AC93F28EE84F800E32729 /* SenolopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC93E28EE84F800E32729 /* SenolopApp.swift */; };
@@ -70,6 +71,8 @@
 		1708BDE928F1AB8C004C1013 /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 		170E381428FA3BFE00A98A3C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		170E381628FA3BFE00A98A3C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		17340DE229F73CE80033D100 /* TouchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBar.swift; sourceTree = "<group>"; };
+		17340DE429F740A50033D100 /* macOS App Icon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "macOS App Icon"; sourceTree = "<group>"; };
 		173C2BFA29E71FF10039DB93 /* SenolopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SenolopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		173C2BFC29E71FF20039DB93 /* SenolopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopTests.swift; sourceTree = "<group>"; };
 		173C2C0429E841CF0039DB93 /* CalculatorHapticsFeedbackHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorHapticsFeedbackHandler.swift; sourceTree = "<group>"; };
@@ -172,6 +175,7 @@
 		174AC93228EE84F800E32729 = {
 			isa = PBXGroup;
 			children = (
+				17340DE429F740A50033D100 /* macOS App Icon */,
 				174AC93D28EE84F800E32729 /* Senolop */,
 				173C2BFB29E71FF20039DB93 /* SenolopTests */,
 				17F243EB29F58F45008DAC68 /* Watch Senolop Watch App */,
@@ -198,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				174AC93E28EE84F800E32729 /* SenolopApp.swift */,
+				17340DE229F73CE80033D100 /* TouchBar.swift */,
 				174AC96E28EE85C700E32729 /* Shared */,
 				170B37A828F3DB4500FFF7CF /* Calculator */,
 				174AC96F28EE85C700E32729 /* Assets.xcassets */,
@@ -494,6 +499,7 @@
 				17606B7228F11AD9002031DC /* CalculatorView.swift in Sources */,
 				174AC98128EE85C700E32729 /* SubscriptionView.swift in Sources */,
 				176EFF9929F53A5D00317BF3 /* StringResources.swift in Sources */,
+				17340DE329F73CE80033D100 /* TouchBar.swift in Sources */,
 				17012AEA290868F500D7449C /* RPN.swift in Sources */,
 				17DE35CE295B8029002FA5C8 /* NumericKeyboard.swift in Sources */,
 				1708BDE828F1AAB2004C1013 /* WelcomeView.swift in Sources */,

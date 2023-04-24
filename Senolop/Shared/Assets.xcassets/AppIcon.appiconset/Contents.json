@@ -49,13 +49,13 @@
       "size" : "256x256"
     },
     {
-      "filename" : "macOS App Icon 512x512px 1.png",
+      "filename" : "macOS App Icon 512x512px.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
-      "filename" : "macOS App Icon 512x512px.png",
+      "filename" : "macOS App Icon 512x512px 1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"

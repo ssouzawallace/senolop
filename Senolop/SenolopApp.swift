@@ -17,26 +17,7 @@ struct SenolopApp: App {
             return WindowGroup {
                 ContentView(calculator: $calculator)
                     .touchBar {
-                        Button {
-                            calculator.plusPressed()
-                        } label: {
-                            Image(systemName: "plus")
-                        }
-                        Button {
-                            calculator.minusPressed()
-                        } label: {
-                            Image(systemName: "minus")
-                        }
-                        Button {
-                            calculator.multiplyPressed()
-                        } label: {
-                            Image(systemName: "multiply")
-                        }
-                        Button {
-                            calculator.dividePressed()
-                        } label: {
-                            Image(systemName: "divide")
-                        }
+                        TouchBar(calculator: $calculator)
                     }
                     .buttonStyle(CalculatorButtonStyle(proeminent: true))
             }
