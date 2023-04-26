@@ -8,7 +8,7 @@
 import Foundation
 
 struct Item: Identifiable {
-    var value: Double
+    var value: String
     let id = UUID()
 }
 

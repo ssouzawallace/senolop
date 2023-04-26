@@ -22,7 +22,7 @@ struct RPN: Calculator {
     
     var cleanStateTitle: String = "AC"
     
-    var stack: [Item] = [Item(value: 0)]
+    var stack: [Item] = [Item(value: "0")]
     
     var calculatorHapticsFeedbackHandler: CalculatorHapticsFeedbackHandler
     init(_ calculatorHapticsFeedbackHandler: CalculatorHapticsFeedbackHandler = DummyCalculatorHapticsFeedbackHandler()) {
@@ -62,7 +62,7 @@ struct RPN: Calculator {
         buttonPressed()
         stack.removeLast()
         if stack.isEmpty {
-            stack = [Item(value: 0)]
+            stack = [Item(value: "0")]
         }
         shouldAppend = true
     }
@@ -76,20 +76,21 @@ struct RPN: Calculator {
         guard !shouldAppend else {
             shouldAppend = false
             stack.removeLast()
-            stack.append(Item(value: Double(digit)))
+            stack.append(Item(value: String(digit)))
             return
         }
         
         clearAll = false
-        let value: Double = stack.popLast()?.value ?? 0
+        guard var value = stack.popLast()?.value else { return }
         if addsComma {
-            if value.rounded() == value {
-                stack.append(Item(value: Double(String(Int(value)) + "." + String(digit)) ?? .nan))
+            if value.contains(".") || value.contains(",") {
+                stack.append(Item(value: value + String(digit)))
             } else {
-                stack.append(Item(value: Double(String(value) + String(digit)) ?? .nan))
+                stack.append(Item(value: value + "." + String(digit)))
             }
         } else {
-            stack.append(Item(value: value * 10 + Double(digit)))
+            if value == "0" { value = "" }
+            stack.append(Item(value: value + String(digit)))
         }
     }
     
@@ -106,7 +107,7 @@ struct RPN: Calculator {
             clearAll = true
             stack.removeLast()
         }
-        stack.append(Item(value: 0))
+        stack.append(Item(value: "0"))
         shouldAppend = false
     }
     
@@ -116,7 +117,7 @@ struct RPN: Calculator {
             error()
             return
         }
-        stack.append(Item(value: -element.value))
+        stack.append(Item(value: "-" + element.value))
         shouldAppend = true
     }
     
@@ -136,7 +137,11 @@ struct RPN: Calculator {
             error()
             return
         }
-        stack.append(Item(value: element.value / 100.0))
+        guard let value = Double(element.value) else {
+            error()
+            return
+        }
+        stack.append(Item(value: String(value / 100.0)))
         shouldAppend = true
     }
     
@@ -146,9 +151,11 @@ struct RPN: Calculator {
             error()
             return
         }
-        guard let elementB = stack.popLast() else { return }
-        guard let elementA = stack.popLast() else { return }
-        stack.append(Item(value: elementA.value + elementB.value))
+        guard let elementB = stack.popLast()?.value else { return }
+        guard let elementA = stack.popLast()?.value else { return }
+        guard let elementB = Double(elementB) else { return }
+        guard let elementA = Double(elementA) else { return }
+        stack.append(Item(value: String(elementA + elementB)))
         shouldAppend = true
     }
     
@@ -158,9 +165,11 @@ struct RPN: Calculator {
             error()
             return
         }
-        guard let elementB = stack.popLast() else { return }
-        guard let elementA = stack.popLast() else { return }
-        stack.append(Item(value: elementA.value - elementB.value))
+        guard let elementB = stack.popLast()?.value else { return }
+        guard let elementA = stack.popLast()?.value else { return }
+        guard let elementB = Double(elementB) else { return }
+        guard let elementA = Double(elementA) else { return }
+        stack.append(Item(value: String(elementA - elementB)))
         shouldAppend = true
     }
     
@@ -170,9 +179,11 @@ struct RPN: Calculator {
             error()
             return
         }
-        guard let elementB = stack.popLast() else { return }
-        guard let elementA = stack.popLast() else { return }
-        stack.append(Item(value: elementA.value / elementB.value))
+        guard let elementB = stack.popLast()?.value else { return }
+        guard let elementA = stack.popLast()?.value else { return }
+        guard let elementB = Double(elementB) else { return }
+        guard let elementA = Double(elementA) else { return }
+        stack.append(Item(value: String(elementA / elementB)))
         shouldAppend = true
     }
     
@@ -182,9 +193,11 @@ struct RPN: Calculator {
             error()
             return
         }
-        guard let elementB = stack.popLast() else { return }
-        guard let elementA = stack.popLast() else { return }
-        stack.append(Item(value: elementA.value * elementB.value))
+        guard let elementB = stack.popLast()?.value else { return }
+        guard let elementA = stack.popLast()?.value else { return }
+        guard let elementB = Double(elementB) else { return }
+        guard let elementA = Double(elementA) else { return }
+        stack.append(Item(value: String(elementA * elementB)))
         shouldAppend = true
     }
 }

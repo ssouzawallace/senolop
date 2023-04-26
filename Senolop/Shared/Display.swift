@@ -16,7 +16,7 @@ struct Display: View {
             VStack {
                 HStack {
                     Spacer()
-                    Text("\(Double(element.value))".replacingOccurrences(of: ".", with: ","))
+                    Text("\(element.value)".replacingOccurrences(of: ".", with: ","))
                         .font(.largeTitle)
                         .lineLimit(1)
                         .minimumScaleFactor(0.5)

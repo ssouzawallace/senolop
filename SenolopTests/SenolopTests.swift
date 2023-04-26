@@ -24,7 +24,7 @@ final class SenolopTests: XCTestCase {
         calculator.digitPressed(1)
         calculator.digitPressed(3)
         calculator.digitPressed(4)
-        XCTAssertEqual(calculator.stack.last?.value, Double(1134))
+        XCTAssertEqual(calculator.stack.last?.value, String(1134))
     }
     
     func testComma() throws {
@@ -35,7 +35,7 @@ final class SenolopTests: XCTestCase {
         calculator.digitPressed(4)
         calculator.digitPressed(0)
         calculator.digitPressed(3)
-        XCTAssertEqual(calculator.stack.last?.value, Double(0.01403))
+        XCTAssertEqual(calculator.stack.last?.value, String(0.01403))
     }
     
     func testPlus() throws {
@@ -46,7 +46,7 @@ final class SenolopTests: XCTestCase {
         calculator.digitPressed(3)
         calculator.digitPressed(4)
         calculator.plusPressed()
-        XCTAssertEqual(calculator.stack.last?.value, Double(11 + 34))
+        XCTAssertEqual(calculator.stack.last?.value, String(11.0 + 34.0))
     }
     
     func testMinus() throws {
@@ -57,7 +57,7 @@ final class SenolopTests: XCTestCase {
         calculator.digitPressed(3)
         calculator.digitPressed(4)
         calculator.minusPressed()
-        XCTAssertEqual(calculator.stack.last?.value, Double(11 - 34))
+        XCTAssertEqual(calculator.stack.last?.value, String(11.0 - 34.0))
     }
     
     func testMultiply() throws {
@@ -68,7 +68,7 @@ final class SenolopTests: XCTestCase {
         calculator.digitPressed(3)
         calculator.digitPressed(4)
         calculator.multiplyPressed()
-        XCTAssertEqual(calculator.stack.last?.value, Double(11 * 34))
+        XCTAssertEqual(calculator.stack.last?.value, String(11.0 * 34.0))
     }
     
     func testDivide() throws {
@@ -79,7 +79,7 @@ final class SenolopTests: XCTestCase {
         calculator.digitPressed(3)
         calculator.digitPressed(4)
         calculator.dividePressed()
-        XCTAssertEqual(calculator.stack.last?.value, Double(11.0 / 34.0))
+        XCTAssertEqual(calculator.stack.last?.value, String(11.0 / 34.0))
     }
     
     func testPercent() throws {
@@ -87,7 +87,7 @@ final class SenolopTests: XCTestCase {
         calculator.digitPressed(1)
         calculator.digitPressed(1)
         calculator.percentPressed()
-        XCTAssertEqual(calculator.stack.last?.value, Double(11.0 / 100.0))
+        XCTAssertEqual(calculator.stack.last?.value, String(11.0 / 100.0))
     }
     
     func testInvertSignal() throws {
@@ -95,7 +95,7 @@ final class SenolopTests: XCTestCase {
         calculator.digitPressed(1)
         calculator.digitPressed(1)
         calculator.invertSignalPressed()
-        XCTAssertEqual(calculator.stack.last?.value, Double(-11.0))
+        XCTAssertEqual(calculator.stack.last?.value, String(-11))
     }
     
     func testClear() throws {
@@ -107,7 +107,7 @@ final class SenolopTests: XCTestCase {
         calculator.clearPressed()
         calculator.clearPressed()
         XCTAssertEqual(calculator.stack.count, 1)
-        XCTAssertEqual(calculator.stack.last?.value, Double(0))
+        XCTAssertEqual(calculator.stack.last?.value, String(0))
     }
     
     func testSwap() throws {
@@ -115,11 +115,11 @@ final class SenolopTests: XCTestCase {
         calculator.digitPressed(1)
         calculator.returnPressed()
         calculator.digitPressed(2)
-        XCTAssertEqual(calculator.stack.last?.value, Double(2))
-        XCTAssertEqual(calculator.stack[calculator.stack.count - 2].value, Double(1))
+        XCTAssertEqual(calculator.stack.last?.value, String(2))
+        XCTAssertEqual(calculator.stack[calculator.stack.count - 2].value, String(1))
         calculator.swapPressed()
-        XCTAssertEqual(calculator.stack.last?.value, Double(1))
-        XCTAssertEqual(calculator.stack[calculator.stack.count - 2].value, Double(2))
+        XCTAssertEqual(calculator.stack.last?.value, String(1))
+        XCTAssertEqual(calculator.stack[calculator.stack.count - 2].value, String(2))
     }
     
     func testRollDown() throws {
@@ -130,7 +130,7 @@ final class SenolopTests: XCTestCase {
         calculator.returnPressed()
         calculator.digitPressed(3)
         calculator.rollDownPressed()
-        XCTAssertEqual(calculator.stack.last?.value, Double(2))
+        XCTAssertEqual(calculator.stack.last?.value, String(2))
     }
     
     func testRollUp() throws {
@@ -141,7 +141,7 @@ final class SenolopTests: XCTestCase {
         calculator.returnPressed()
         calculator.digitPressed(3)
         calculator.rollUpPressed()
-        XCTAssertEqual(calculator.stack.last?.value, Double(1))
+        XCTAssertEqual(calculator.stack.last?.value, String(1))
     }
 
     func testPerformanceExample() throws {
