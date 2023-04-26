@@ -15,16 +15,28 @@ struct SenolopApp: App {
     var body: some Scene {
             #if os(macOS)
             return WindowGroup {
-                ContentView(calculator: $calculator)
-                    .touchBar {
-                        TouchBar(calculator: $calculator)
-                    }
-                    .buttonStyle(CalculatorButtonStyle(proeminent: true))
+                NavigationLink {
+                    WelcomeView()
+                } label: {
+                    ContentView(calculator: $calculator)
+                        .touchBar {
+                            TouchBar(calculator: $calculator)
+                        }
+                        .buttonStyle(CalculatorButtonStyle(proeminent: true))
+                }
             }
             #else
             return WindowGroup {
                 ContentView(calculator: $calculator)
             }
+        NavigationView {
+            NavigationLink {
+                WelcomeView()
+            } label: {
+                ContentView(calculator: $calculator)
+            }
+
+        }
             #endif
     }
 }
