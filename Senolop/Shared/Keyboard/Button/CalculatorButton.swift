@@ -32,7 +32,7 @@ struct CalculatorButtonStyle: ButtonStyle {
         
             configuration.label
                 .font(.system(.title3))
-                .padding()
+                .padding(.vertical)
         }
         .opacity(configuration.isPressed ? 0.5 : 1.0)
     }
