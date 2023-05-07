@@ -10,25 +10,15 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Feedback &amp; Sound</string>
+			<string>Sound &amp; Haptics Feedback</string>
 		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Sound</string>
+			<string>Enabled</string>
 			<key>Key</key>
-			<string>sound_enabled_preference</string>
-			<key>DefaultValue</key>
-			<true/>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Haptics</string>
-			<key>Key</key>
-			<string>haptics_enabled_preference</string>
+			<string>sound_haptics_feedback_enabled_preference</string>
 			<key>DefaultValue</key>
 			<true/>
 		</dict>
@@ -45,6 +35,8 @@
 			<string>App theme</string>
 			<key>Key</key>
 			<string>theme_selected_preference</string>
+			<key>New item</key>
+			<string></string>
 			<key>DefaultValue</key>
 			<string>0</string>
 			<key>Values</key>

@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreHaptics
+import SwiftUI
 
 protocol CalculatorHapticsFeedbackHandler {
     func bip()
@@ -28,6 +29,9 @@ struct DummyCalculatorHapticsFeedbackHandler: CalculatorHapticsFeedbackHandler {
 }
 
 class CalculatorHapticsFeedbackHandlerImpl: CalculatorHapticsFeedbackHandler {
+    @AppStorage("sound_haptics_feedback_enabled_preference")
+    private var soundHapticsFeedbackEnabledPreference = true
+    
     var supportsHaptics: Bool = false
     var engine: CHHapticEngine?
 
@@ -76,7 +80,7 @@ class CalculatorHapticsFeedbackHandlerImpl: CalculatorHapticsFeedbackHandler {
                 [CHHapticPattern.Key.event: [
                     CHHapticPattern.Key.eventType: CHHapticEvent.EventType.hapticTransient,
                     CHHapticPattern.Key.time: CHHapticTimeImmediate,
-                    CHHapticPattern.Key.eventDuration: 1.0]
+                    CHHapticPattern.Key.eventDuration: 1.0] as [CHHapticPattern.Key : Any]
                 ]
             ]
         ]
@@ -89,7 +93,7 @@ class CalculatorHapticsFeedbackHandlerImpl: CalculatorHapticsFeedbackHandler {
                 [CHHapticPattern.Key.event: [
                     CHHapticPattern.Key.eventType: CHHapticEvent.EventType.hapticTransient,
                     CHHapticPattern.Key.time: CHHapticTimeImmediate,
-                    CHHapticPattern.Key.eventDuration: 0.5]
+                    CHHapticPattern.Key.eventDuration: 0.5] as [CHHapticPattern.Key : Any]
                 ],
                 [CHHapticPattern.Key.event: [
                     CHHapticPattern.Key.eventType: CHHapticEvent.EventType.hapticTransient,
@@ -105,6 +109,7 @@ class CalculatorHapticsFeedbackHandlerImpl: CalculatorHapticsFeedbackHandler {
         do {
             let pattern = try CHHapticPattern(dictionary: hapticDict)
             let player = try engine?.makePlayer(with: pattern)
+            player?.isMuted = !soundHapticsFeedbackEnabledPreference
             engine?.notifyWhenPlayersFinished { error in
                 return .stopEngine
             }

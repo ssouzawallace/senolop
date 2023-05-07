@@ -7,20 +7,33 @@
 
 import SwiftUI
 
+enum Theme: String, CaseIterable {
+    case orange
+    case mint
+    case strawberry
+    case lime
+    case grape
+    case mango
+    
+    var color: Color {        
+        Color(rawValue.capitalized)
+    }
+}
+
 struct CalculatorButtonStyle: ButtonStyle {
+    @AppStorage("theme_selected_preference")
+    private var themeSelectedPreference = 0
+    
     var squared = true
     var proeminent = false
     var special = false
     private var color: Color {
         if proeminent {
-            // return .purple // Color("OperationButtonColor")
-            return Color("OperationButtonColor")
+            return Theme.allCases[themeSelectedPreference].color
         } else {
             if special {
-                // return .blue // Color("SpecialButtonColor")
                 return Color("SpecialButtonColor")
             } else {
-                // return .yellow // Color("NumericButtonColor")
                 return  Color("NumericButtonColor")
             }
         }
@@ -44,24 +57,21 @@ struct CalculatorButton: View {
     var body: some View {
         VStack {
             Button("ABC", action: { })
-//                .if(#available (true), transform: { view in
-//                    view                    
-//                        .buttonStyle(.borderedProminent)
-//                        .buttonBorderShape(.roundedRectangle)
-//                    
-//                })
+                .buttonStyle(CalculatorButtonStyle())
+            
             HStack {
                 Button("ABC", action: { })
                 Button("ABC", action: { })
             }
-            .aspectRatio(1, contentMode: .fit)
+            .buttonStyle(CalculatorButtonStyle(proeminent: true))
+            
             VStack {
                 Button("ABC", action: { })
                 Button("ABC", action: { })
             }
+            .buttonStyle(CalculatorButtonStyle(squared: false, proeminent: true))
         }
-        .buttonStyle(CalculatorButtonStyle(proeminent: true))
-        .buttonStyle(CalculatorButtonStyle(squared: false, proeminent: true))
+        .padding()
     }
 }
 
