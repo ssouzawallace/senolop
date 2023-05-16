@@ -117,7 +117,11 @@ struct RPN: Calculator {
             error()
             return
         }
-        stack.append(Item(value: "-" + element.value))
+        if element.value.first == "-" {
+            stack.append(Item(value: element.value.trimmingCharacters(in: ["-"])))
+        } else {
+            stack.append(Item(value: "-" + element.value))
+        }
         shouldAppend = true
     }
     
