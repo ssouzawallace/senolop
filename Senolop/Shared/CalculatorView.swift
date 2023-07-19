@@ -16,6 +16,30 @@ struct CalculatorView: View {
             Keyboard(calculator: $calculator)
                 .padding()
         }
+        .touchBar {
+            ZStack {
+                Button {
+                    calculator.plusPressed()
+                } label: {
+                    Image(systemName: "plus")
+                }
+                Button {
+                    calculator.minusPressed()
+                } label: {
+                    Image(systemName: "minus")
+                }
+                Button {
+                    calculator.multiplyPressed()
+                } label: {
+                    Image(systemName: "multiply")
+                }
+                Button {
+                    calculator.dividePressed()
+                } label: {
+                    Image(systemName: "divide")
+                }
+            }
+        }
     }
 }
 

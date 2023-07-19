@@ -36,6 +36,23 @@ struct Keyboard: View {
                 }
             }
             .buttonStyle(CalculatorButtonStyle(proeminent: true))
+            .keyboardShortcut(.cancelAction)
+            .keyboardShortcut(.clear)
+            .keyboardShortcut(.defaultAction)
+            .keyboardShortcut(.delete)
+            .keyboardShortcut(.deleteForward)
+            .keyboardShortcut(.downArrow)
+            .keyboardShortcut(.end)
+            .keyboardShortcut(.escape)
+            .keyboardShortcut(.home)
+            .keyboardShortcut(.leftArrow)
+            .keyboardShortcut(.pageDown)
+            .keyboardShortcut(.pageUp)
+            .keyboardShortcut(.return)
+            .keyboardShortcut(.rightArrow)
+            .keyboardShortcut(.space)
+            .keyboardShortcut(.tab)
+            .keyboardShortcut(.upArrow)
         #else
         return NumericKeyboard(calculator: $calculator)
         #endif

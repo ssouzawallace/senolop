@@ -16,9 +16,6 @@ struct SenolopApp: App {
             #if os(macOS)
             return WindowGroup {
                 ContentView(calculator: $calculator)
-                    .touchBar {
-                        TouchBar(calculator: $calculator)
-                    }
                     .buttonStyle(CalculatorButtonStyle(proeminent: true))
             }
             #else
