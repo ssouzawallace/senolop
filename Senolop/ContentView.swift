@@ -12,6 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         CalculatorView(calculator: $calculator)
+            .frame(minWidth: 400, minHeight: 600)
     }
 }
 
