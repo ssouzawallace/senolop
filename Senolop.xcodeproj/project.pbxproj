@@ -155,7 +155,6 @@
 				174AC93E28EE84F800E32729 /* SenolopApp.swift */,
 				174AC97B28EE85C700E32729 /* ContentView.swift */,
 				174AC96E28EE85C700E32729 /* Shared */,
-				170B37A828F3DB4500FFF7CF /* Calculator */,
 				174AC94A28EE84FA00E32729 /* Preview Content */,
 				17E1D9BA2A0711D300062AFA /* Settings.bundle */,
 			);
@@ -173,14 +172,8 @@
 		174AC96E28EE85C700E32729 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				179F3D1228EF644D00445748 /* Keyboard */,
-				17606B7128F11AD9002031DC /* CalculatorView.swift */,
-				174AC97528EE85C700E32729 /* SubscriptionView.swift */,
-				174AC97A28EE85C700E32729 /* IntroView.swift */,
-				174AC97428EE85C700E32729 /* BinariesDisplay.swift */,
-				174AC97628EE85C700E32729 /* Display.swift */,
-				1708BDE728F1AAB2004C1013 /* WelcomeView.swift */,
-				176EFF9829F53A5D00317BF3 /* StringResources.swift */,
+				170B37A828F3DB4500FFF7CF /* Calculator */,
+				BA4212B02A68AF6B00C4FE36 /* SwiftUI */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -221,6 +214,21 @@
 				17F2440929F58F49008DAC68 /* Watch_Senolop_Watch_AppUITestsLaunchTests.swift */,
 			);
 			path = "Watch Senolop Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		BA4212B02A68AF6B00C4FE36 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				179F3D1228EF644D00445748 /* Keyboard */,
+				17606B7128F11AD9002031DC /* CalculatorView.swift */,
+				174AC97528EE85C700E32729 /* SubscriptionView.swift */,
+				174AC97A28EE85C700E32729 /* IntroView.swift */,
+				174AC97428EE85C700E32729 /* BinariesDisplay.swift */,
+				174AC97628EE85C700E32729 /* Display.swift */,
+				1708BDE728F1AAB2004C1013 /* WelcomeView.swift */,
+				176EFF9829F53A5D00317BF3 /* StringResources.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

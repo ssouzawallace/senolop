@@ -16,6 +16,7 @@ struct CalculatorView: View {
             Keyboard(calculator: $calculator)
                 .padding()
         }
+#if os(macOS)
         .touchBar {
             ZStack {
                 Button {
@@ -40,6 +41,7 @@ struct CalculatorView: View {
                 }
             }
         }
+#endif
     }
 }
 
