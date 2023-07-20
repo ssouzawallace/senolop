@@ -12,14 +12,14 @@ struct ContentView: View {
     
     var body: some View {
         CalculatorView(calculator: $calculator)
-            .frame(minWidth: 400, minHeight: 600)
+            .frame(minWidth: 400, minHeight: 400)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(calculator: .constant(RPN()))
-            .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
+            .previewDevice(PreviewDevice(rawValue: "iPhone SE (3rd generation)"))
             .preferredColorScheme(.light)
     }
 }

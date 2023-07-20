@@ -2,21 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>GCSupportsControllerUserInteraction</key>
-	<true/>
-	<key>MKDirectionsApplicationSupportedModes</key>
-	<array/>
 	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSExceptionDomains</key>
-		<dict/>
-	</dict>
+	<dict/>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 	</dict>
-	<key>UIBackgroundModes</key>
-	<array/>
 </dict>
 </plist>
