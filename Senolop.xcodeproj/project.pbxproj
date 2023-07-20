@@ -30,6 +30,13 @@
 		176EFF9929F53A5D00317BF3 /* StringResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176EFF9829F53A5D00317BF3 /* StringResources.swift */; };
 		17DE35CE295B8029002FA5C8 /* NumericKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DE35CD295B8029002FA5C8 /* NumericKeyboard.swift */; };
 		17E1D9BB2A0711D300062AFA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 17E1D9BA2A0711D300062AFA /* Settings.bundle */; };
+		BA4212B22A68B58800C4FE36 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4212B12A68B58800C4FE36 /* CreditsView.swift */; };
+		BA4212B42A68C2F500C4FE36 /* TestButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4212B32A68C2F500C4FE36 /* TestButtons.swift */; };
+		BA4212B62A68C30500C4FE36 /* TestBasicOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4212B52A68C30500C4FE36 /* TestBasicOperations.swift */; };
+		BA4212B82A68C31E00C4FE36 /* TestQueueManipulationOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4212B72A68C31E00C4FE36 /* TestQueueManipulationOperations.swift */; };
+		BA4212BA2A68C33100C4FE36 /* TestNumericButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4212B92A68C33100C4FE36 /* TestNumericButtons.swift */; };
+		BA4212BC2A68C35700C4FE36 /* TestBasicOperationsButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4212BB2A68C35700C4FE36 /* TestBasicOperationsButtons.swift */; };
+		BA4212BE2A68C37000C4FE36 /* TestQueueManipulationOperationsButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4212BD2A68C37000C4FE36 /* TestQueueManipulationOperationsButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +83,13 @@
 		17F243FD29F58F49008DAC68 /* Watch_Senolop_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watch_Senolop_Watch_AppTests.swift; sourceTree = "<group>"; };
 		17F2440729F58F49008DAC68 /* Watch_Senolop_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watch_Senolop_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		17F2440929F58F49008DAC68 /* Watch_Senolop_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watch_Senolop_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BA4212B12A68B58800C4FE36 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		BA4212B32A68C2F500C4FE36 /* TestButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtons.swift; sourceTree = "<group>"; };
+		BA4212B52A68C30500C4FE36 /* TestBasicOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBasicOperations.swift; sourceTree = "<group>"; };
+		BA4212B72A68C31E00C4FE36 /* TestQueueManipulationOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestQueueManipulationOperations.swift; sourceTree = "<group>"; };
+		BA4212B92A68C33100C4FE36 /* TestNumericButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNumericButtons.swift; sourceTree = "<group>"; };
+		BA4212BB2A68C35700C4FE36 /* TestBasicOperationsButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBasicOperationsButtons.swift; sourceTree = "<group>"; };
+		BA4212BD2A68C37000C4FE36 /* TestQueueManipulationOperationsButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestQueueManipulationOperationsButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +126,12 @@
 			isa = PBXGroup;
 			children = (
 				173C2BFC29E71FF20039DB93 /* SenolopTests.swift */,
+				BA4212B32A68C2F500C4FE36 /* TestButtons.swift */,
+				BA4212B92A68C33100C4FE36 /* TestNumericButtons.swift */,
+				BA4212BB2A68C35700C4FE36 /* TestBasicOperationsButtons.swift */,
+				BA4212B52A68C30500C4FE36 /* TestBasicOperations.swift */,
+				BA4212B72A68C31E00C4FE36 /* TestQueueManipulationOperations.swift */,
+				BA4212BD2A68C37000C4FE36 /* TestQueueManipulationOperationsButtons.swift */,
 			);
 			path = SenolopTests;
 			sourceTree = "<group>";
@@ -221,6 +241,7 @@
 			children = (
 				179F3D1228EF644D00445748 /* Keyboard */,
 				17606B7128F11AD9002031DC /* CalculatorView.swift */,
+				BA4212B12A68B58800C4FE36 /* CreditsView.swift */,
 				174AC97528EE85C700E32729 /* SubscriptionView.swift */,
 				174AC97A28EE85C700E32729 /* IntroView.swift */,
 				174AC97428EE85C700E32729 /* BinariesDisplay.swift */,
@@ -335,7 +356,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4212B62A68C30500C4FE36 /* TestBasicOperations.swift in Sources */,
+				BA4212BE2A68C37000C4FE36 /* TestQueueManipulationOperationsButtons.swift in Sources */,
 				173C2BFD29E71FF20039DB93 /* SenolopTests.swift in Sources */,
+				BA4212BC2A68C35700C4FE36 /* TestBasicOperationsButtons.swift in Sources */,
+				BA4212B82A68C31E00C4FE36 /* TestQueueManipulationOperations.swift in Sources */,
+				BA4212BA2A68C33100C4FE36 /* TestNumericButtons.swift in Sources */,
+				BA4212B42A68C2F500C4FE36 /* TestButtons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +383,7 @@
 				1708BDEA28F1AB8C004C1013 /* CalculatorButton.swift in Sources */,
 				174AC98028EE85C700E32729 /* BinariesDisplay.swift in Sources */,
 				17012AEE2908699C00D7449C /* Programmer.swift in Sources */,
+				BA4212B22A68B58800C4FE36 /* CreditsView.swift in Sources */,
 				174AC98628EE85C700E32729 /* IntroView.swift in Sources */,
 				174AC98228EE85C700E32729 /* Display.swift in Sources */,
 				174AC98428EE85C700E32729 /* ProgrammerKeyboard.swift in Sources */,
