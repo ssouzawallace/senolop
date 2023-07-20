@@ -15,17 +15,18 @@ struct SubscriptionView: View {
     
     var body: some View {
         VStack {
-            Text("Subscription")
-                .font(.title)
-            Text("Deligthfull features waiting for you!")
-                .font(.body)
-            Button {
-                pay()
-            } label: {
-                Text("Pay")
-                    .font(.callout)
+            CreditsView()
+            
+            HStack {
+                Text("Subscribe")
+                    .font(.title)
+                Button {
+                    pay()
+                } label: {
+                    Text("Pay")
+                        .font(.callout)
+                }
             }
-
         }
     }
 }
