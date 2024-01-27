@@ -29,6 +29,7 @@
 		176EFF9929F53A5D00317BF3 /* StringResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176EFF9829F53A5D00317BF3 /* StringResources.swift */; };
 		17DE35CE295B8029002FA5C8 /* NumericKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DE35CD295B8029002FA5C8 /* NumericKeyboard.swift */; };
 		17E1D9BB2A0711D300062AFA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 17E1D9BA2A0711D300062AFA /* Settings.bundle */; };
+		BA00FDD02B64A8C6006D811F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA00FDCF2B64A8C6006D811F /* StoreKit.framework */; };
 		BA4212B22A68B58800C4FE36 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4212B12A68B58800C4FE36 /* CreditsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		176EFF9829F53A5D00317BF3 /* StringResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringResources.swift; sourceTree = "<group>"; };
 		17DE35CD295B8029002FA5C8 /* NumericKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericKeyboard.swift; sourceTree = "<group>"; };
 		17E1D9BA2A0711D300062AFA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		BA00FDCF2B64A8C6006D811F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		BA4212B12A68B58800C4FE36 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		BA4212B32A68C2F500C4FE36 /* TestButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtons.swift; sourceTree = "<group>"; };
 		BA4212B52A68C30500C4FE36 /* TestBasicOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBasicOperations.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA00FDD02B64A8C6006D811F /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +124,7 @@
 				174AC93E28EE84F800E32729 /* SenolopApp.swift */,
 				174AC93D28EE84F800E32729 /* Senolop */,
 				174AC93C28EE84F800E32729 /* Products */,
+				BA00FDCE2B64A8C6006D811F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,6 +180,14 @@
 				174AC97828EE85C700E32729 /* ProgrammerKeyboard.swift */,
 			);
 			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		BA00FDCE2B64A8C6006D811F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA00FDCF2B64A8C6006D811F /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BA4212B02A68AF6B00C4FE36 /* SwiftUI */ = {
