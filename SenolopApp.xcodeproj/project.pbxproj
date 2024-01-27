@@ -12,7 +12,6 @@
 		17012AEE2908699C00D7449C /* Programmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17012AED2908699C00D7449C /* Programmer.swift */; };
 		1708BDE828F1AAB2004C1013 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708BDE728F1AAB2004C1013 /* WelcomeView.swift */; };
 		1708BDEA28F1AB8C004C1013 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708BDE928F1AB8C004C1013 /* CalculatorButton.swift */; };
-		173C2BFD29E71FF20039DB93 /* SenolopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173C2BFC29E71FF20039DB93 /* SenolopTests.swift */; };
 		173C2C0529E841CF0039DB93 /* CalculatorHapticsFeedbackHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173C2C0429E841CF0039DB93 /* CalculatorHapticsFeedbackHandler.swift */; };
 		174AC93F28EE84F800E32729 /* SenolopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC93E28EE84F800E32729 /* SenolopApp.swift */; };
 		174AC94C28EE84FA00E32729 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 174AC94B28EE84FA00E32729 /* Preview Assets.xcassets */; };
@@ -31,44 +30,7 @@
 		17DE35CE295B8029002FA5C8 /* NumericKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DE35CD295B8029002FA5C8 /* NumericKeyboard.swift */; };
 		17E1D9BB2A0711D300062AFA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 17E1D9BA2A0711D300062AFA /* Settings.bundle */; };
 		BA4212B22A68B58800C4FE36 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4212B12A68B58800C4FE36 /* CreditsView.swift */; };
-		BA4212B42A68C2F500C4FE36 /* TestButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4212B32A68C2F500C4FE36 /* TestButtons.swift */; };
-		BA4212B62A68C30500C4FE36 /* TestBasicOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4212B52A68C30500C4FE36 /* TestBasicOperations.swift */; };
-		BA4212B82A68C31E00C4FE36 /* TestQueueManipulationOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4212B72A68C31E00C4FE36 /* TestQueueManipulationOperations.swift */; };
-		BA4212BA2A68C33100C4FE36 /* TestNumericButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4212B92A68C33100C4FE36 /* TestNumericButtons.swift */; };
-		BA4212BC2A68C35700C4FE36 /* TestBasicOperationsButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4212BB2A68C35700C4FE36 /* TestBasicOperationsButtons.swift */; };
-		BA4212BE2A68C37000C4FE36 /* TestQueueManipulationOperationsButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4212BD2A68C37000C4FE36 /* TestQueueManipulationOperationsButtons.swift */; };
-		BAC81E962B48B2FF00320A56 /* Senolop_tvOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC81E952B48B2FF00320A56 /* Senolop_tvOSApp.swift */; };
-		BAC81E9A2B48B2FF00320A56 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC81E992B48B2FF00320A56 /* Item.swift */; };
-		BAC81E9C2B48B30200320A56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAC81E9B2B48B30200320A56 /* Assets.xcassets */; };
-		BAC81E9F2B48B30200320A56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAC81E9E2B48B30200320A56 /* Preview Assets.xcassets */; };
-		BAC81EAB2B48B30200320A56 /* Senolop_tvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC81EAA2B48B30200320A56 /* Senolop_tvOSTests.swift */; };
-		BAC81EB52B48B30200320A56 /* Senolop_tvOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC81EB42B48B30200320A56 /* Senolop_tvOSUITests.swift */; };
-		BAC81EB72B48B30200320A56 /* Senolop_tvOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC81EB62B48B30200320A56 /* Senolop_tvOSUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		173C2BFE29E71FF20039DB93 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 174AC93328EE84F800E32729 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 174AC93A28EE84F800E32729;
-			remoteInfo = Senolop;
-		};
-		BAC81EA72B48B30200320A56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 174AC93328EE84F800E32729 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BAC81E922B48B2FF00320A56;
-			remoteInfo = "Senolop-tvOS";
-		};
-		BAC81EB12B48B30200320A56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 174AC93328EE84F800E32729 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BAC81E922B48B2FF00320A56;
-			remoteInfo = "Senolop-tvOS";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		17012AE9290868F500D7449C /* RPN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPN.swift; sourceTree = "<group>"; };
@@ -76,11 +38,8 @@
 		17012AED2908699C00D7449C /* Programmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Programmer.swift; sourceTree = "<group>"; };
 		1708BDE728F1AAB2004C1013 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		1708BDE928F1AB8C004C1013 /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
-		170E381428FA3BFE00A98A3C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
-		170E381628FA3BFE00A98A3C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		17340DE429F740A50033D100 /* macOS App Icon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "macOS App Icon"; sourceTree = "<group>"; };
 		17340DE529F742D90033D100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		173C2BFA29E71FF10039DB93 /* SenolopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SenolopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		173C2BFC29E71FF20039DB93 /* SenolopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenolopTests.swift; sourceTree = "<group>"; };
 		173C2C0429E841CF0039DB93 /* CalculatorHapticsFeedbackHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorHapticsFeedbackHandler.swift; sourceTree = "<group>"; };
 		174AC93B28EE84F800E32729 /* Senolop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Senolop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,9 +60,6 @@
 		176EFF9829F53A5D00317BF3 /* StringResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringResources.swift; sourceTree = "<group>"; };
 		17DE35CD295B8029002FA5C8 /* NumericKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericKeyboard.swift; sourceTree = "<group>"; };
 		17E1D9BA2A0711D300062AFA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		17F243FD29F58F49008DAC68 /* Watch_Senolop_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watch_Senolop_Watch_AppTests.swift; sourceTree = "<group>"; };
-		17F2440729F58F49008DAC68 /* Watch_Senolop_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watch_Senolop_Watch_AppUITests.swift; sourceTree = "<group>"; };
-		17F2440929F58F49008DAC68 /* Watch_Senolop_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watch_Senolop_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BA4212B12A68B58800C4FE36 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		BA4212B32A68C2F500C4FE36 /* TestButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtons.swift; sourceTree = "<group>"; };
 		BA4212B52A68C30500C4FE36 /* TestBasicOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBasicOperations.swift; sourceTree = "<group>"; };
@@ -112,50 +68,10 @@
 		BA4212BB2A68C35700C4FE36 /* TestBasicOperationsButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBasicOperationsButtons.swift; sourceTree = "<group>"; };
 		BA4212BD2A68C37000C4FE36 /* TestQueueManipulationOperationsButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestQueueManipulationOperationsButtons.swift; sourceTree = "<group>"; };
 		BAC81E8E2B4895B000320A56 /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
-		BAC81E932B48B2FF00320A56 /* Senolop-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Senolop-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAC81E952B48B2FF00320A56 /* Senolop_tvOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Senolop_tvOSApp.swift; sourceTree = "<group>"; };
-		BAC81E992B48B2FF00320A56 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		BAC81E9B2B48B30200320A56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BAC81E9E2B48B30200320A56 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BAC81EA02B48B30200320A56 /* Senolop_tvOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Senolop_tvOS.entitlements; sourceTree = "<group>"; };
-		BAC81EA12B48B30200320A56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAC81EA62B48B30200320A56 /* Senolop-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Senolop-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAC81EAA2B48B30200320A56 /* Senolop_tvOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Senolop_tvOSTests.swift; sourceTree = "<group>"; };
-		BAC81EB02B48B30200320A56 /* Senolop-tvOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Senolop-tvOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAC81EB42B48B30200320A56 /* Senolop_tvOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Senolop_tvOSUITests.swift; sourceTree = "<group>"; };
-		BAC81EB62B48B30200320A56 /* Senolop_tvOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Senolop_tvOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		173C2BF729E71FF10039DB93 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		174AC93828EE84F800E32729 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BAC81E902B48B2FF00320A56 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BAC81EA32B48B30200320A56 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BAC81EAD2B48B30200320A56 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -202,14 +118,9 @@
 		174AC93228EE84F800E32729 = {
 			isa = PBXGroup;
 			children = (
+				174AC93E28EE84F800E32729 /* SenolopApp.swift */,
 				174AC93D28EE84F800E32729 /* Senolop */,
-				17F243FC29F58F49008DAC68 /* Watch Senolop Watch AppTests */,
-				17F2440629F58F49008DAC68 /* Watch Senolop Watch AppUITests */,
-				BAC81E942B48B2FF00320A56 /* Senolop-tvOS */,
-				BAC81EA92B48B30200320A56 /* Senolop-tvOSTests */,
-				BAC81EB32B48B30200320A56 /* Senolop-tvOSUITests */,
 				174AC93C28EE84F800E32729 /* Products */,
-				174CAE1028F14AE900901A71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,10 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				174AC93B28EE84F800E32729 /* Senolop.app */,
-				173C2BFA29E71FF10039DB93 /* SenolopTests.xctest */,
-				BAC81E932B48B2FF00320A56 /* Senolop-tvOS.app */,
-				BAC81EA62B48B30200320A56 /* Senolop-tvOSTests.xctest */,
-				BAC81EB02B48B30200320A56 /* Senolop-tvOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,7 +135,6 @@
 		174AC93D28EE84F800E32729 /* Senolop */ = {
 			isa = PBXGroup;
 			children = (
-				174AC93E28EE84F800E32729 /* SenolopApp.swift */,
 				174AC96E28EE85C700E32729 /* Shared */,
 				173C2BFB29E71FF20039DB93 /* SenolopTests */,
 				174AC94A28EE84FA00E32729 /* Preview Content */,
@@ -260,15 +166,6 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		174CAE1028F14AE900901A71 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				170E381428FA3BFE00A98A3C /* WidgetKit.framework */,
-				170E381628FA3BFE00A98A3C /* SwiftUI.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		179F3D1228EF644D00445748 /* Keyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,23 +176,6 @@
 				174AC97828EE85C700E32729 /* ProgrammerKeyboard.swift */,
 			);
 			path = Keyboard;
-			sourceTree = "<group>";
-		};
-		17F243FC29F58F49008DAC68 /* Watch Senolop Watch AppTests */ = {
-			isa = PBXGroup;
-			children = (
-				17F243FD29F58F49008DAC68 /* Watch_Senolop_Watch_AppTests.swift */,
-			);
-			path = "Watch Senolop Watch AppTests";
-			sourceTree = "<group>";
-		};
-		17F2440629F58F49008DAC68 /* Watch Senolop Watch AppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				17F2440729F58F49008DAC68 /* Watch_Senolop_Watch_AppUITests.swift */,
-				17F2440929F58F49008DAC68 /* Watch_Senolop_Watch_AppUITestsLaunchTests.swift */,
-			);
-			path = "Watch Senolop Watch AppUITests";
 			sourceTree = "<group>";
 		};
 		BA4212B02A68AF6B00C4FE36 /* SwiftUI */ = {
@@ -314,65 +194,9 @@
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
-		BAC81E942B48B2FF00320A56 /* Senolop-tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				BAC81E952B48B2FF00320A56 /* Senolop_tvOSApp.swift */,
-				BAC81E992B48B2FF00320A56 /* Item.swift */,
-				BAC81E9B2B48B30200320A56 /* Assets.xcassets */,
-				BAC81EA02B48B30200320A56 /* Senolop_tvOS.entitlements */,
-				BAC81EA12B48B30200320A56 /* Info.plist */,
-				BAC81E9D2B48B30200320A56 /* Preview Content */,
-			);
-			path = "Senolop-tvOS";
-			sourceTree = "<group>";
-		};
-		BAC81E9D2B48B30200320A56 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				BAC81E9E2B48B30200320A56 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		BAC81EA92B48B30200320A56 /* Senolop-tvOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				BAC81EAA2B48B30200320A56 /* Senolop_tvOSTests.swift */,
-			);
-			path = "Senolop-tvOSTests";
-			sourceTree = "<group>";
-		};
-		BAC81EB32B48B30200320A56 /* Senolop-tvOSUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BAC81EB42B48B30200320A56 /* Senolop_tvOSUITests.swift */,
-				BAC81EB62B48B30200320A56 /* Senolop_tvOSUITestsLaunchTests.swift */,
-			);
-			path = "Senolop-tvOSUITests";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		173C2BF929E71FF10039DB93 /* SenolopTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 173C2C0029E71FF20039DB93 /* Build configuration list for PBXNativeTarget "SenolopTests" */;
-			buildPhases = (
-				173C2BF629E71FF10039DB93 /* Sources */,
-				173C2BF729E71FF10039DB93 /* Frameworks */,
-				173C2BF829E71FF10039DB93 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				173C2BFF29E71FF20039DB93 /* PBXTargetDependency */,
-			);
-			name = SenolopTests;
-			productName = SenolopTests;
-			productReference = 173C2BFA29E71FF10039DB93 /* SenolopTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		174AC93A28EE84F800E32729 /* Senolop */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 174AC96528EE84FA00E32729 /* Build configuration list for PBXNativeTarget "Senolop" */;
@@ -390,59 +214,6 @@
 			productReference = 174AC93B28EE84F800E32729 /* Senolop.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BAC81E922B48B2FF00320A56 /* Senolop-tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BAC81EBE2B48B30200320A56 /* Build configuration list for PBXNativeTarget "Senolop-tvOS" */;
-			buildPhases = (
-				BAC81E8F2B48B2FF00320A56 /* Sources */,
-				BAC81E902B48B2FF00320A56 /* Frameworks */,
-				BAC81E912B48B2FF00320A56 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Senolop-tvOS";
-			productName = "Senolop-tvOS";
-			productReference = BAC81E932B48B2FF00320A56 /* Senolop-tvOS.app */;
-			productType = "com.apple.product-type.application";
-		};
-		BAC81EA52B48B30200320A56 /* Senolop-tvOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BAC81EBF2B48B30200320A56 /* Build configuration list for PBXNativeTarget "Senolop-tvOSTests" */;
-			buildPhases = (
-				BAC81EA22B48B30200320A56 /* Sources */,
-				BAC81EA32B48B30200320A56 /* Frameworks */,
-				BAC81EA42B48B30200320A56 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BAC81EA82B48B30200320A56 /* PBXTargetDependency */,
-			);
-			name = "Senolop-tvOSTests";
-			productName = "Senolop-tvOSTests";
-			productReference = BAC81EA62B48B30200320A56 /* Senolop-tvOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		BAC81EAF2B48B30200320A56 /* Senolop-tvOSUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BAC81EC02B48B30200320A56 /* Build configuration list for PBXNativeTarget "Senolop-tvOSUITests" */;
-			buildPhases = (
-				BAC81EAC2B48B30200320A56 /* Sources */,
-				BAC81EAD2B48B30200320A56 /* Frameworks */,
-				BAC81EAE2B48B30200320A56 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BAC81EB22B48B30200320A56 /* PBXTargetDependency */,
-			);
-			name = "Senolop-tvOSUITests";
-			productName = "Senolop-tvOSUITests";
-			productReference = BAC81EB02B48B30200320A56 /* Senolop-tvOSUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -453,23 +224,8 @@
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
-					173C2BF929E71FF10039DB93 = {
-						CreatedOnToolsVersion = 14.1;
-						TestTargetID = 174AC93A28EE84F800E32729;
-					};
 					174AC93A28EE84F800E32729 = {
 						CreatedOnToolsVersion = 14.0.1;
-					};
-					BAC81E922B48B2FF00320A56 = {
-						CreatedOnToolsVersion = 15.1;
-					};
-					BAC81EA52B48B30200320A56 = {
-						CreatedOnToolsVersion = 15.1;
-						TestTargetID = BAC81E922B48B2FF00320A56;
-					};
-					BAC81EAF2B48B30200320A56 = {
-						CreatedOnToolsVersion = 15.1;
-						TestTargetID = BAC81E922B48B2FF00320A56;
 					};
 				};
 			};
@@ -490,22 +246,11 @@
 			projectRoot = "";
 			targets = (
 				174AC93A28EE84F800E32729 /* Senolop */,
-				173C2BF929E71FF10039DB93 /* SenolopTests */,
-				BAC81E922B48B2FF00320A56 /* Senolop-tvOS */,
-				BAC81EA52B48B30200320A56 /* Senolop-tvOSTests */,
-				BAC81EAF2B48B30200320A56 /* Senolop-tvOSUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		173C2BF829E71FF10039DB93 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		174AC93928EE84F800E32729 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -516,46 +261,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAC81E912B48B2FF00320A56 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BAC81E9F2B48B30200320A56 /* Preview Assets.xcassets in Resources */,
-				BAC81E9C2B48B30200320A56 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BAC81EA42B48B30200320A56 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BAC81EAE2B48B30200320A56 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		173C2BF629E71FF10039DB93 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BA4212B62A68C30500C4FE36 /* TestBasicOperations.swift in Sources */,
-				BA4212BE2A68C37000C4FE36 /* TestQueueManipulationOperationsButtons.swift in Sources */,
-				173C2BFD29E71FF20039DB93 /* SenolopTests.swift in Sources */,
-				BA4212BC2A68C35700C4FE36 /* TestBasicOperationsButtons.swift in Sources */,
-				BA4212B82A68C31E00C4FE36 /* TestQueueManipulationOperations.swift in Sources */,
-				BA4212BA2A68C33100C4FE36 /* TestNumericButtons.swift in Sources */,
-				BA4212B42A68C2F500C4FE36 /* TestButtons.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		174AC93728EE84F800E32729 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -583,100 +291,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAC81E8F2B48B2FF00320A56 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BAC81E9A2B48B2FF00320A56 /* Item.swift in Sources */,
-				BAC81E962B48B2FF00320A56 /* Senolop_tvOSApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BAC81EA22B48B30200320A56 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BAC81EAB2B48B30200320A56 /* Senolop_tvOSTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BAC81EAC2B48B30200320A56 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BAC81EB52B48B30200320A56 /* Senolop_tvOSUITests.swift in Sources */,
-				BAC81EB72B48B30200320A56 /* Senolop_tvOSUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		173C2BFF29E71FF20039DB93 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 174AC93A28EE84F800E32729 /* Senolop */;
-			targetProxy = 173C2BFE29E71FF20039DB93 /* PBXContainerItemProxy */;
-		};
-		BAC81EA82B48B30200320A56 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BAC81E922B48B2FF00320A56 /* Senolop-tvOS */;
-			targetProxy = BAC81EA72B48B30200320A56 /* PBXContainerItemProxy */;
-		};
-		BAC81EB22B48B30200320A56 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BAC81E922B48B2FF00320A56 /* Senolop-tvOS */;
-			targetProxy = BAC81EB12B48B30200320A56 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		173C2C0129E71FF20039DB93 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 55XL2R5538;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.SenolopTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Senolop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Senolop";
-				TVOS_DEPLOYMENT_TARGET = 16.0;
-			};
-			name = Debug;
-		};
-		173C2C0229E71FF20039DB93 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 55XL2R5538;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tech.wcorp.SenolopTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Senolop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Senolop";
-				TVOS_DEPLOYMENT_TARGET = 16.0;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		174AC96328EE84FA00E32729 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -888,176 +505,9 @@
 			};
 			name = Release;
 		};
-		BAC81EB82B48B30200320A56 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Senolop-tvOS/Senolop_tvOS.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Senolop-tvOS/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Senolop-tvOS/Info.plist";
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "tech.wcorp.Senolop-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 17.2;
-			};
-			name = Debug;
-		};
-		BAC81EB92B48B30200320A56 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Senolop-tvOS/Senolop_tvOS.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Senolop-tvOS/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Senolop-tvOS/Info.plist";
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "tech.wcorp.Senolop-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 17.2;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		BAC81EBA2B48B30200320A56 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GENERATE_INFOPLIST_FILE = YES;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "tech.wcorp.Senolop-tvOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Senolop-tvOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Senolop-tvOS";
-				TVOS_DEPLOYMENT_TARGET = 17.2;
-			};
-			name = Debug;
-		};
-		BAC81EBB2B48B30200320A56 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GENERATE_INFOPLIST_FILE = YES;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "tech.wcorp.Senolop-tvOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Senolop-tvOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Senolop-tvOS";
-				TVOS_DEPLOYMENT_TARGET = 17.2;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		BAC81EBC2B48B30200320A56 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GENERATE_INFOPLIST_FILE = YES;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "tech.wcorp.Senolop-tvOSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = appletvos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TEST_TARGET_NAME = "Senolop-tvOS";
-				TVOS_DEPLOYMENT_TARGET = 17.2;
-			};
-			name = Debug;
-		};
-		BAC81EBD2B48B30200320A56 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GENERATE_INFOPLIST_FILE = YES;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "tech.wcorp.Senolop-tvOSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = appletvos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TEST_TARGET_NAME = "Senolop-tvOS";
-				TVOS_DEPLOYMENT_TARGET = 17.2;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		173C2C0029E71FF20039DB93 /* Build configuration list for PBXNativeTarget "SenolopTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				173C2C0129E71FF20039DB93 /* Debug */,
-				173C2C0229E71FF20039DB93 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		174AC93628EE84F800E32729 /* Build configuration list for PBXProject "SenolopApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1072,33 +522,6 @@
 			buildConfigurations = (
 				174AC96628EE84FA00E32729 /* Debug */,
 				174AC96728EE84FA00E32729 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BAC81EBE2B48B30200320A56 /* Build configuration list for PBXNativeTarget "Senolop-tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BAC81EB82B48B30200320A56 /* Debug */,
-				BAC81EB92B48B30200320A56 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BAC81EBF2B48B30200320A56 /* Build configuration list for PBXNativeTarget "Senolop-tvOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BAC81EBA2B48B30200320A56 /* Debug */,
-				BAC81EBB2B48B30200320A56 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BAC81EC02B48B30200320A56 /* Build configuration list for PBXNativeTarget "Senolop-tvOSUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BAC81EBC2B48B30200320A56 /* Debug */,
-				BAC81EBD2B48B30200320A56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
