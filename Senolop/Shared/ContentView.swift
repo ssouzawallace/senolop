@@ -18,8 +18,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(calculator: .constant(RPN()))
-            .previewDevice(PreviewDevice(rawValue: "iPhone SE (3rd generation)"))
-            .preferredColorScheme(.light)
+        ContentView(calculator: .constant(RPN()))            
     }
 }
