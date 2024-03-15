@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ScientificKeyboard: View {
-    @Binding var calculator: Calculator
+    @Binding var calculator: CalculatorProtocol
     
     private let spacing: CGFloat = 8
     

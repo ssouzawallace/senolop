@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Display: View {
     @State private var multiSelection = Set<UUID>()
-    @Binding var calculator: Calculator
+    @Binding var calculator: CalculatorProtocol
     
     var body: some View {
         List(calculator.stack.reversed()) { element in

@@ -16,7 +16,7 @@
 		174AC93F28EE84F800E32729 /* SenolopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC93E28EE84F800E32729 /* SenolopApp.swift */; };
 		174AC94C28EE84FA00E32729 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 174AC94B28EE84FA00E32729 /* Preview Assets.xcassets */; };
 		174AC97C28EE85C700E32729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 174AC96F28EE85C700E32729 /* Assets.xcassets */; };
-		174AC97E28EE85C700E32729 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97228EE85C700E32729 /* Calculator.swift */; };
+		174AC97E28EE85C700E32729 /* Calculato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97228EE85C700E32729 /* Calculato.swift */; };
 		174AC97F28EE85C700E32729 /* ScientificKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97328EE85C700E32729 /* ScientificKeyboard.swift */; };
 		174AC98028EE85C700E32729 /* BinariesDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97428EE85C700E32729 /* BinariesDisplay.swift */; };
 		174AC98128EE85C700E32729 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97528EE85C700E32729 /* SubscriptionView.swift */; };
@@ -25,12 +25,13 @@
 		174AC98528EE85C700E32729 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97928EE85C700E32729 /* Keyboard.swift */; };
 		174AC98628EE85C700E32729 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97A28EE85C700E32729 /* IntroView.swift */; };
 		174AC98728EE85C700E32729 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AC97B28EE85C700E32729 /* ContentView.swift */; };
-		17606B7228F11AD9002031DC /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17606B7128F11AD9002031DC /* CalculatorView.swift */; };
+		17606B7228F11AD9002031DC /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17606B7128F11AD9002031DC /* Calculator.swift */; };
 		176EFF9929F53A5D00317BF3 /* StringResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176EFF9829F53A5D00317BF3 /* StringResources.swift */; };
 		17DE35CE295B8029002FA5C8 /* NumericKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DE35CD295B8029002FA5C8 /* NumericKeyboard.swift */; };
 		17E1D9BB2A0711D300062AFA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 17E1D9BA2A0711D300062AFA /* Settings.bundle */; };
 		BA00FDD02B64A8C6006D811F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA00FDCF2B64A8C6006D811F /* StoreKit.framework */; };
 		BA4212B22A68B58800C4FE36 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4212B12A68B58800C4FE36 /* CreditsView.swift */; };
+		BAF7C5DC2B843F0E003C7319 /* SettingsStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF7C5DB2B843F0E003C7319 /* SettingsStatusBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +49,7 @@
 		174AC94928EE84FA00E32729 /* Senolop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Senolop.entitlements; sourceTree = "<group>"; };
 		174AC94B28EE84FA00E32729 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		174AC96F28EE85C700E32729 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Shared/Assets.xcassets; sourceTree = "<group>"; };
-		174AC97228EE85C700E32729 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		174AC97228EE85C700E32729 /* Calculato.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculato.swift; sourceTree = "<group>"; };
 		174AC97328EE85C700E32729 /* ScientificKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScientificKeyboard.swift; sourceTree = "<group>"; };
 		174AC97428EE85C700E32729 /* BinariesDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinariesDisplay.swift; sourceTree = "<group>"; };
 		174AC97528EE85C700E32729 /* SubscriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
@@ -57,7 +58,7 @@
 		174AC97928EE85C700E32729 /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		174AC97A28EE85C700E32729 /* IntroView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		174AC97B28EE85C700E32729 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		17606B7128F11AD9002031DC /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		17606B7128F11AD9002031DC /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		176EFF9829F53A5D00317BF3 /* StringResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringResources.swift; sourceTree = "<group>"; };
 		17DE35CD295B8029002FA5C8 /* NumericKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericKeyboard.swift; sourceTree = "<group>"; };
 		17E1D9BA2A0711D300062AFA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		BA4212BB2A68C35700C4FE36 /* TestBasicOperationsButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBasicOperationsButtons.swift; sourceTree = "<group>"; };
 		BA4212BD2A68C37000C4FE36 /* TestQueueManipulationOperationsButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestQueueManipulationOperationsButtons.swift; sourceTree = "<group>"; };
 		BAC81E8E2B4895B000320A56 /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		BAF7C5DB2B843F0E003C7319 /* SettingsStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStatusBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +89,7 @@
 		170B37A828F3DB4500FFF7CF /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				174AC97228EE85C700E32729 /* Calculator.swift */,
+				174AC97228EE85C700E32729 /* Calculato.swift */,
 				17012AE9290868F500D7449C /* RPN.swift */,
 				17012AEB2908699300D7449C /* Scientific.swift */,
 				17012AED2908699C00D7449C /* Programmer.swift */,
@@ -139,6 +141,7 @@
 		174AC93D28EE84F800E32729 /* Senolop */ = {
 			isa = PBXGroup;
 			children = (
+				170B37A828F3DB4500FFF7CF /* Calculator */,
 				174AC96E28EE85C700E32729 /* Shared */,
 				173C2BFB29E71FF20039DB93 /* SenolopTests */,
 				174AC94A28EE84FA00E32729 /* Preview Content */,
@@ -163,8 +166,6 @@
 		174AC96E28EE85C700E32729 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				174AC97B28EE85C700E32729 /* ContentView.swift */,
-				170B37A828F3DB4500FFF7CF /* Calculator */,
 				BA4212B02A68AF6B00C4FE36 /* SwiftUI */,
 			);
 			path = Shared;
@@ -194,11 +195,13 @@
 			isa = PBXGroup;
 			children = (
 				179F3D1228EF644D00445748 /* Keyboard */,
-				17606B7128F11AD9002031DC /* CalculatorView.swift */,
+				174AC97B28EE85C700E32729 /* ContentView.swift */,
+				17606B7128F11AD9002031DC /* Calculator.swift */,
 				BA4212B12A68B58800C4FE36 /* CreditsView.swift */,
 				174AC97528EE85C700E32729 /* SubscriptionView.swift */,
 				174AC97A28EE85C700E32729 /* IntroView.swift */,
 				174AC97428EE85C700E32729 /* BinariesDisplay.swift */,
+				BAF7C5DB2B843F0E003C7319 /* SettingsStatusBar.swift */,
 				174AC97628EE85C700E32729 /* Display.swift */,
 				1708BDE728F1AAB2004C1013 /* WelcomeView.swift */,
 				176EFF9829F53A5D00317BF3 /* StringResources.swift */,
@@ -282,7 +285,7 @@
 			files = (
 				17012AEC2908699400D7449C /* Scientific.swift in Sources */,
 				174AC93F28EE84F800E32729 /* SenolopApp.swift in Sources */,
-				17606B7228F11AD9002031DC /* CalculatorView.swift in Sources */,
+				17606B7228F11AD9002031DC /* Calculator.swift in Sources */,
 				174AC98128EE85C700E32729 /* SubscriptionView.swift in Sources */,
 				176EFF9929F53A5D00317BF3 /* StringResources.swift in Sources */,
 				17012AEA290868F500D7449C /* RPN.swift in Sources */,
@@ -293,12 +296,13 @@
 				1708BDEA28F1AB8C004C1013 /* CalculatorButton.swift in Sources */,
 				174AC98028EE85C700E32729 /* BinariesDisplay.swift in Sources */,
 				17012AEE2908699C00D7449C /* Programmer.swift in Sources */,
+				BAF7C5DC2B843F0E003C7319 /* SettingsStatusBar.swift in Sources */,
 				BA4212B22A68B58800C4FE36 /* CreditsView.swift in Sources */,
 				174AC98628EE85C700E32729 /* IntroView.swift in Sources */,
 				174AC98228EE85C700E32729 /* Display.swift in Sources */,
 				174AC98428EE85C700E32729 /* ProgrammerKeyboard.swift in Sources */,
 				174AC97F28EE85C700E32729 /* ScientificKeyboard.swift in Sources */,
-				174AC97E28EE85C700E32729 /* Calculator.swift in Sources */,
+				174AC97E28EE85C700E32729 /* Calculato.swift in Sources */,
 				174AC98528EE85C700E32729 /* Keyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,9 +464,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
-				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3";
@@ -507,9 +511,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator macosx";
-				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3";

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProgrammerKeyboard: View {
-    @Binding var calculator: Calculator
+    @Binding var calculator: CalculatorProtocol
     
     var body: some View {
         VStack {

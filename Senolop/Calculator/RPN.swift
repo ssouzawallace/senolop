@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RPN: Calculator {
+struct RPN: CalculatorProtocol {
     private var clearAll = true {
         didSet {
             cleanStateTitle = clearAll ? "AC" : "C"

@@ -54,9 +54,11 @@ struct CalculatorButtonStyle: ButtonStyle {
 
 
 struct CalculatorButton: View {
+    var title: String
+    var style: CalculatorButtonStyle
     var body: some View {
         VStack {
-            Button("ABC", action: { })
+            Button(title, action: { })
                 .buttonStyle(CalculatorButtonStyle())
             
             HStack {
@@ -77,6 +79,6 @@ struct CalculatorButton: View {
 
 struct CalculatorButton_Previews: PreviewProvider {
     static var previews: some View {
-        CalculatorButton()
+        CalculatorButton(title: "X", style: CalculatorButtonStyle(proeminent: true))
     }
 }

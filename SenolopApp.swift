@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct SenolopApp: App {
     
-    @State var calculator: Calculator = RPN(CalculatorHapticsFeedbackHandlerImpl())
+    @State var calculator: CalculatorProtocol = RPN(CalculatorHapticsFeedbackHandlerImpl())
     
     var body: some Scene {
             #if os(macOS)

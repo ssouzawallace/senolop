@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Binding var calculator: Calculator
+    @Binding var calculator: CalculatorProtocol
     
     var body: some View {
-        CalculatorView(calculator: $calculator)
+        Calculator(calculator: $calculator)
             .frame(minWidth: 400, minHeight: 400)
     }
 }
