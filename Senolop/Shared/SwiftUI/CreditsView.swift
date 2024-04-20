@@ -9,9 +9,8 @@ import SwiftUI
 
 struct CreditsView: View {
     var body: some View {
-        VStack {
+        Group {
             Text("Hello, World!")
-                .font(.title)
             Group {
                 Text("Me")
                 Text("Myself")
@@ -19,7 +18,7 @@ struct CreditsView: View {
                 Text("I")
             }
             .font(.body)
-        }
+        }.font(.title)
     }
 }
 
