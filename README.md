@@ -90,3 +90,5 @@ This project is licensed under the MIT License. See [LICENSE](https://github.com
 For any inquiries or feedback, please contact the project maintainer at [ssouza.wallace@gmail.com](mailto:ssouza.wallace@gmail.com).
 
 Enjoy calculating with Senolop, and may your RPN expressions always yield fruitful results!
+
+[Help Wanted]!
