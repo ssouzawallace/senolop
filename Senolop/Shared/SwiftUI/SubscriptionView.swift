@@ -7,6 +7,20 @@
 
 import SwiftUI
 
+protocol PayMachine {
+    var value: Double { get }
+    var description: String { get }
+}
+
+struct SubscriptionPayMachine: PayMachine {
+    var value: Double {
+        14.9
+    }
+    var description: String {
+        "1 m"
+    }
+}
+
 struct SubscriptionView: View {
     
     func pay() {

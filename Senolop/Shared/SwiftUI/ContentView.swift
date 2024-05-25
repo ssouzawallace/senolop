@@ -13,6 +13,7 @@ struct ContentView: View {
     var body: some View {
         Calculator(calculator: $calculator)
             .frame(minWidth: 400, minHeight: 400)
+            .frame(maxWidth: 600, maxHeight: 800)
     }
 }
 

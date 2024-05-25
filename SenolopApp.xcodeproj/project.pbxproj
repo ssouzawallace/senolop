@@ -29,8 +29,8 @@
 		176EFF9929F53A5D00317BF3 /* StringResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176EFF9829F53A5D00317BF3 /* StringResources.swift */; };
 		17DE35CE295B8029002FA5C8 /* NumericKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DE35CD295B8029002FA5C8 /* NumericKeyboard.swift */; };
 		17E1D9BB2A0711D300062AFA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 17E1D9BA2A0711D300062AFA /* Settings.bundle */; };
-		BA00FDD02B64A8C6006D811F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA00FDCF2B64A8C6006D811F /* StoreKit.framework */; };
 		BA4212B22A68B58800C4FE36 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4212B12A68B58800C4FE36 /* CreditsView.swift */; };
+		BAF00D512C0042850092EF90 /* DocumentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF00D502C0042850092EF90 /* DocumentsView.swift */; };
 		BAF7C5DC2B843F0E003C7319 /* SettingsStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF7C5DB2B843F0E003C7319 /* SettingsStatusBar.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +62,6 @@
 		176EFF9829F53A5D00317BF3 /* StringResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringResources.swift; sourceTree = "<group>"; };
 		17DE35CD295B8029002FA5C8 /* NumericKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericKeyboard.swift; sourceTree = "<group>"; };
 		17E1D9BA2A0711D300062AFA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		BA00FDCF2B64A8C6006D811F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		BA4212B12A68B58800C4FE36 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		BA4212B32A68C2F500C4FE36 /* TestButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtons.swift; sourceTree = "<group>"; };
 		BA4212B52A68C30500C4FE36 /* TestBasicOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBasicOperations.swift; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		BA4212BB2A68C35700C4FE36 /* TestBasicOperationsButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBasicOperationsButtons.swift; sourceTree = "<group>"; };
 		BA4212BD2A68C37000C4FE36 /* TestQueueManipulationOperationsButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestQueueManipulationOperationsButtons.swift; sourceTree = "<group>"; };
 		BAC81E8E2B4895B000320A56 /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		BAF00D502C0042850092EF90 /* DocumentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsView.swift; sourceTree = "<group>"; };
 		BAF7C5DB2B843F0E003C7319 /* SettingsStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStatusBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,7 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA00FDD02B64A8C6006D811F /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +185,6 @@
 		BA00FDCE2B64A8C6006D811F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BA00FDCF2B64A8C6006D811F /* StoreKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -194,9 +192,9 @@
 		BA4212B02A68AF6B00C4FE36 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				BAF00D4F2C003FE50092EF90 /* Calculator */,
 				179F3D1228EF644D00445748 /* Keyboard */,
 				174AC97B28EE85C700E32729 /* ContentView.swift */,
-				17606B7128F11AD9002031DC /* Calculator.swift */,
 				BA4212B12A68B58800C4FE36 /* CreditsView.swift */,
 				174AC97528EE85C700E32729 /* SubscriptionView.swift */,
 				174AC97A28EE85C700E32729 /* IntroView.swift */,
@@ -205,8 +203,17 @@
 				174AC97628EE85C700E32729 /* Display.swift */,
 				1708BDE728F1AAB2004C1013 /* WelcomeView.swift */,
 				176EFF9829F53A5D00317BF3 /* StringResources.swift */,
+				BAF00D502C0042850092EF90 /* DocumentsView.swift */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		BAF00D4F2C003FE50092EF90 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				17606B7128F11AD9002031DC /* Calculator.swift */,
+			);
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +305,7 @@
 				17012AEE2908699C00D7449C /* Programmer.swift in Sources */,
 				BAF7C5DC2B843F0E003C7319 /* SettingsStatusBar.swift in Sources */,
 				BA4212B22A68B58800C4FE36 /* CreditsView.swift in Sources */,
+				BAF00D512C0042850092EF90 /* DocumentsView.swift in Sources */,
 				174AC98628EE85C700E32729 /* IntroView.swift in Sources */,
 				174AC98228EE85C700E32729 /* Display.swift in Sources */,
 				174AC98428EE85C700E32729 /* ProgrammerKeyboard.swift in Sources */,
