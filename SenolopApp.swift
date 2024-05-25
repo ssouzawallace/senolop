@@ -15,7 +15,6 @@ struct SenolopApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .background(Color.white)
         }
     }
 }
