@@ -14,6 +14,16 @@ protocol CalculatorHapticsFeedbackHandler {
     func blink()
 }
 
+struct DefaultCalculatorHapticsFeedbackHandler: CalculatorHapticsFeedbackHandler {
+    func bip() {
+        //** no-op **//
+    }
+    
+    func blink() {
+        //** no-op **//
+    }
+}
+
 struct DummyCalculatorHapticsFeedbackHandler: CalculatorHapticsFeedbackHandler {
     var debug = false
     func bip() {
