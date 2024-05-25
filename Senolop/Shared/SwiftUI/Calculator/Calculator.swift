@@ -18,52 +18,17 @@ var keyboardType: KeyboardType = .scientific
 
 struct Calculator: View {
     @Binding var calculator: CalculatorProtocol
-    
-    var keyboard: any View {
-        switch keyboardMode {
-        case .numeric:
-            return NumericKeyboard(calculator: $calculator)
-        case .programmer:
-            return ProgrammerKeyboard(calculator: $calculator)
-        case .scientific:
-            return ScientificKeyboard(calculator: $calculator)
-        case .none:
-        default:
-            return EmptyView()
-        }
-    }
-    
     var body: some View {
-        VStack {
-            Display(
-                calculator: $calculator
-            )
-            Keyboard(
-                calculator: $calculator
-            )
+        Grid {
+            GridRow(alignment: VerticalAlignment?.none) {
+                Display(
+                    calculator: $calculator
+                )
+                Keyboard(
+                    calculator: $calculator
+                )
+            }
         }
-    }
-    
-    var body: some View {
-        VStack {
-            Display(
-                calculator: $calculator
-            )
-            Keyboard(
-                calculator: $calculator
-            )
-        }
-    }
-    
-    var display: any View {
-        Display(
-            calculator: $calculator
-        )
-    }
-    
-    var body: some View {
-        display
-        keyboard
     }
 }
 

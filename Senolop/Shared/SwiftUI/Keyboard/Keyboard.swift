@@ -11,9 +11,18 @@ struct Keyboard: View {
     @Binding var calculator: CalculatorProtocol
     
     var body: some View {
-        NumericKeyboard(
-            calculator: $calculator
-        )
+        var keyboard: any View {
+            switch keyboardMode {
+            case .numeric:
+                return NumericKeyboard(calculator: $calculator)
+            case .programmer:
+                return ProgrammerKeyboard(calculator: $calculator)
+            case .scientific:
+                return ScientificKeyboard(calculator: $calculator)
+            default:
+                return EmptyView()
+            }
+        }
     }
 }
 
