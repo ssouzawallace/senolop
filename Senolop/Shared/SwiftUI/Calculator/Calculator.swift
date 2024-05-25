@@ -19,16 +19,12 @@ var keyboardType: KeyboardType = .scientific
 struct Calculator: View {
     @Binding var calculator: CalculatorProtocol
     var body: some View {
-        Grid {
-            GridRow(alignment: VerticalAlignment?.none) {
-                Display(
-                    calculator: $calculator
-                )
-                Keyboard(
-                    calculator: $calculator
-                )
-            }
-        }
+        Display(
+            calculator: $calculator
+        )
+        Keyboard(
+            calculator: $calculator
+        )
     }
 }
 
