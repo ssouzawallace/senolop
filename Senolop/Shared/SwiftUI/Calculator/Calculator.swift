@@ -27,8 +27,20 @@ struct Calculator: View {
             return ProgrammerKeyboard(calculator: $calculator)
         case .scientific:
             return ScientificKeyboard(calculator: $calculator)
+        case .none:
         default:
             return EmptyView()
+        }
+    }
+    
+    var body: some View {
+        VStack {
+            Display(
+                calculator: $calculator
+            )
+            Keyboard(
+                calculator: $calculator
+            )
         }
     }
     
