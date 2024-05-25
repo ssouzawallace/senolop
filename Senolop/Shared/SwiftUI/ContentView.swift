@@ -8,17 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Binding var calculator: CalculatorProtocol
-    
     var body: some View {
-        Calculator(calculator: $calculator)
-            .frame(minWidth: 400, minHeight: 400)
-            .frame(maxWidth: 600, maxHeight: 800)
+        Calculator(
+            calculator: .constant(RPN())
+        )
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(calculator: .constant(RPN()))            
+        ContentView()
     }
 }

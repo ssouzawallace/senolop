@@ -12,45 +12,14 @@ struct Calculator: View {
     
     var body: some View {
         VStack {
-            Rectangle()
-                .frame(maxHeight: 22)
-            
-            Display(calculator: $calculator)
-            
-            Rectangle()
-                .frame(maxHeight: 22)
-            Keyboard(calculator: $calculator)
-                .padding()
-            
-            Rectangle()
-                .frame(maxHeight: 22)
+            Display(
+                calculator: $calculator
+            )
+            Keyboard(
+                calculator: $calculator
+            )
         }
-#if os(macOS)
-        .touchBar {
-            ZStack {
-                Button {
-                    calculator.plusPressed()
-                } label: {
-                    Image(systemName: "plus")
-                }
-                Button {
-                    calculator.minusPressed()
-                } label: {
-                    Image(systemName: "minus")
-                }
-                Button {
-                    calculator.multiplyPressed()
-                } label: {
-                    Image(systemName: "multiply")
-                }
-                Button {
-                    calculator.dividePressed()
-                } label: {
-                    Image(systemName: "divide")
-                }
-            }
-        }
-#endif
+        .padding()
     }
 }
 
@@ -94,4 +63,3 @@ extension CalculatorProtocol {
         fatalError()
     }
 }
-
