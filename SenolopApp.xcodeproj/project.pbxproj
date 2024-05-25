@@ -30,6 +30,7 @@
 		17DE35CE295B8029002FA5C8 /* NumericKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DE35CD295B8029002FA5C8 /* NumericKeyboard.swift */; };
 		17E1D9BB2A0711D300062AFA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 17E1D9BA2A0711D300062AFA /* Settings.bundle */; };
 		BA125D742C029445004E4C7F /* KeyboardModeSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA125D732C029445004E4C7F /* KeyboardModeSelection.swift */; };
+		BA2C1E922C02976A00B2B8F0 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C1E912C02976A00B2B8F0 /* View+Extension.swift */; };
 		BA4212B22A68B58800C4FE36 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4212B12A68B58800C4FE36 /* CreditsView.swift */; };
 		BAF00D512C0042850092EF90 /* DocumentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF00D502C0042850092EF90 /* DocumentsView.swift */; };
 		BAF7C5DC2B843F0E003C7319 /* SettingsStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF7C5DB2B843F0E003C7319 /* SettingsStatusBar.swift */; };
@@ -64,6 +65,7 @@
 		17DE35CD295B8029002FA5C8 /* NumericKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericKeyboard.swift; sourceTree = "<group>"; };
 		17E1D9BA2A0711D300062AFA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BA125D732C029445004E4C7F /* KeyboardModeSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardModeSelection.swift; sourceTree = "<group>"; };
+		BA2C1E912C02976A00B2B8F0 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		BA4212B12A68B58800C4FE36 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		BA4212B32A68C2F500C4FE36 /* TestButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtons.swift; sourceTree = "<group>"; };
 		BA4212B52A68C30500C4FE36 /* TestBasicOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBasicOperations.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				174AC97228EE85C700E32729 /* Calculato.swift */,
+				BA2C1E912C02976A00B2B8F0 /* View+Extension.swift */,
 				17012AE9290868F500D7449C /* RPN.swift */,
 				17012AEB2908699300D7449C /* Scientific.swift */,
 				17012AED2908699C00D7449C /* Programmer.swift */,
@@ -303,6 +306,7 @@
 				1708BDE828F1AAB2004C1013 /* WelcomeView.swift in Sources */,
 				174AC98728EE85C700E32729 /* ContentView.swift in Sources */,
 				173C2C0529E841CF0039DB93 /* CalculatorHapticsFeedbackHandler.swift in Sources */,
+				BA2C1E922C02976A00B2B8F0 /* View+Extension.swift in Sources */,
 				1708BDEA28F1AB8C004C1013 /* CalculatorButton.swift in Sources */,
 				BA125D742C029445004E4C7F /* KeyboardModeSelection.swift in Sources */,
 				174AC98028EE85C700E32729 /* BinariesDisplay.swift in Sources */,
