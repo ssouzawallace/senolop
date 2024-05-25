@@ -13,15 +13,8 @@ struct SenolopApp: App {
     @State var calculator: CalculatorProtocol = RPN(CalculatorHapticsFeedbackHandlerImpl())
     
     var body: some Scene {
-            #if os(macOS)
-            return WindowGroup {
-                ContentView(calculator: $calculator)
-                    .buttonStyle(CalculatorButtonStyle(proeminent: true))
-            }
-            #else
-            return WindowGroup {
-                ContentView(calculator: $calculator)
-            }
-            #endif
+        WindowGroup {
+            ContentView()
+        }
     }
 }
