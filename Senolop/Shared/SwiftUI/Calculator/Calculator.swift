@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+enum KeyboardType {
+    case scientific
+    case numeric
+    case programmer
+    case none
+}
+
+var keyboardType: KeyboardType = .scientific
+
 struct Calculator: View {
     @Binding var calculator: CalculatorProtocol
     
@@ -18,8 +27,20 @@ struct Calculator: View {
             return ProgrammerKeyboard(calculator: $calculator)
         case .scientific:
             return ScientificKeyboard(calculator: $calculator)
+        case .none:
         default:
             EmptyView()
+        }
+    }
+    
+    var body: some View {
+        VStack {
+            Display(
+                calculator: $calculator
+            )
+            Keyboard(
+                calculator: $calculator
+            )
         }
     }
     
