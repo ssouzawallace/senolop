@@ -32,6 +32,7 @@
 		BA125D742C029445004E4C7F /* KeyboardModeSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA125D732C029445004E4C7F /* KeyboardModeSelection.swift */; };
 		BA2C1E922C02976A00B2B8F0 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2C1E912C02976A00B2B8F0 /* View+Extension.swift */; };
 		BA4212B22A68B58800C4FE36 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4212B12A68B58800C4FE36 /* CreditsView.swift */; };
+		BA90D06B2C03C58D0080BADA /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA90D06A2C03C58D0080BADA /* Typealiases.swift */; };
 		BAF00D512C0042850092EF90 /* DocumentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF00D502C0042850092EF90 /* DocumentsView.swift */; };
 		BAF7C5DC2B843F0E003C7319 /* SettingsStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF7C5DB2B843F0E003C7319 /* SettingsStatusBar.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,7 @@
 		BA4212B92A68C33100C4FE36 /* TestNumericButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNumericButtons.swift; sourceTree = "<group>"; };
 		BA4212BB2A68C35700C4FE36 /* TestBasicOperationsButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBasicOperationsButtons.swift; sourceTree = "<group>"; };
 		BA4212BD2A68C37000C4FE36 /* TestQueueManipulationOperationsButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestQueueManipulationOperationsButtons.swift; sourceTree = "<group>"; };
+		BA90D06A2C03C58D0080BADA /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		BAC81E8E2B4895B000320A56 /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		BAF00D502C0042850092EF90 /* DocumentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsView.swift; sourceTree = "<group>"; };
 		BAF7C5DB2B843F0E003C7319 /* SettingsStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStatusBar.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		174AC93228EE84F800E32729 = {
 			isa = PBXGroup;
 			children = (
+				BA90D06A2C03C58D0080BADA /* Typealiases.swift */,
 				174AC93E28EE84F800E32729 /* SenolopApp.swift */,
 				174AC93D28EE84F800E32729 /* Senolop */,
 				174AC93C28EE84F800E32729 /* Products */,
@@ -298,6 +301,7 @@
 			files = (
 				17012AEC2908699400D7449C /* Scientific.swift in Sources */,
 				174AC93F28EE84F800E32729 /* SenolopApp.swift in Sources */,
+				BA90D06B2C03C58D0080BADA /* Typealiases.swift in Sources */,
 				17606B7228F11AD9002031DC /* Calculator.swift in Sources */,
 				174AC98128EE85C700E32729 /* SubscriptionView.swift in Sources */,
 				176EFF9929F53A5D00317BF3 /* StringResources.swift in Sources */,

@@ -34,12 +34,6 @@ struct CalculatorView_Previews: PreviewProvider {
     }
 }
 
-
-struct Item: Identifiable {
-    var value: String
-    let id = UUID()
-}
-
 protocol CalculatorProtocol {
     var stack: [Item] { get }
     
