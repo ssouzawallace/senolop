@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SwiftData
 
 struct NumericKeyboard: View {
     @Binding var calculator: CalculatorProtocol
