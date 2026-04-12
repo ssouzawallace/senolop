@@ -1,94 +1,154 @@
-# Senolop: RPN Calculator
+# Senolop — RPN Calculator for iOS & tvOS
 
-Welcome to Senolop, a powerful Reverse Polish Notation (RPN) calculator! This calculator allows you to perform mathematical operations using the classic postfix notation. With its intuitive stack-based approach, Senolop offers a unique way to solve complex equations.
+**Senolop** is a native [Reverse Polish Notation (RPN)](https://en.wikipedia.org/wiki/Reverse_Polish_notation) calculator built with **SwiftUI**. It provides an intuitive, stack-based interface for performing arithmetic — the way HP calculators made famous.
+
+> *"Senolop"* is *"Polones"* spelled backwards — a nod to Polish notation!
 
 ## Features
-- Efficient and easy-to-use RPN calculator
-- Supports basic arithmetic operations: addition, subtraction, multiplication, and division
-- Performs calculations using a stack-based mechanism
-- Error handling for incorrect inputs and division by zero
-- Memory functionality with a built-in memory stack
-- Customizable precision settings for accurate calculations
 
-## Installation
-Senolop is a command-line application written in Python. To use it, make sure you have Python 3.x installed on your system. Follow these steps to install Senolop:
+### Core Calculator
+- **Full RPN engine** — enter operands first, then the operator
+- **Basic arithmetic** — addition, subtraction, multiplication, and division
+- **Stack operations** — duplicate (`Enter`), drop, swap, roll up, and roll down
+- **Percentage** and **sign inversion** (`±`) operators
+- **Live stack display** — see the entire stack at a glance
 
-1. Clone the repository:
-```shell
-git clone https://github.com/ssouzawallace/senolop.git
+### Multiple Keyboard Modes
+| Mode | Description |
+|------|-------------|
+| **Numeric** | Standard 0–9 digits, decimal point, and basic operations |
+| **Scientific** | Trigonometric, logarithmic, and power functions *(in development)* |
+| **Programmer** | Hexadecimal digits (A–F) and bitwise operations *(in development)* |
+
+### User Experience
+- **Haptic feedback** — tactile response on button presses via CoreHaptics (configurable in Settings)
+- **Customizable themes** — choose from 6 button color themes (Orange, Mint, Strawberry, Lime, Grape, Mango)
+- **Localization** — supports English, Portuguese (Brazil), Spanish, and Polish
+
+## Requirements
+
+| Requirement | Version |
+|-------------|---------|
+| Xcode | 14.0+ |
+| Swift | 5.0+ |
+| iOS | 16.0+ |
+| tvOS | 16.0+ |
+
+## Getting Started
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/ssouzawallace/senolop.git
+   ```
+
+2. **Open the project in Xcode:**
+
+   ```bash
+   cd senolop
+   open SenolopApp.xcodeproj
+   ```
+
+3. **Select a target** — choose an iOS Simulator or a tvOS Simulator from the device menu.
+
+4. **Build and run** — press <kbd>⌘</kbd><kbd>R</kbd> or click the Play button.
+
+## How RPN Works
+
+In Reverse Polish Notation you enter operands *before* the operator. There are no parentheses — the stack determines the order of operations.
+
+**Example:** To compute `(3 + 4) × 2`:
+
+| Step | Action | Stack (top → bottom) |
+|------|--------|---------------------|
+| 1 | Enter `3` | `3` |
+| 2 | Press `Enter` | `3  3` |
+| 3 | Enter `4` | `4  3` |
+| 4 | Press `+` | `7` |
+| 5 | Enter `2` | `2  7` |
+| 6 | Press `×` | `14` |
+
+### Quick Examples
+
+| Expression (infix) | RPN Input | Result |
+|--------------------|-----------|--------|
+| `5 + 2` | `5 Enter 2 +` | `7` |
+| `9 − 3` | `9 Enter 3 −` | `6` |
+| `4 × 5` | `4 Enter 5 ×` | `20` |
+| `10 ÷ 2` | `10 Enter 2 ÷` | `5` |
+| `(4 × 3) ÷ (8 + 2)` | `4 Enter 3 × 8 Enter 2 + ÷` | `1.2` |
+
+### Stack Manipulation
+
+| Button | Action |
+|--------|--------|
+| **Enter** | Duplicates the top of the stack |
+| **Drop** | Removes the top value |
+| **Swap** | Swaps the top two values |
+| **Roll ↑** | Rotates the stack upward |
+| **Roll ↓** | Rotates the stack downward |
+| **AC / C** | Clears the stack or the current entry |
+
+## Project Structure
+
 ```
-2. Change into the project directory:
-```shell
-cd senolop
+senolop/
+├── SenolopApp.swift                # App entry point (@main)
+├── Typealiases.swift               # Global type aliases
+├── Senolop/
+│   ├── Calculator/
+│   │   ├── RPN.swift               # Core RPN stack engine
+│   │   ├── Scientific.swift        # Scientific functions (planned)
+│   │   ├── Programmer.swift        # Programmer mode (planned)
+│   │   └── CalculatorHapticsFeedbackHandler.swift
+│   ├── Shared/SwiftUI/
+│   │   ├── ContentView.swift       # Main app view
+│   │   ├── Display.swift           # Stack display
+│   │   ├── Calculator/             # Calculator protocol & component
+│   │   ├── Keyboard/               # Numeric, Scientific, Programmer keyboards
+│   │   ├── WelcomeView.swift       # Splash screen
+│   │   └── StringResources.swift   # Localized strings
+│   └── SenolopTests/               # Unit tests (XCTest)
+└── Senolop-tvOS/                   # tvOS-specific target
 ```
-3. Run the application:
-```shell
-xcrun Senolop.xcproj
-```
 
-## Usage
-Senolop provides a simple and efficient way to perform calculations using RPN notation. Follow these guidelines to start using Senolop:
+## Architecture
 
-1. Enter numbers and operators in the desired order, separated by spaces.
-   - **Example:** To calculate `4 + (7 - 2) * 5`, enter `4 7 2 - 5 * +`.
+- **Protocol-oriented design** — `CalculatorProtocol` enables multiple calculator implementations
+- **Value-type state** — the `RPN` struct uses `mutating` methods for a functional approach
+- **SwiftUI bindings** — parent views pass `@Binding` references to child views for reactive state
+- **Haptics abstraction** — swappable implementations (Dummy, Default, Real) for testing and production
 
-2. Press Enter to display the result.
+## Running Tests
 
-3. Senolop will evaluate the expression and provide the output.
+Open the project in Xcode and run the test suite:
 
-4. The calculator supports the following operators: `+`, `-`, `*`, and `/`.
+<kbd>⌘</kbd><kbd>U</kbd>
 
-5. To clear the stack, type `clear` or press Enter without entering any input.
-
-6. To store a number in memory, use the `sto` command followed by the memory slot number and the number to be stored.
-   - **Example:** `sto 1` saves the top element from the stack to memory slot 1.
-
-7. To recall a number from memory, use the `rcl` command followed by the memory slot number.
-   - **Example:** `rcl 1` retrieves the value stored in memory slot 1 and pushes it to the stack.
-
-8. To change the precision settings, use the `precision` command followed by the desired number of decimal places.
-   - **Example:** `precision 4` configures Senolop to display results with four decimal places.
-
-## Examples
-- Addition:
-  - Input: `5 2 +`
-  - Output: `7`
-
-- Subtraction:
-  - Input: `9 3 -`
-  - Output: `6`
-
-- Multiplication:
-  - Input: `4 5 *`
-  - Output: `20`
-
-- Division:
-  - Input: `10 2 /`
-  - Output: `5`
-
-- Mixed operations:
-  - Input: `4 3 * 8 2 + /`
-  - Output: `0.5714`
-
-- Storing and recalling from memory:
-  - Input: `7 3 + sto 1 rcl 1 -`
-  - Output: `7`
+The test suite covers:
+- Digit input and decimal handling
+- All four arithmetic operations
+- Stack manipulation (swap, roll up, roll down)
+- Special operations (percentage, sign inversion, clear)
 
 ## Contributing
-Contributions are always welcome! If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on the [Senolop GitHub repository](https://github.com/your-username/senolop).
 
-## License
-This project is licensed under the MIT License. See [LICENSE](https://github.com/your-username/senolop/blob/main/LICENSE) for more information.
+Contributions are welcome! Here's how to get involved:
 
-## Acknowledgements
-- This project was inspired by the concept of Reverse Polish Notation (RPN) calculators.
-- Special thanks to the contributors of the following libraries used in this project:
-  - [Python](https://www.python.org/)
-  - [Markdown](https://daringfireball.net/projects/markdown/)
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/my-feature`
+3. Commit your changes: `git commit -m "Add my feature"`
+4. Push to the branch: `git push origin feature/my-feature`
+5. Open a Pull Request on [GitHub](https://github.com/ssouzawallace/senolop)
+
+### Areas Where Help Is Needed
+
+- 🔬 **Scientific mode** — wire up trigonometric, logarithmic, and power functions
+- 💻 **Programmer mode** — implement bitwise operations and hex input
+- 🧪 **Test coverage** — expand unit tests for edge cases
+- 🌍 **Localization** — improve and add new language translations
+- ♿ **Accessibility** — add VoiceOver labels and Dynamic Type support
 
 ## Contact
-For any inquiries or feedback, please contact the project maintainer at [ssouza.wallace@gmail.com](mailto:ssouza.wallace@gmail.com).
 
-Enjoy calculating with Senolop, and may your RPN expressions always yield fruitful results!
-
-[Help Wanted]!
+For questions or feedback, reach out to the maintainer at [ssouza.wallace@gmail.com](mailto:ssouza.wallace@gmail.com).
