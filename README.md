@@ -1,4 +1,4 @@
-# Senolop: RPN Calculator
+# Senolop: RPN Calculator 
 
 Welcome to Senolop, a powerful Reverse Polish Notation (RPN) calculator! This calculator allows you to perform mathematical operations using the classic postfix notation. With its intuitive stack-based approach, Senolop offers a unique way to solve complex equations.
 
