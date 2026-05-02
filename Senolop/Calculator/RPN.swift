@@ -13,75 +13,91 @@ struct RPN: CalculatorProtocol {
             cleanStateTitle = clearAll ? "AC" : "C"
         }
     }
-    private var shouldAppend = false {
+    var shouldAppend = false {
         didSet {
             addsComma = false
         }
     }
     private var addsComma = false
-    
+
     var cleanStateTitle: String = "AC"
-    
+
     var stack: [Item] = [Item(value: "0")]
-    
+
+    /// Last user-visible error, cleared on next successful action.
+    var lastError: String? = nil
+
     var calculatorHapticsFeedbackHandler: CalculatorHapticsFeedbackHandler
     init(_ calculatorHapticsFeedbackHandler: CalculatorHapticsFeedbackHandler = DummyCalculatorHapticsFeedbackHandler()) {
         self.calculatorHapticsFeedbackHandler = calculatorHapticsFeedbackHandler
     }
-    
+
     func buttonPressed() {
         calculatorHapticsFeedbackHandler.bip()
     }
-    
-    private func error() {
+
+    mutating func error(_ message: String = "Error") {
         calculatorHapticsFeedbackHandler.blink()
+        lastError = message
     }
-    
+
+    private mutating func clearError() {
+        lastError = nil
+    }
+
     mutating func swapPressed() {
         buttonPressed()
         guard stack.count > 1 else {
-            error()
+            error("Stack too small")
             return
         }
+        clearError()
         stack.swapAt(stack.count - 1, stack.count - 2)
     }
-    
+
     mutating func rollUpPressed() {
         buttonPressed()
+        guard !stack.isEmpty else { error("Stack empty"); return }
+        clearError()
         let firstItem = stack.removeFirst()
         stack.append(firstItem)
     }
-    
+
     mutating func rollDownPressed() {
         buttonPressed()
+        guard !stack.isEmpty else { error("Stack empty"); return }
+        clearError()
         let lastItem = stack.removeLast()
         stack.insert(lastItem, at: 0)
     }
-    
+
     mutating func dropPressed() {
         buttonPressed()
-        stack.removeLast()
+        if !stack.isEmpty { stack.removeLast() }
         if stack.isEmpty {
             stack = [Item(value: "0")]
         }
+        clearError()
         shouldAppend = true
     }
-    
+
     mutating func digitPressed(_ digit: UInt8) {
         buttonPressed()
-        guard digit >= 0 && digit <= 9 else {
-            raise(0)
-            return
-        }
+        guard digit <= 9 else { return }
+        clearError()
         guard !shouldAppend else {
             shouldAppend = false
-            stack.removeLast()
+            if !stack.isEmpty { stack.removeLast() }
+            stack.append(Item(value: String(digit)))
+            clearAll = false
+            return
+        }
+
+        clearAll = false
+        guard var value = stack.popLast()?.value else {
             stack.append(Item(value: String(digit)))
             return
         }
-        
-        clearAll = false
-        guard var value = stack.popLast()?.value else { return }
         if addsComma {
             if value.contains(".") || value.contains(",") {
                 stack.append(Item(value: value + String(digit)))
@@ -93,30 +109,33 @@ struct RPN: CalculatorProtocol {
             stack.append(Item(value: value + String(digit)))
         }
     }
-    
+
     mutating func commaPressed() {
         buttonPressed()
+        clearError()
         addsComma = true
     }
 
     mutating func clearPressed() {
         buttonPressed()
+        clearError()
         if clearAll {
             stack = []
         } else {
             clearAll = true
-            stack.removeLast()
+            if !stack.isEmpty { stack.removeLast() }
         }
         stack.append(Item(value: "0"))
         shouldAppend = false
     }
-    
+
     mutating func invertSignalPressed() {
         buttonPressed()
         guard let element = stack.popLast() else {
-            error()
+            error("Stack empty")
             return
         }
+        clearError()
         if element.value.first == "-" {
             stack.append(Item(value: element.value.trimmingCharacters(in: ["-"])))
         } else {
@@ -124,84 +143,61 @@ struct RPN: CalculatorProtocol {
         }
         shouldAppend = true
     }
-    
+
     mutating func returnPressed() {
         buttonPressed()
         guard let newElement = stack.last else {
-            error()
+            error("Stack empty")
             return
         }
+        clearError()
         stack.append(Item(value: newElement.value))
         shouldAppend = true
     }
 
     mutating func percentPressed() {
         buttonPressed()
-        guard let element = stack.popLast() else {
-            error()
+        guard let element = stack.popLast(), let value = element.doubleValue else {
+            error("Stack empty")
             return
         }
-        guard let value = Double(element.value) else {
-            error()
-            return
-        }
+        clearError()
         stack.append(Item(value: String(value / 100.0)))
         shouldAppend = true
     }
-    
-    mutating func plusPressed() {
-        buttonPressed()
+
+    private mutating func binaryOp(_ op: (Double, Double) -> Double, name: String = "Op") {
         guard stack.count > 1 else {
-            error()
+            error("Stack too small")
             return
         }
-        guard let elementB = stack.popLast()?.value else { return }
-        guard let elementA = stack.popLast()?.value else { return }
-        guard let elementB = Double(elementB) else { return }
-        guard let elementA = Double(elementA) else { return }
-        stack.append(Item(value: String(elementA + elementB)))
+        guard let b = stack.popLast()?.doubleValue,
+              let a = stack.popLast()?.doubleValue else {
+            error("Invalid number")
+            return
+        }
+        let result = op(a, b)
+        if result.isNaN || result.isInfinite {
+            error("Math error")
+        } else {
+            clearError()
+        }
+        stack.append(Item(value: String(result)))
         shouldAppend = true
     }
-    
-    mutating func minusPressed() {
+
+    mutating func plusPressed()     { buttonPressed(); binaryOp(+, name: "+") }
+    mutating func minusPressed()    { buttonPressed(); binaryOp(-, name: "-") }
+    mutating func multiplyPressed() { buttonPressed(); binaryOp(*, name: "×") }
+    mutating func dividePressed()   {
         buttonPressed()
-        guard stack.count > 1 else {
-            error()
+        // Guard against divide-by-zero before popping so user can fix it
+        guard stack.count > 1 else { error("Stack too small"); return }
+        guard let b = stack.last?.doubleValue, b != 0 else {
+            error("Divide by zero")
             return
         }
-        guard let elementB = stack.popLast()?.value else { return }
-        guard let elementA = stack.popLast()?.value else { return }
-        guard let elementB = Double(elementB) else { return }
-        guard let elementA = Double(elementA) else { return }
-        stack.append(Item(value: String(elementA - elementB)))
-        shouldAppend = true
-    }
-    
-    mutating func dividePressed() {
-        buttonPressed()
-        guard stack.count > 1 else {
-            error()
-            return
-        }
-        guard let elementB = stack.popLast()?.value else { return }
-        guard let elementA = stack.popLast()?.value else { return }
-        guard let elementB = Double(elementB) else { return }
-        guard let elementA = Double(elementA) else { return }
-        stack.append(Item(value: String(elementA / elementB)))
-        shouldAppend = true
-    }
-    
-    mutating func multiplyPressed() {
-        buttonPressed()
-        guard stack.count > 1 else {
-            error()
-            return
-        }
-        guard let elementB = stack.popLast()?.value else { return }
-        guard let elementA = stack.popLast()?.value else { return }
-        guard let elementB = Double(elementB) else { return }
-        guard let elementA = Double(elementA) else { return }
-        stack.append(Item(value: String(elementA * elementB)))
-        shouldAppend = true
+        binaryOp(/, name: "÷")
     }
 }
+
