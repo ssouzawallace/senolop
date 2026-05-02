@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		17012AEA290868F500D7449C /* RPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17012AE9290868F500D7449C /* RPN.swift */; };
+		C0DEC0DEC0DEC0DE00000002 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C0DEC0DEC0DEC0DE00000001 /* PrivacyInfo.xcprivacy */; };
+		C0DEC0DEC0DEC0DE00000006 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C0DEC0DEC0DEC0DE00000005 /* Localizable.strings */; };
 		17012AEC2908699400D7449C /* Scientific.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17012AEB2908699300D7449C /* Scientific.swift */; };
 		17012AEE2908699C00D7449C /* Programmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17012AED2908699C00D7449C /* Programmer.swift */; };
 		1708BDE828F1AAB2004C1013 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1708BDE728F1AAB2004C1013 /* WelcomeView.swift */; };
@@ -39,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		17012AE9290868F500D7449C /* RPN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPN.swift; sourceTree = "<group>"; };
+		C0DEC0DEC0DEC0DE00000001 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		C0DEC0DEC0DEC0DE00000003 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C0DEC0DEC0DEC0DE00000004 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		17012AEB2908699300D7449C /* Scientific.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scientific.swift; sourceTree = "<group>"; };
 		17012AED2908699C00D7449C /* Programmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Programmer.swift; sourceTree = "<group>"; };
 		1708BDE728F1AAB2004C1013 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -158,6 +163,8 @@
 				BAC81E8E2B4895B000320A56 /* File */,
 				17340DE429F740A50033D100 /* macOS App Icon */,
 				17E1D9BA2A0711D300062AFA /* Settings.bundle */,
+				C0DEC0DEC0DEC0DE00000001 /* PrivacyInfo.xcprivacy */,
+				C0DEC0DEC0DEC0DE00000005 /* Localizable.strings */,
 			);
 			path = Senolop;
 			sourceTree = "<group>";
@@ -289,6 +296,8 @@
 				174AC94C28EE84FA00E32729 /* Preview Assets.xcassets in Resources */,
 				17E1D9BB2A0711D300062AFA /* Settings.bundle in Resources */,
 				174AC97C28EE85C700E32729 /* Assets.xcassets in Resources */,
+				C0DEC0DEC0DEC0DE00000002 /* PrivacyInfo.xcprivacy in Resources */,
+				C0DEC0DEC0DEC0DE00000006 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +337,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C0DEC0DEC0DEC0DE00000005 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0DEC0DEC0DEC0DE00000003 /* en */,
+				C0DEC0DEC0DEC0DE00000004 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		174AC96328EE84FA00E32729 /* Debug */ = {

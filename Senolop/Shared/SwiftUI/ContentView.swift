@@ -26,10 +26,7 @@ struct ContentView: View {
                     Calculator(calculator: $calculator)
                 }
             } else {
-                IntroView(hasSeenIntro: Binding(
-                    get: { hasSeenIntro },
-                    set: { hasSeenIntro = $0 }
-                ))
+                IntroView(hasSeenIntro: $hasSeenIntro)
             }
         }
         .environmentObject(store)
