@@ -9,16 +9,14 @@ import SwiftUI
 
 struct CreditsView: View {
     var body: some View {
-        Group {
-            Text("Hello, World!")
-            Group {
-                Text("Me")
-                Text("Myself")
-                Text("And")
-                Text("I")
-            }
-            .font(.body)
-        }.font(.title)
+        VStack(spacing: 8) {
+            Text("Senolop").font(.title)
+            Text(NSLocalizedString("credits.tagline",
+                                   value: "An RPN calculator built with SwiftUI.",
+                                   comment: ""))
+                .font(.body).foregroundColor(.secondary)
+            Text("v\(Bundle.main.shortVersion)").font(.caption2).foregroundColor(.secondary)
+        }
     }
 }
 
@@ -27,3 +25,4 @@ struct CreditsView_Previews: PreviewProvider {
         CreditsView()
     }
 }
+

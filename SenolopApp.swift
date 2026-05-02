@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct SenolopApp: App {
-    
     @State var calculator: CalculatorProtocol = RPN(CalculatorHapticsFeedbackHandlerImpl())
-    
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(calculator: $calculator)
         }
     }
 }
+

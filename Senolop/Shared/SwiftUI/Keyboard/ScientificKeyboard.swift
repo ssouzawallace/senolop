@@ -13,48 +13,34 @@ struct ScientificKeyboard: View {
         HStack {
             VStack {
                 HStack {
-                    Button("(", action: { })
-                        .disabled(true)
-                    Button(")", action: { })
-                        .disabled(true)
-                    Button("mc", action: { })
-                    Button("m+", action: { })
-                    Button("m-", action: { })
-                    Button("mr", action: { })
+                    Button("π",     action: { calculator.piPressed() })
+                    Button("e",     action: { calculator.ePressed() })
+                    Button("Rand",  action: { calculator.randomPressed() })
                 }
                 HStack {
-                    Button("2nd", action: { })
-                    Button("x²", action: { })
-                    Button("x³", action: { })
-                    Button("yˣ", action: { })
-                    Button("eˣ", action: { })
-                    Button("10ˣ", action: { })
+                    Button("x²",  action: { calculator.squarePressed() })
+                    Button("x³",  action: { calculator.cubePressed() })
+                    Button("yˣ",  action: { calculator.powPressed() })
                 }
                 HStack {
-                    Button("¹⁄𝚡", action: { })
-                    Button("√x", action: { })
-                    Button("∛x", action: { })
-                    Button("ˣ√y", action: { })
-                    Button("ln", action: { })
-                    Button("log₁₀", action: { })
+                    Button("¹⁄𝚡", action: { calculator.reciprocalPressed() })
+                    Button("√x",  action: { calculator.sqrtPressed() })
+                    Button("x!",  action: { calculator.factorialPressed() })
                 }
                 HStack {
-                    Button("x!", action: { })
-                    Button("sin", action: { })
-                    Button("cos", action: { })
-                    Button("tan", action: { })
-                    Button("e", action: { })
-                    Button("EE", action: { })
-                    
+                    Button("ln",     action: { calculator.lnPressed() })
+                    Button("log₁₀",  action: { calculator.log10Pressed() })
+                    Button("eˣ",     action: { calculator.expPressed() })
                 }
                 HStack {
-                    Button("Rad", action: { })
-                    Button("sinh", action: { })
-                    Button("cosh", action: { })
-                    Button("tanh", action: { })
-                    Button("π", action: { })
-                    Button("Rand", action: { })
-                                    
+                    Button("10ˣ",  action: { calculator.tenPowXPressed() })
+                    Button("sin",  action: { calculator.sinPressed() })
+                    Button("cos",  action: { calculator.cosPressed() })
+                }
+                HStack {
+                    Button("tan",  action: { calculator.tanPressed() })
+                    Button("sinh", action: { calculator.sinhPressed() })
+                    Button("cosh", action: { calculator.coshPressed() })
                 }
             }
             NumericKeyboard(calculator: $calculator)
@@ -73,3 +59,4 @@ struct ScientificKeyboard_Previews: PreviewProvider {
         ScientificKeyboard(calculator: Binding.constant(RPN()))
     }
 }
+
