@@ -1,5 +1,4 @@
-# This workflow will build a Swift project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
+# Build and (when a test target exists) test the Senolop scheme.
 
 name: Swift
 
@@ -9,14 +8,41 @@ on:
   pull_request:
     branches: [ "main" ]
 
+permissions:
+  contents: read
+
 jobs:
   build:
-
+    name: Build
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v6
+
+    - name: Show Xcode version
+      run: xcodebuild -version
+
     - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+      run: |
+        xcodebuild clean build \
+          -project SenolopApp.xcodeproj \
+          -scheme Senolop \
+          -destination 'platform=iOS Simulator,name=iPhone 16' \
+          CODE_SIGN_IDENTITY="" \
+          CODE_SIGNING_REQUIRED=NO \
+          CODE_SIGNING_ALLOWED=NO
+
+    - name: Test (only if a test target exists)
+      run: |
+        if xcodebuild -project SenolopApp.xcodeproj -list | grep -qE '^\s+SenolopTests\s*$'; then
+          xcodebuild test \
+            -project SenolopApp.xcodeproj \
+            -scheme Senolop \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO
+        else
+          echo "No SenolopTests target configured in the Xcode project — skipping tests."
+        fi
+

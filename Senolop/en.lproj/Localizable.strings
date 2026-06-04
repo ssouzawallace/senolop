@@ -1,0 +1,25 @@
+/* Senolop — English localization */
+
+"keyboard.mode.numeric"    = "Numeric";
+"keyboard.mode.scientific" = "Scientific";
+"keyboard.mode.programmer" = "Programmer";
+
+"intro.title.welcome"  = "Welcome to Senolop";
+"intro.body.welcome"   = "A fast, beautiful Reverse-Polish Notation calculator for iPhone and iPad.";
+"intro.title.rpn"      = "Stack-based math";
+"intro.body.rpn"       = "Type a number, press Enter to push it onto the stack, then choose an operator. No parentheses needed.";
+"intro.title.example"  = "Try it: 3 ↵ 4 +";
+"intro.body.example"   = "Press 3, then Enter, then 4, then +. The stack shows 7. That’s it.";
+"intro.next"           = "Next";
+"intro.get_started"    = "Get Started";
+"intro.skip"           = "Skip";
+
+"a11y.history"  = "History";
+"a11y.settings" = "Settings";
+
+"history.empty" = "No history yet. Your past results will appear here.";
+
+"credits.tagline" = "An RPN calculator built with SwiftUI.";
+
+"paywall.error.product_unavailable" = "Product not available right now. Please try again later.";
+"paywall.error.unverified"          = "Purchase could not be verified.";

@@ -1,0 +1,25 @@
+/* Senolop — Português (Brasil) */
+
+"keyboard.mode.numeric"    = "Numérico";
+"keyboard.mode.scientific" = "Científico";
+"keyboard.mode.programmer" = "Programador";
+
+"intro.title.welcome"  = "Bem-vindo ao Senolop";
+"intro.body.welcome"   = "Uma calculadora RPN rápida e bonita para iPhone e iPad.";
+"intro.title.rpn"      = "Matemática baseada em pilha";
+"intro.body.rpn"       = "Digite um número, pressione Enter para empilhá-lo e escolha um operador. Sem parênteses.";
+"intro.title.example"  = "Tente: 3 ↵ 4 +";
+"intro.body.example"   = "Pressione 3, depois Enter, 4 e +. A pilha mostra 7. Simples assim.";
+"intro.next"           = "Avançar";
+"intro.get_started"    = "Começar";
+"intro.skip"           = "Pular";
+
+"a11y.history"  = "Histórico";
+"a11y.settings" = "Configurações";
+
+"history.empty" = "Sem histórico ainda. Seus resultados aparecerão aqui.";
+
+"credits.tagline" = "Uma calculadora RPN feita com SwiftUI.";
+
+"paywall.error.product_unavailable" = "Produto indisponível no momento. Tente novamente em breve.";
+"paywall.error.unverified"          = "Compra não pôde ser verificada.";

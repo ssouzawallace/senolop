@@ -6,53 +6,24 @@
 //
 
 import SwiftUI
-import SwiftData
 
+// NOTE: tvOS support is currently a placeholder. The shared calculator core
+// (`RPN`, `CalculatorProtocol`, etc.) is portable, but the SwiftUI keyboards
+// are tuned for touch input. Wire this up before shipping a tvOS build.
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
+        VStack(spacing: 16) {
+            Image(systemName: "function")
+                .resizable().scaledToFit().frame(width: 120, height: 120)
+                .foregroundColor(.accentColor)
+            Text("Senolop").font(.largeTitle)
+            Text("tvOS support is in progress.").foregroundColor(.secondary)
         }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
+        .padding()
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
+
